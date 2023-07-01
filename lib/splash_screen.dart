@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ulmo/main_page_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -10,19 +11,33 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Color(0xFFFEEB70),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Align(
             alignment: Alignment.center,
-            child: Text(
-              "ulmo",
-              style: TextStyle(
-                color: Color(0xFF212121),
-                fontSize: 32,
-                fontFamily: "poppins",
+            child: TextButton(
+              onPressed: () {
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => MainPageScreen(),
+                      ),
+                    );
+                  },
+                );
+              },
+              child: Text(
+                "ulmo",
+                style: TextStyle(
+                  color: Color(0xFF212121),
+                  fontSize: 32,
+                  fontFamily: "poppins",
+                ),
               ),
             ),
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ulmo/common_widget/elevated_common.dart';
 import 'package:ulmo/common_widget/no_connection_common.dart';
 
 class NoInternetScreen extends StatefulWidget {
@@ -11,7 +12,7 @@ class NoInternetScreen extends StatefulWidget {
 class _NoInternetScreenState extends State<NoInternetScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
         child: Column(
           children: [
@@ -33,9 +34,11 @@ class _NoInternetScreenState extends State<NoInternetScreen> {
               title: "ulmo",
               heading: "no connection",
               text: "so, it’s looks like you don’t have an \nintternet connection right now",
-              elevated: "retry",
               image: "assets/images/sad images.png",
             ),
+            ElevatedCommon(
+              elevated: "retry",
+            )
           ],
         ),
       ),

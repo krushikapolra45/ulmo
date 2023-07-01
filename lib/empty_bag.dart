@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ulmo/common_widget/elevated_common.dart';
 import 'package:ulmo/common_widget/no_connection_common.dart';
 
 class EmptyBag extends StatefulWidget {
@@ -68,8 +69,10 @@ class _EmptyBagState extends State<EmptyBag> {
             NoConnection(
               heading: "your bag is empty",
               text: "items remain in your bag for 1 hour,\n and then they’re moved to your Saved items",
-              elevated: "Start shopping",
               image: "assets/images/surprised.png",
+            ),
+            ElevatedCommon(
+              elevated: "Start shopping",
             ),
           ],
         ),
