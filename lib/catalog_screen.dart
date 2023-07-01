@@ -1,0 +1,272 @@
+import 'package:flutter/material.dart';
+import 'package:ulmo/common_widget/gridview_common.dart';
+import 'package:ulmo/common_widget/textfield_common.dart';
+import 'package:ulmo/common_widget/titlename_common.dart';
+
+class CatalogScreen extends StatefulWidget {
+  const CatalogScreen({Key? key}) : super(key: key);
+
+  @override
+  State<CatalogScreen> createState() => _CatalogScreenState();
+}
+
+class _CatalogScreenState extends State<CatalogScreen> {
+  List<Map<String, dynamic>> furnitureList = [
+    {
+      "populerImage": "assets/images/woodtblroom.png",
+      "price": "\$150.00",
+      "icon": Icons.favorite,
+      "history": "Wooden bedside\ntable featuring a raised desi...",
+      "cardImages": "assets/images/new.png",
+    },
+    {
+      "populerImage": "assets/images/chair.png",
+      "price": "\$149.99",
+      "icon": Icons.favorite_border,
+      "history": "Chair made of ash wood\nsourced from responsib...",
+    },
+    {
+      "populerImage": "assets/images/squretable.png",
+      "price": "\$140.25",
+      "icon": Icons.favorite_border,
+      "history": "Square bedside table\nwith legs, a rattan shelf and a...",
+    },
+    {
+      "populerImage": "assets/images/tvtable.png",
+      "price": "\$450.00",
+      "icon": Icons.favorite_border,
+      "history": "Dark wood side board\nwith a faceted drawer",
+      "cardImages": "assets/images/badge.png",
+    }
+  ];
+  List<Map<String, dynamic>> furnitureListTwo = [
+    {
+      "populerImage": "assets/images/blackchair.png",
+      "price": "\$160.00",
+      "icon": Icons.favorite_border,
+      "history": "Mango wood chair with a woven design",
+    },
+    {
+      "populerImage": "assets/images/twosteptbl.png",
+      "price": "\$189.00",
+      "icon": Icons.favorite_border,
+      "history": "Square bedside table with legs, a rattan shelf and ...  ",
+      "cardImages": "assets/images/new.png",
+    },
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const TitleScreen(
+                name: "furniture",
+              ),
+              const TextFieldScreen(
+                name: "search",
+                icon: Icons.search_rounded,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Expanded(
+                      child: Container(
+                        height: 36,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(4),
+                          color: const Color(0xFFF5F5F5),
+                        ),
+                        child: const Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Sort",
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontFamily: "poppins",
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Icon(
+                              Icons.swap_vert,
+                              size: 18,
+                              color: Color(0xFF212121),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 15,
+                    ),
+                    Expanded(
+                      child: Container(
+                        height: 36,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(4),
+                          color: const Color(0xFFF5F5F5),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text(
+                              "Filter",
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontFamily: "poppins",
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            Image.asset(
+                              "assets/images/filtertwo.png",
+                              height: 17,
+                              width: 17,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(8.0),
+                child: GridView.builder(
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemCount: furnitureList.length,
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      mainAxisSpacing: 30,
+                      crossAxisSpacing: 20,
+                      mainAxisExtent: 280,
+                    ),
+                    itemBuilder: (context, index) {
+                      return GridviewScreen(
+                        images: furnitureList[index]["populerImage"],
+                        icon: furnitureList[index]["icon"],
+                        price: furnitureList[index]["price"],
+                        history: furnitureList[index]["history"],
+                        cardImages: furnitureList[index]["cardImages"],
+                        isCardImages: index == 0 || index == 3,
+                      );
+                    }),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: Container(
+                        height: 64,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          color: const Color(0xFFF5F5F5),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(10),
+                          child: Row(
+                            children: [
+                              const Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    "Hard to decide?",
+                                    style: TextStyle(
+                                      color: Color(0xFF212121),
+                                      fontWeight: FontWeight.w400,
+                                      fontFamily: "poppins",
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                  Text(
+                                    "We are ready for help",
+                                    style: TextStyle(
+                                      color: Color(0xFF9E9E9E),
+                                      fontWeight: FontWeight.w400,
+                                      fontFamily: "poppins",
+                                      fontSize: 14,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(
+                                width: 100,
+                              ),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Container(
+                                    width: 104,
+                                    height: 36,
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xFFFEE440),
+                                      borderRadius: BorderRadius.circular(4),
+                                    ),
+                                    child: const Align(
+                                      alignment: Alignment.center,
+                                      child: Text(
+                                        "Need help",
+                                        style: TextStyle(
+                                          fontFamily: "poppins",
+                                          fontWeight: FontWeight.normal,
+                                          color: Color(0xFF212121),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: GridView.builder(
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemCount: furnitureListTwo.length,
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      mainAxisSpacing: 30,
+                      crossAxisSpacing: 20,
+                      mainAxisExtent: 280,
+                    ),
+                    itemBuilder: (context, index) {
+                      return GridviewScreen(
+                        images: furnitureListTwo[index]["populerImage"],
+                        icon: furnitureListTwo[index]["icon"],
+                        price: furnitureListTwo[index]["price"],
+                        history: furnitureListTwo[index]["history"],
+                        cardImages: furnitureListTwo[index]["cardImages"],
+                        isCardImages: index == 1,
+                      );
+                    }),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
