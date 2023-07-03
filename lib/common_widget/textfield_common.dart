@@ -8,7 +8,7 @@ class TextFieldScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(8.0),
+      padding: EdgeInsets.all(5),
       child: ClipRRect(
         borderRadius: BorderRadius.all(
           Radius.circular(8),

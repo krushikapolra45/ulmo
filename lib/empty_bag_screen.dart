@@ -23,7 +23,7 @@ class _EmptyBagState extends State<EmptyBag> {
         },
         items: const [
           BottomNavigationBarItem(
-            label: "bag",
+            label: "",
             icon: Icon(
               Icons.shopping_bag_outlined,
               color: Colors.black,
@@ -31,7 +31,7 @@ class _EmptyBagState extends State<EmptyBag> {
             ),
           ),
           BottomNavigationBarItem(
-            label: "favorite",
+            label: "",
             icon: Icon(
               Icons.favorite_border,
               color: Color(0xFFBDBDBD),
@@ -39,7 +39,7 @@ class _EmptyBagState extends State<EmptyBag> {
             ),
           ),
           BottomNavigationBarItem(
-            label: "person",
+            label: "",
             activeIcon: Icon(Icons.person),
             icon: Icon(
               Icons.person_outline,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ulmo/splash_screen.dart';
+
+import 'reviews_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
           // colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
           // useMaterial3: false,
           ),
-      home: const SplashScreen(),
+      home: const ReviewsScreen(),
     );
   }
 }

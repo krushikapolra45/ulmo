@@ -6,33 +6,25 @@ class ElevatedCommon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(10),
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(30),
-        ),
+    return Container(
+      height: 64,
+      width: 343,
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(8),
         child: ElevatedButton(
-          style: const ButtonStyle(
+          style: ButtonStyle(
             backgroundColor: MaterialStatePropertyAll(
               Color(0xFFFee440),
             ),
-            fixedSize: MaterialStatePropertyAll(
-              Size(390, 64),
-            ),
           ),
           onPressed: () {},
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                elevated ?? "",
-                style: const TextStyle(
-                  fontSize: 20,
-                  color: Colors.black,
-                ),
-              ),
-            ],
+          child: Text(
+            elevated ?? "",
+            style: const TextStyle(
+              fontSize: 16,
+              color: Colors.black,
+              fontWeight: FontWeight.normal,
+            ),
           ),
         ),
       ),

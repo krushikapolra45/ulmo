@@ -1,13 +1,21 @@
 import 'package:flutter/material.dart';
 
 class NoConnection extends StatelessWidget {
-  final String? title;
   final String? image;
   final String? heading;
   final String? text;
-  final String? elevated;
 
-  const NoConnection({Key? key, this.title, this.heading, this.text, this.elevated, this.image}) : super(key: key);
+  final String? elevated;
+  final Color? colors;
+
+  const NoConnection({
+    Key? key,
+    this.heading,
+    this.text,
+    this.elevated,
+    this.image,
+    this.colors,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

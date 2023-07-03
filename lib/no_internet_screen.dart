@@ -12,16 +12,16 @@ class NoInternetScreen extends StatefulWidget {
 class _NoInternetScreenState extends State<NoInternetScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SafeArea(
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 30, left: 20),
+              padding: EdgeInsets.only(top: 30, left: 20),
               child: Align(
                 alignment: Alignment.topCenter,
                 child: Text(
-                  "bag",
+                  "ulmo",
                   style: TextStyle(
                     fontSize: 32,
                     fontWeight: FontWeight.bold,
@@ -31,14 +31,13 @@ class _NoInternetScreenState extends State<NoInternetScreen> {
               ),
             ),
             NoConnection(
-              title: "ulmo",
               heading: "no connection",
               text: "so, it’s looks like you don’t have an \nintternet connection right now",
               image: "assets/images/sad images.png",
             ),
             ElevatedCommon(
               elevated: "retry",
-            )
+            ),
           ],
         ),
       ),

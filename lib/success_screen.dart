@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ulmo/common_widget/no_connection_common.dart';
 
 class SuccessScreen extends StatefulWidget {
   const SuccessScreen({Key? key}) : super(key: key);
@@ -11,62 +12,44 @@ class _SuccessScreenState extends State<SuccessScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFFEEB70),
+      backgroundColor: const Color(0xFFFEEB70),
       body: SafeArea(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(
-              "assets/images/friendly.png",
-              width: 120,
+            const NoConnection(
+              image: "assets/images/friendly.png",
+              heading: "your order is placed",
+              colors: Color(0xFF000000),
+              text: "thanks for your order, we hope you \n         senjoyed shopping with us",
+            ),
+            const SizedBox(
               height: 120,
             ),
-            SizedBox(
-              height: 10,
-            ),
-            Text(
-              "your order is placed",
-              style: TextStyle(
-                fontWeight: FontWeight.w600,
-                fontSize: 24,
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Align(
-              alignment: Alignment.center,
-              child: Text(
-                "thanks for your order, we hope you\nenjoyed shopping with us",
-                style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 16,
-                  color: Color(0xFF212121),
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 150,
-            ),
-            Container(
-              height: 64,
-              width: 343,
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Color(0xFF212121),
-                  width: 2,
-                ),
-                borderRadius: BorderRadius.circular(8),
-              ),
-              child: ElevatedButton(
-                onPressed: () {},
-                child: Text(
-                  "To my orders",
-                  style: TextStyle(
-                    fontSize: 16,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  height: 64,
+                  width: 343,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: const Color(0xFF212121),
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: OutlinedButton(
+                    onPressed: () {},
+                    child: const Text(
+                      "To my orders",
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.black,
+                      ),
+                    ),
                   ),
                 ),
-              ),
+              ],
             ),
           ],
         ),
