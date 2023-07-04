@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'reviews_screen.dart';
+import 'package:ulmo/filter_option_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
           // colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
           // useMaterial3: false,
           ),
-      home: const ReviewsScreen(),
+      home: const FilterOptionScreen(),
     );
   }
 }

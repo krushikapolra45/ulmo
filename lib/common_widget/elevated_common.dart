@@ -2,7 +2,12 @@ import 'package:flutter/material.dart';
 
 class ElevatedCommon extends StatelessWidget {
   final String? elevated;
-  const ElevatedCommon({Key? key, this.elevated}) : super(key: key);
+  final IconData? icon;
+  const ElevatedCommon({
+    Key? key,
+    this.elevated,
+    this.icon,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,19 +17,28 @@ class ElevatedCommon extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(8),
         child: ElevatedButton(
-          style: ButtonStyle(
+          style: const ButtonStyle(
             backgroundColor: MaterialStatePropertyAll(
               Color(0xFFFee440),
             ),
           ),
           onPressed: () {},
-          child: Text(
-            elevated ?? "",
-            style: const TextStyle(
-              fontSize: 16,
-              color: Colors.black,
-              fontWeight: FontWeight.normal,
-            ),
+          child: Row(
+            children: [
+              Text(
+                elevated ?? "",
+                style: const TextStyle(
+                  fontSize: 16,
+                  color: Colors.black,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+              Icon(
+                icon!,
+                color: Colors.black,
+                size: 20,
+              ),
+            ],
           ),
         ),
       ),
