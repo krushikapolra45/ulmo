@@ -73,6 +73,8 @@ class _EmptyBagState extends State<EmptyBag> {
             ),
             ElevatedCommon(
               elevated: "Start shopping",
+              width: double.infinity,
+              hight: 30,
             ),
           ],
         ),
