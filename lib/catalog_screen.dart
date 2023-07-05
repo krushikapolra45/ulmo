@@ -54,6 +54,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
       "cardImages": "assets/images/new.png",
     },
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,77 +65,84 @@ class _CatalogScreenState extends State<CatalogScreen> {
               const TitleScreen(
                 name: "furniture",
               ),
-              const TextFieldScreen(
-                name: "search",
-                icon: Icons.search_rounded,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: const TextFieldScreen(
+                  name: "search",
+                  icon: Icons.search_rounded,
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Expanded(
-                      child: Container(
-                        height: 36,
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(4),
-                          color: const Color(0xFFF5F5F5),
-                        ),
-                        child: const Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "Sort",
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontFamily: "poppins",
-                                fontWeight: FontWeight.w400,
+                    Container(
+                      height: 36,
+                      width: 170,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(8),
+                        child: ElevatedButton(
+                          style: const ButtonStyle(
+                            backgroundColor: MaterialStatePropertyAll(
+                              const Color(0xFFF5F5F5),
+                            ),
+                          ),
+                          onPressed: () {},
+                          child: const Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "sort",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w400,
+                                ),
                               ),
-                            ),
-                            SizedBox(
-                              width: 5,
-                            ),
-                            Icon(
-                              Icons.swap_vert,
-                              size: 18,
-                              color: Color(0xFF212121),
-                            ),
-                          ],
+                              Icon(
+                                Icons.swap_vert,
+                                color: Colors.black,
+                                size: 20,
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
                     const SizedBox(
                       width: 15,
                     ),
-                    Expanded(
-                      child: Container(
-                        height: 36,
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(4),
-                          color: const Color(0xFFF5F5F5),
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const Text(
-                              "Filter",
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontFamily: "poppins",
-                                fontWeight: FontWeight.w400,
+                    Container(
+                      height: 36,
+                      width: 170,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(8),
+                        child: ElevatedButton(
+                          style: const ButtonStyle(
+                            backgroundColor: MaterialStatePropertyAll(
+                              const Color(0xFFF5F5F5),
+                            ),
+                          ),
+                          onPressed: () {},
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Text(
+                                "sort",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w400,
+                                ),
                               ),
-                            ),
-                            const SizedBox(
-                              width: 5,
-                            ),
-                            Image.asset(
-                              "assets/images/filtertwo.png",
-                              height: 17,
-                              width: 17,
-                            ),
-                          ],
+                              Image.asset(
+                                "assets/images/filtertwo.png",
+                                height: 17,
+                                width: 17,
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -142,14 +150,14 @@ class _CatalogScreenState extends State<CatalogScreen> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(15),
                 child: GridView.builder(
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
                     itemCount: furnitureList.length,
                     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
-                      mainAxisSpacing: 30,
+                      mainAxisSpacing: 25,
                       crossAxisSpacing: 20,
                       mainAxisExtent: 280,
                     ),
@@ -165,7 +173,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
                     }),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.only(left: 15, right: 15),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -241,14 +249,14 @@ class _CatalogScreenState extends State<CatalogScreen> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(15),
                 child: GridView.builder(
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
                     itemCount: furnitureListTwo.length,
                     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
-                      mainAxisSpacing: 30,
+                      mainAxisSpacing: 25,
                       crossAxisSpacing: 20,
                       mainAxisExtent: 280,
                     ),
