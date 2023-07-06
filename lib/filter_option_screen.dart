@@ -49,12 +49,6 @@ class _FilterOptionScreenState extends State<FilterOptionScreen> {
                   });
                 },
               ),
-              title: const Text(
-                "Furniture",
-                style: TextStyle(
-                  fontSize: 20,
-                ),
-              ),
             ),
           ],
         ),

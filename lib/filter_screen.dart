@@ -110,12 +110,13 @@ class _FilterScreenState extends State<FilterScreen> {
             const FilterCommon(
               name: "Quality",
             ),
-            Row(
-              children: [
-                const ElevatedCommon(
-                  elevated: "Show 25 items",
-                ),
-              ],
+            SizedBox(
+              height: 90,
+            ),
+            const ElevatedCommon(
+              elevated: "Show 25 items",
+              width: double.infinity,
+              hight: 64,
             ),
           ],
         ),

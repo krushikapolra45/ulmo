@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ulmo/catalog_screen.dart';
 
 import 'common_widget/categories_common.dart';
 import 'common_widget/textfield_common.dart';
@@ -14,7 +15,7 @@ class CategoriesScreen extends StatefulWidget {
 class _CategoriesScreenState extends State<CategoriesScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
         child: Column(
           children: [
@@ -44,9 +45,19 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                 scrollDirection: Axis.vertical,
                 child: Column(
                   children: [
-                    CategoriesCommonScreen(
-                      images: "assets/images_two/furniture.png",
-                      itemname: "furniture",
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => CatalogScreen(),
+                          ),
+                        );
+                      },
+                      child: CategoriesCommonScreen(
+                        images: "assets/images_two/furniture.png",
+                        itemname: "furniture",
+                      ),
                     ),
                     CategoriesCommonScreen(
                       images: "assets/images_two/lighting.png",

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ulmo/categories_screen.dart';
 import 'package:ulmo/common_widget/textfield_common.dart';
+import 'package:ulmo/story_screen.dart';
 
 import 'common_widget/gridview_common.dart';
 import 'common_widget/item_common.dart';
@@ -70,7 +72,7 @@ class _MainPageScreenState extends State<MainPageScreen> {
         foregroundColor: Colors.black,
         backgroundColor: Colors.white,
         centerTitle: true,
-        title: const Text(
+        title: Text(
           "ulmo",
           style: TextStyle(
             fontSize: 32,
@@ -87,15 +89,25 @@ class _MainPageScreenState extends State<MainPageScreen> {
                 name: "serch",
                 icon: Icons.search_rounded,
               ),
-              const SingleChildScrollView(
+              SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Padding(
                   padding: EdgeInsets.only(left: 8.0),
                   child: Row(
                     children: [
-                      ItemScreen(
-                        image: "assets/images/tablepic.png",
-                        name: "best of\n2020",
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => StoryScreen(),
+                            ),
+                          );
+                        },
+                        child: ItemScreen(
+                          image: "assets/images/tablepic.png",
+                          name: "best of\n2020",
+                        ),
                       ),
                       SizedBox(
                         width: 5,
@@ -122,50 +134,60 @@ class _MainPageScreenState extends State<MainPageScreen> {
                   ),
                 ),
               ),
-              SizedBox(
-                child: ListView.builder(
-                  physics: const NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  scrollDirection: Axis.vertical,
-                  itemCount: searchList.length,
-                  itemBuilder: (context, index) {
-                    return Container(
-                      margin: const EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFFF5F5F5),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      width: 343,
-                      height: 100,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 8, bottom: 25),
-                            child: Text(
-                              searchList[index]["serchText"],
-                              style: const TextStyle(
-                                fontSize: 24,
-                                fontFamily: "poppins",
-                                fontWeight: FontWeight.w600,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CategoriesScreen(),
+                    ),
+                  );
+                },
+                child: SizedBox(
+                  child: ListView.builder(
+                    physics: const NeverScrollableScrollPhysics(),
+                    shrinkWrap: true,
+                    scrollDirection: Axis.vertical,
+                    itemCount: searchList.length,
+                    itemBuilder: (context, index) {
+                      return Container(
+                        margin: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFF5F5F5),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        width: 343,
+                        height: 100,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left: 8, bottom: 25),
+                              child: Text(
+                                searchList[index]["serchText"],
+                                style: const TextStyle(
+                                  fontSize: 24,
+                                  fontFamily: "poppins",
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ),
-                          ),
-                          ClipRRect(
-                            borderRadius: const BorderRadius.only(
-                              topRight: Radius.circular(8),
-                              bottomRight: Radius.circular(8),
+                            ClipRRect(
+                              borderRadius: const BorderRadius.only(
+                                topRight: Radius.circular(8),
+                                bottomRight: Radius.circular(8),
+                              ),
+                              clipBehavior: Clip.antiAlias,
+                              child: Image.asset(
+                                searchList[index]["image"],
+                                height: 100,
+                              ),
                             ),
-                            clipBehavior: Clip.antiAlias,
-                            child: Image.asset(
-                              searchList[index]["image"],
-                              height: 100,
-                            ),
-                          ),
-                        ],
-                      ),
-                    );
-                  },
+                          ],
+                        ),
+                      );
+                    },
+                  ),
                 ),
               ),
               const SizedBox(

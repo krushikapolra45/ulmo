@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ulmo/common_widget/gridview_common.dart';
 import 'package:ulmo/common_widget/textfield_common.dart';
 import 'package:ulmo/common_widget/titlename_common.dart';
+import 'package:ulmo/filter_screen.dart';
 
 class CatalogScreen extends StatefulWidget {
   const CatalogScreen({Key? key}) : super(key: key);
@@ -65,9 +66,9 @@ class _CatalogScreenState extends State<CatalogScreen> {
               const TitleScreen(
                 name: "furniture",
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: const TextFieldScreen(
+              const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: TextFieldScreen(
                   name: "search",
                   icon: Icons.search_rounded,
                 ),
@@ -77,72 +78,80 @@ class _CatalogScreenState extends State<CatalogScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Container(
-                      height: 36,
-                      width: 170,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(8),
-                        child: ElevatedButton(
-                          style: const ButtonStyle(
-                            backgroundColor: MaterialStatePropertyAll(
-                              const Color(0xFFF5F5F5),
-                            ),
-                          ),
-                          onPressed: () {},
-                          child: const Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                "sort",
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w400,
-                                ),
-                              ),
-                              Icon(
-                                Icons.swap_vert,
-                                color: Colors.black,
-                                size: 20,
-                              ),
-                            ],
+                    ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStatePropertyAll(Color(0xFFF5F5F5)),
+                        shape: MaterialStatePropertyAll(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
                           ),
                         ),
+                        fixedSize: MaterialStatePropertyAll(
+                          Size(164, 36),
+                        ),
                       ),
-                    ),
-                    const SizedBox(
-                      width: 15,
-                    ),
-                    Container(
-                      height: 36,
-                      width: 170,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(8),
-                        child: ElevatedButton(
-                          style: const ButtonStyle(
-                            backgroundColor: MaterialStatePropertyAll(
-                              const Color(0xFFF5F5F5),
+                      onPressed: () {},
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "sort",
+                            style: const TextStyle(
+                              fontSize: 16,
+                              color: Colors.black,
+                              fontWeight: FontWeight.w400,
                             ),
                           ),
-                          onPressed: () {},
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              const Text(
-                                "sort",
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w400,
-                                ),
-                              ),
-                              Image.asset(
-                                "assets/images/filtertwo.png",
-                                height: 17,
-                                width: 17,
-                              ),
-                            ],
+                          Icon(
+                            Icons.swap_vert,
+                            color: Colors.black,
+                            size: 20,
                           ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStatePropertyAll(Color(0xFFF5F5F5)),
+                        shape: MaterialStatePropertyAll(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                        ),
+                        fixedSize: MaterialStatePropertyAll(
+                          Size(164, 36),
+                        ),
+                      ),
+                      onPressed: () {},
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => FilterScreen(),
+                            ),
+                          );
+                        },
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "filter",
+                              style: const TextStyle(
+                                fontSize: 16,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                            Image.asset(
+                              "assets/images/filtertwo.png",
+                              height: 17,
+                              width: 17,
+                            ),
+                          ],
                         ),
                       ),
                     ),
