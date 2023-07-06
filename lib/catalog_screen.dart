@@ -3,6 +3,7 @@ import 'package:ulmo/common_widget/gridview_common.dart';
 import 'package:ulmo/common_widget/textfield_common.dart';
 import 'package:ulmo/common_widget/titlename_common.dart';
 import 'package:ulmo/filter_screen.dart';
+import 'package:ulmo/product_page_screen.dart';
 
 class CatalogScreen extends StatefulWidget {
   const CatalogScreen({Key? key}) : super(key: key);
@@ -80,23 +81,23 @@ class _CatalogScreenState extends State<CatalogScreen> {
                   children: [
                     ElevatedButton(
                       style: ButtonStyle(
-                        backgroundColor: MaterialStatePropertyAll(Color(0xFFF5F5F5)),
+                        backgroundColor: const MaterialStatePropertyAll(Color(0xFFF5F5F5)),
                         shape: MaterialStatePropertyAll(
                           RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8),
                           ),
                         ),
-                        fixedSize: MaterialStatePropertyAll(
+                        fixedSize: const MaterialStatePropertyAll(
                           Size(164, 36),
                         ),
                       ),
                       onPressed: () {},
-                      child: Row(
+                      child: const Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
                             "sort",
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontSize: 16,
                               color: Colors.black,
                               fontWeight: FontWeight.w400,
@@ -110,18 +111,18 @@ class _CatalogScreenState extends State<CatalogScreen> {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     ElevatedButton(
                       style: ButtonStyle(
-                        backgroundColor: MaterialStatePropertyAll(Color(0xFFF5F5F5)),
+                        backgroundColor: const MaterialStatePropertyAll(Color(0xFFF5F5F5)),
                         shape: MaterialStatePropertyAll(
                           RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8),
                           ),
                         ),
-                        fixedSize: MaterialStatePropertyAll(
+                        fixedSize: const MaterialStatePropertyAll(
                           Size(164, 36),
                         ),
                       ),
@@ -131,16 +132,16 @@ class _CatalogScreenState extends State<CatalogScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => FilterScreen(),
+                              builder: (context) => const FilterScreen(),
                             ),
                           );
                         },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text(
+                            const Text(
                               "filter",
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontSize: 16,
                                 color: Colors.black,
                                 fontWeight: FontWeight.w400,
@@ -160,26 +161,36 @@ class _CatalogScreenState extends State<CatalogScreen> {
               ),
               Padding(
                 padding: const EdgeInsets.all(15),
-                child: GridView.builder(
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    itemCount: furnitureList.length,
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      mainAxisSpacing: 25,
-                      crossAxisSpacing: 20,
-                      mainAxisExtent: 280,
-                    ),
-                    itemBuilder: (context, index) {
-                      return GridviewScreen(
-                        images: furnitureList[index]["populerImage"],
-                        icon: furnitureList[index]["icon"],
-                        price: furnitureList[index]["price"],
-                        history: furnitureList[index]["history"],
-                        cardImages: furnitureList[index]["cardImages"],
-                        isCardImages: index == 0 || index == 3,
-                      );
-                    }),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ProductPageScreen(),
+                      ),
+                    );
+                  },
+                  child: GridView.builder(
+                      shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
+                      itemCount: furnitureList.length,
+                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        mainAxisSpacing: 25,
+                        crossAxisSpacing: 20,
+                        mainAxisExtent: 280,
+                      ),
+                      itemBuilder: (context, index) {
+                        return GridviewScreen(
+                          images: furnitureList[index]["populerImage"],
+                          icon: furnitureList[index]["icon"],
+                          price: furnitureList[index]["price"],
+                          history: furnitureList[index]["history"],
+                          cardImages: furnitureList[index]["cardImages"],
+                          isCardImages: index == 0 || index == 3,
+                        );
+                      }),
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 15, right: 15),
