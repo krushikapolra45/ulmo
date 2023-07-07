@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ulmo/common_widget/textfield_common.dart';
 
 class SearchResultScreen extends StatefulWidget {
   const SearchResultScreen({Key? key}) : super(key: key);
@@ -14,14 +13,37 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(8.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              TextFieldScreen(
-                icon: Icons.arrow_back,
-                name: "wood|",
-                iconTwo: Icons.cancel_outlined,
+              Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Container(
+                  width: double.infinity,
+                  height: 64,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: const Color(0xFFF5F5F5),
+                  ),
+                  child: const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Row(
+                      children: [
+                        BackButton(
+                          color: Color(0xFF212121),
+                        ),
+                        SizedBox(width: 10),
+                        Text(
+                          "|",
+                          style: TextStyle(color: Color(0xFF212121), fontSize: 16),
+                        ),
+                        Spacer(),
+                        Icon(Icons.keyboard_voice_outlined, color: Color(0xFF212121), size: 20),
+                      ],
+                    ),
+                  ),
+                ),
               ),
               SizedBox(
                 height: 10,

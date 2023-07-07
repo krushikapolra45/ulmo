@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ulmo/main_page_screen.dart';
 
 class StoryScreen extends StatefulWidget {
   const StoryScreen({Key? key}) : super(key: key);
@@ -45,9 +46,19 @@ class _StoryScreenState extends State<StoryScreen> {
                         width: 40,
                         height: 40,
                         decoration: BoxDecoration(borderRadius: BorderRadius.circular(50), color: Colors.white),
-                        child: CloseButton(
-                          color: const Color(0xFF212121),
-                          onPressed: (() {}),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.pop(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const MainPageScreen(),
+                              ),
+                            );
+                          },
+                          child: CloseButton(
+                            color: const Color(0xFF212121),
+                            onPressed: (() {}),
+                          ),
                         ),
                       ),
                     ),

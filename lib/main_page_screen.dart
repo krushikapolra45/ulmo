@@ -3,6 +3,7 @@ import 'package:ulmo/categories_screen.dart';
 import 'package:ulmo/common_widget/gridview_common.dart';
 import 'package:ulmo/common_widget/item_common.dart';
 
+import 'search_screen.dart';
 import 'story_screen.dart';
 
 class MainPageScreen extends StatefulWidget {
@@ -71,7 +72,7 @@ class _MainPageScreenState extends State<MainPageScreen> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Text(
+              const Text(
                 "ulmo",
                 style: TextStyle(
                   fontSize: 32,
@@ -81,24 +82,34 @@ class _MainPageScreenState extends State<MainPageScreen> {
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  width: double.infinity,
-                  height: 64,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: Color(0xFFF5F5F5),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      children: [
-                        Icon(Icons.search_rounded, color: Color(0xFF9E9E9E), size: 20),
-                        SizedBox(width: 10),
-                        Text(
-                          "search",
-                          style: TextStyle(color: Color(0xFF9E9E9E), fontSize: 16),
-                        ),
-                      ],
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SearchScreen(),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    width: double.infinity,
+                    height: 64,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: const Color(0xFFF5F5F5),
+                    ),
+                    child: const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          Icon(Icons.search_rounded, color: Color(0xFF9E9E9E), size: 20),
+                          SizedBox(width: 10),
+                          Text(
+                            "search",
+                            style: TextStyle(color: Color(0xFF9E9E9E), fontSize: 16),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -106,7 +117,7 @@ class _MainPageScreenState extends State<MainPageScreen> {
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 8.0),
+                  padding: const EdgeInsets.only(left: 3),
                   child: Row(
                     children: [
                       GestureDetector(

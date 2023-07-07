@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ulmo/common_widget/textfield_common.dart';
 
 import 'search_result_screen.dart';
 
@@ -26,10 +25,33 @@ class _SearchScreenState extends State<SearchScreen> {
                   ),
                 );
               },
-              child: TextFieldScreen(
-                icon: Icons.arrow_back,
-                name: "|",
-                iconTwo: Icons.keyboard_voice_outlined,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  width: double.infinity,
+                  height: 64,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: const Color(0xFFF5F5F5),
+                  ),
+                  child: const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Row(
+                      children: [
+                        BackButton(
+                          color: Color(0xFF212121),
+                        ),
+                        SizedBox(width: 10),
+                        Text(
+                          "|",
+                          style: TextStyle(color: Color(0xFF212121), fontSize: 16),
+                        ),
+                        Spacer(),
+                        Icon(Icons.keyboard_voice_outlined, color: Color(0xFF212121), size: 20),
+                      ],
+                    ),
+                  ),
+                ),
               ),
             ),
             SizedBox(

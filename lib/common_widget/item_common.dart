@@ -16,15 +16,15 @@ class ItemScreen extends StatelessWidget {
       alignment: Alignment.bottomLeft,
       children: [
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8),
           child: ClipRRect(
             borderRadius: const BorderRadius.all(
               Radius.circular(8),
             ),
             child: Image.asset(
               image ?? "",
-              height: 135,
-              width: 135,
+              height: 88,
+              width: 88,
               fit: BoxFit.cover,
             ),
           ),
@@ -37,7 +37,7 @@ class ItemScreen extends StatelessWidget {
           child: Text(
             name ?? "",
             style: const TextStyle(
-              fontSize: 20,
+              fontSize: 15,
               color: Color(0xFFFFFFFF),
               fontWeight: FontWeight.bold,
             ),
