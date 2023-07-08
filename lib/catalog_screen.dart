@@ -13,6 +13,7 @@ class CatalogScreen extends StatefulWidget {
 }
 
 class _CatalogScreenState extends State<CatalogScreen> {
+  bool checkBoxValue = false;
   List<Map<String, dynamic>> furnitureList = [
     {
       "populerImage": "assets/images/woodtblroom.png",
@@ -91,7 +92,116 @@ class _CatalogScreenState extends State<CatalogScreen> {
                           Size(164, 36),
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        showModalBottomSheet(
+                          barrierColor: Colors.black,
+                          shape: OutlineInputBorder(
+                            borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(20),
+                              topLeft: Radius.circular(20),
+                            ),
+                          ),
+                          context: context,
+                          builder: (context) {
+                            return Wrap(
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.all(12),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      SizedBox(
+                                        height: 30,
+                                      ),
+                                      const Text(
+                                        "sort by",
+                                        style: TextStyle(
+                                          fontSize: 32,
+                                          color: Color(0xFF212121),
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      const SizedBox(height: 20),
+                                      Row(
+                                        children: [
+                                          const Text(
+                                            "Price: high to low",
+                                            style: TextStyle(
+                                              fontSize: 16,
+                                              color: Color(0xFF212121),
+                                            ),
+                                          ),
+                                          const Spacer(),
+                                          Checkbox(
+                                            value: checkBoxValue,
+                                            checkColor: Color(0xFF212121),
+                                            activeColor: Color(0xFFFEE440),
+                                            shape: CircleBorder(),
+                                            onChanged: (value) {
+                                              debugPrint("value---> $value");
+                                              setState(() {
+                                                checkBoxValue = value!;
+                                              });
+                                            },
+                                          ),
+                                        ],
+                                      ),
+                                      const SizedBox(height: 20),
+                                      const Text(
+                                        "Price: low to high",
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          color: Color(0xFF212121),
+                                        ),
+                                      ),
+                                      const SizedBox(height: 30),
+                                      const Text(
+                                        "New first",
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          color: Color(0xFF212121),
+                                        ),
+                                      ),
+                                      const SizedBox(height: 30),
+                                      const Text(
+                                        "Popular first",
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          color: Color(0xFF212121),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                const SizedBox(height: 40),
+                                Padding(
+                                  padding: const EdgeInsets.all(10),
+                                  child: Container(
+                                    alignment: Alignment.center,
+                                    width: 343,
+                                    height: 64,
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xFFF5F5F5),
+                                      borderRadius: BorderRadius.circular(8),
+                                    ),
+                                    child: const Text(
+                                      textAlign: TextAlign.center,
+                                      "cancel",
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        color: Color(0xFF212121),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                              ],
+                            );
+                          },
+                        );
+                      },
                       child: const Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [

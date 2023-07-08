@@ -10,8 +10,8 @@ class FilterOptionScreen extends StatefulWidget {
 }
 
 class _FilterOptionScreenState extends State<FilterOptionScreen> {
-  bool checkvalue = false;
-
+  bool? checkvalue = false;
+  bool? checkListButton = false;
   List<Map<String, dynamic>> listButton = [
     {"index": 1, "text": "Furniture"},
     {"index": 2, "text": "Lighting"},
@@ -29,30 +29,15 @@ class _FilterOptionScreenState extends State<FilterOptionScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            const TitleScreen(
+            TitleScreen(
               name: "Category",
               text: "clear",
             ),
-            const SizedBox(
+            SizedBox(
               height: 10,
             ),
             Column(
-              children: listButton
-                  .map((data) => CheckboxListTile(
-                        value: checkvalue,
-                        onChanged: (val) {
-                          setState(() {
-                            checkvalue = val!;
-                            if (val == true) {
-                              val = checkvalue;
-                            }
-                          });
-                        },
-                        activeColor: Color(0xFFFEE440),
-                        checkColor: Color(0xFF212121),
-                        checkboxShape: const CircleBorder(),
-                      ))
-                  .toList(),
+              children: [],
             ),
             const SizedBox(
               height: 30,

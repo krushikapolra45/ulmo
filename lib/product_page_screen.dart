@@ -69,11 +69,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(50),
                             ),
-                            child: const Icon(
-                              Icons.favorite_outline,
-                              color: Colors.black,
-                              size: 20,
-                            ),
+                            child: const Icon(Icons.favorite_outline, color: Colors.black, size: 20),
                           ),
                         ),
                       ],
@@ -231,7 +227,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                               ),
                             ],
                           ),
-                          Spacer(),
+                          const Spacer(),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -262,14 +258,14 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                const Padding(
-                  padding: EdgeInsets.all(8.0),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Text(
+                      const Text(
                         "Product information",
                         style: TextStyle(
                           fontSize: 16,
@@ -280,20 +276,204 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-                      Spacer(),
-                      Icon(
-                        Icons.arrow_forward_ios_outlined,
-                        size: 24,
-                        color: Color(0xFF212121),
+                      const Spacer(),
+                      IconButton(
+                        onPressed: () {
+                          showModalBottomSheet(
+                            barrierColor: Colors.black,
+                            shape: const OutlineInputBorder(
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(20),
+                                topRight: Radius.circular(20),
+                              ),
+                            ),
+                            context: context,
+                            builder: (context) {
+                              return const Wrap(
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsets.all(12),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        CloseButton(
+                                          color: Color(0xFF212121),
+                                        ),
+                                        SizedBox(height: 20),
+                                        Text(
+                                          "Product information",
+                                          style: TextStyle(fontSize: 32, color: Color(0xFF212121), fontFamily: "poppins", fontWeight: FontWeight.bold),
+                                        ),
+                                        SizedBox(height: 30),
+                                        Text(
+                                          "measurements",
+                                          style: TextStyle(fontSize: 24, color: Color(0xFF212121), fontFamily: "poppins", fontWeight: FontWeight.w600),
+                                        ),
+                                        SizedBox(height: 30),
+                                        Row(
+                                          children: [
+                                            Text(
+                                              "Height:",
+                                              style: TextStyle(
+                                                fontSize: 16,
+                                                color: Color(0xFF212121),
+                                                fontFamily: "poppins",
+                                              ),
+                                            ),
+                                            Spacer(),
+                                            Text(
+                                              "50 cm",
+                                              style: TextStyle(
+                                                fontSize: 16,
+                                                color: Color(0xFF9E9E9E),
+                                                fontFamily: "poppins",
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(height: 30),
+                                        Row(
+                                          children: [
+                                            Text(
+                                              "Width:",
+                                              style: TextStyle(
+                                                fontSize: 16,
+                                                color: Color(0xFF212121),
+                                                fontFamily: "poppins",
+                                              ),
+                                            ),
+                                            Spacer(),
+                                            Text(
+                                              "40 cm",
+                                              style: TextStyle(
+                                                fontSize: 16,
+                                                color: Color(0xFF9E9E9E),
+                                                fontFamily: "poppins",
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(height: 30),
+                                        Row(
+                                          children: [
+                                            Text(
+                                              "Depth:",
+                                              style: TextStyle(
+                                                fontSize: 16,
+                                                color: Color(0xFF212121),
+                                                fontFamily: "poppins",
+                                              ),
+                                            ),
+                                            Spacer(),
+                                            Text(
+                                              "35 cm",
+                                              style: TextStyle(
+                                                fontSize: 16,
+                                                color: Color(0xFF9E9E9E),
+                                                fontFamily: "poppins",
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(height: 30),
+                                        Row(
+                                          children: [
+                                            Text(
+                                              "Weight:",
+                                              style: TextStyle(
+                                                fontSize: 16,
+                                                color: Color(0xFF212121),
+                                                fontFamily: "poppins",
+                                              ),
+                                            ),
+                                            Spacer(),
+                                            Text(
+                                              "11.7 kg",
+                                              style: TextStyle(
+                                                fontSize: 16,
+                                                color: Color(0xFF9E9E9E),
+                                                fontFamily: "poppins",
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(height: 30),
+                                        Text(
+                                          textAlign: TextAlign.start,
+                                          "composition",
+                                          style: TextStyle(
+                                            fontSize: 24,
+                                            color: Color(0xFF212121),
+                                            fontFamily: "poppins",
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                        SizedBox(height: 30),
+                                        Row(
+                                          children: [
+                                            Text(
+                                              "Main material",
+                                              style: TextStyle(
+                                                fontSize: 16,
+                                                color: Color(0xFF212121),
+                                                fontFamily: "poppins",
+                                              ),
+                                            ),
+                                            Spacer(),
+                                            Text(
+                                              "100% Mango tree wood",
+                                              style: TextStyle(
+                                                fontSize: 16,
+                                                color: Color(0xFF9E9E9E),
+                                                fontFamily: "poppins",
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        SizedBox(height: 30),
+                                        Row(
+                                          children: [
+                                            Text(
+                                              "Weight:",
+                                              style: TextStyle(
+                                                fontSize: 16,
+                                                color: Color(0xFF212121),
+                                                fontFamily: "poppins",
+                                              ),
+                                            ),
+                                            Spacer(),
+                                            Text(
+                                              "100% Chipboard",
+                                              style: TextStyle(
+                                                fontSize: 16,
+                                                color: Color(0xFF9E9E9E),
+                                                fontFamily: "poppins",
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              );
+                            },
+                          );
+                        },
+                        icon: const Icon(
+                          Icons.arrow_forward_ios_outlined,
+                          color: Color(0xFF212121),
+                          size: 24,
+                        ),
                       ),
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
                       GestureDetector(
@@ -301,11 +481,11 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => ReviewsScreen(),
+                              builder: (context) => const ReviewsScreen(),
                             ),
                           );
                         },
-                        child: Text(
+                        child: const Text(
                           "Reviews",
                           style: TextStyle(
                             fontSize: 16,
@@ -317,8 +497,8 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                           ),
                         ),
                       ),
-                      Spacer(),
-                      Text(
+                      const Spacer(),
+                      const Text(
                         "32",
                         style: TextStyle(
                           color: Color(0xFF9E9E9E),
@@ -329,7 +509,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 const Padding(
@@ -377,7 +557,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Padding(
