@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ulmo/common_widget/elevated_common.dart';
 import 'package:ulmo/common_widget/gridview_common.dart';
 
+import 'reviews_screen.dart';
+
 class ProductPageScreen extends StatefulWidget {
   const ProductPageScreen({Key? key}) : super(key: key);
 
@@ -180,15 +182,15 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                   ),
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(10),
                   child: Container(
                     height: 64,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
-                      color: const Color(0xFFE0E0E0),
+                      color: const Color(0xFFF5F5F5),
                     ),
                     child: Padding(
                       padding: const EdgeInsets.all(10),
@@ -229,14 +231,12 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                               ),
                             ],
                           ),
-                          const SizedBox(
-                            width: 50,
-                          ),
+                          Spacer(),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Container(
-                                width: 104,
+                                width: 70,
                                 height: 36,
                                 decoration: BoxDecoration(
                                   color: const Color(0xFFFEE440),
@@ -262,6 +262,9 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                     ),
                   ),
                 ),
+                SizedBox(
+                  height: 10,
+                ),
                 const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Row(
@@ -286,19 +289,32 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                     ],
                   ),
                 ),
-                const Padding(
+                SizedBox(
+                  height: 15,
+                ),
+                Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Text(
-                        "Reviews",
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Color(
-                            0xFF212121,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ReviewsScreen(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          "Reviews",
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Color(
+                              0xFF212121,
+                            ),
+                            fontFamily: "poppins",
+                            fontWeight: FontWeight.w400,
                           ),
-                          fontFamily: "poppins",
-                          fontWeight: FontWeight.w400,
                         ),
                       ),
                       Spacer(),
@@ -312,6 +328,9 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                       ),
                     ],
                   ),
+                ),
+                SizedBox(
+                  height: 15,
                 ),
                 const Padding(
                   padding: EdgeInsets.all(8.0),
@@ -341,19 +360,25 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                   ),
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 const Padding(
                   padding: EdgeInsets.all(8.0),
-                  child: Text(
-                    "you might also like",
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: "poppins",
-                      color: Color(0xFF212121),
+                  child: Align(
+                    alignment: AlignmentDirectional.topStart,
+                    child: Text(
+                      "you might also like",
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: "poppins",
+                        color: Color(0xFF212121),
+                      ),
                     ),
                   ),
+                ),
+                SizedBox(
+                  height: 15,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),

@@ -46,19 +46,17 @@ class _StoryScreenState extends State<StoryScreen> {
                         width: 40,
                         height: 40,
                         decoration: BoxDecoration(borderRadius: BorderRadius.circular(50), color: Colors.white),
-                        child: GestureDetector(
-                          onTap: () {
-                            Navigator.pop(
+                        child: CloseButton(
+                          color: const Color(0xFF212121),
+                          onPressed: (() {
+                            Navigator.pushAndRemoveUntil(
                               context,
                               MaterialPageRoute(
                                 builder: (context) => const MainPageScreen(),
                               ),
+                              (route) => false,
                             );
-                          },
-                          child: CloseButton(
-                            color: const Color(0xFF212121),
-                            onPressed: (() {}),
-                          ),
+                          }),
                         ),
                       ),
                     ),

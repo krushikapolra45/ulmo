@@ -63,7 +63,7 @@ class _FilterScreenState extends State<FilterScreen> {
             const SizedBox(
               height: 20,
             ),
-            const Padding(
+            Padding(
               padding: EdgeInsets.all(8.0),
               child: Row(
                 children: [

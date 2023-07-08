@@ -61,6 +61,8 @@ class _PopoverScreenState extends State<PopoverScreen> {
                       padding: const EdgeInsets.all(8.0),
                       child: ElevatedCommon(
                         elevated: "Subscribe",
+                        width: double.infinity,
+                        hight: 64,
                       ),
                     ),
                     Padding(

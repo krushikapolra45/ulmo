@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ulmo/common_widget/elevated_common.dart';
 import 'package:ulmo/common_widget/titlename_common.dart';
 
 class FilterOptionScreen extends StatefulWidget {
@@ -32,23 +33,34 @@ class _FilterOptionScreenState extends State<FilterOptionScreen> {
               name: "Category",
               text: "clear",
             ),
-            ListTile(
-              leading: Checkbox(
-                value: checkvalue,
-                fillColor: const MaterialStatePropertyAll(
-                  Color(0xFFFEE440),
-                ),
-                checkColor: Colors.black,
-                onChanged: (value) {
-                  debugPrint("value---> $value");
-                  setState(() {
-                    checkvalue = value!;
-                    Transform.scale(
-                      scale: 5,
-                    );
-                  });
-                },
-              ),
+            const SizedBox(
+              height: 10,
+            ),
+            Column(
+              children: listButton
+                  .map((data) => CheckboxListTile(
+                        value: checkvalue,
+                        onChanged: (val) {
+                          setState(() {
+                            checkvalue = val!;
+                            if (val == true) {
+                              val = checkvalue;
+                            }
+                          });
+                        },
+                        activeColor: Color(0xFFFEE440),
+                        checkColor: Color(0xFF212121),
+                        checkboxShape: const CircleBorder(),
+                      ))
+                  .toList(),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            const ElevatedCommon(
+              elevated: "Show 25 items",
+              width: double.infinity,
+              hight: 64,
             ),
           ],
         ),

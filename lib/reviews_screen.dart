@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ulmo/common_widget/textfield_common.dart';
+import 'package:ulmo/new_review_screen.dart';
 
 class ReviewsScreen extends StatefulWidget {
   const ReviewsScreen({Key? key}) : super(key: key);
@@ -17,7 +18,7 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              const Row(
+              Row(
                 children: [
                   BackButton(
                     color: Color(0xFF212121),
@@ -37,12 +38,22 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
                   SizedBox(
                     width: 48,
                   ),
-                  Text(
-                    "new Reviews",
-                    style: TextStyle(
-                      color: Color(0xFF212121),
-                      fontSize: 16,
-                      fontFamily: "poppins",
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const NewReviewScreen(),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      "new Reviews",
+                      style: TextStyle(
+                        color: Color(0xFF212121),
+                        fontSize: 16,
+                        fontFamily: "poppins",
+                      ),
                     ),
                   ),
                 ],

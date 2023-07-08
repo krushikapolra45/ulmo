@@ -103,6 +103,8 @@ class _NewReviewScreenState extends State<NewReviewScreen> {
             ),
             const ElevatedCommon(
               elevated: "Send review",
+              width: double.infinity,
+              hight: 64,
             ),
           ],
         ),

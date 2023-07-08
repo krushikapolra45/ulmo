@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ulmo/main_page_screen.dart';
+import 'package:ulmo/filter_option_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           ),
       // initialRoute: Routename.initialRoute,
       // routes: AppRoute().approutes,
-      home: const MainPageScreen(),
+      home: const FilterOptionScreen(),
     );
   }
 }

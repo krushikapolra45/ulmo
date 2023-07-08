@@ -47,7 +47,11 @@ class _EmptyAccountScreenState extends State<EmptyAccountScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                ElevatedCommon(elevated: "Continue with phone"),
+                ElevatedCommon(
+                  elevated: "Continue with phone",
+                  width: double.infinity,
+                  hight: 36,
+                ),
               ],
             ),
           ],
