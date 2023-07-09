@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ulmo/bag_screen.dart';
 import 'package:ulmo/categories_screen.dart';
 import 'package:ulmo/common_widget/gridview_common.dart';
 import 'package:ulmo/common_widget/item_common.dart';
@@ -14,6 +15,13 @@ class MainPageScreen extends StatefulWidget {
 }
 
 class _MainPageScreenState extends State<MainPageScreen> {
+  List<Widget> ScreenList = [
+    const MainPageScreen(),
+    const BagScreen(),
+    // Login_Success(),
+    // LoginScreen(),
+  ];
+
   List<Map<String, dynamic>> searchList = [
     {
       "serchText": "badRoom",

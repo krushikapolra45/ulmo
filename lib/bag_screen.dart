@@ -9,6 +9,7 @@ class BagScreen extends StatefulWidget {
 }
 
 class _BagScreenState extends State<BagScreen> {
+  int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -95,7 +95,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
                       onPressed: () {
                         showModalBottomSheet(
                           barrierColor: Colors.black,
-                          shape: OutlineInputBorder(
+                          shape: const OutlineInputBorder(
                             borderRadius: BorderRadius.only(
                               topRight: Radius.circular(20),
                               topLeft: Radius.circular(20),
@@ -106,11 +106,11 @@ class _CatalogScreenState extends State<CatalogScreen> {
                             return Wrap(
                               children: [
                                 Padding(
-                                  padding: EdgeInsets.all(12),
+                                  padding: const EdgeInsets.all(12),
                                   child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-                                      SizedBox(
+                                      const SizedBox(
                                         height: 30,
                                       ),
                                       const Text(
@@ -134,9 +134,9 @@ class _CatalogScreenState extends State<CatalogScreen> {
                                           const Spacer(),
                                           Checkbox(
                                             value: checkBoxValue,
-                                            checkColor: Color(0xFF212121),
-                                            activeColor: Color(0xFFFEE440),
-                                            shape: CircleBorder(),
+                                            checkColor: const Color(0xFF212121),
+                                            activeColor: const Color(0xFFFEE440),
+                                            shape: const CircleBorder(),
                                             onChanged: (value) {
                                               debugPrint("value---> $value");
                                               setState(() {
@@ -194,7 +194,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
                                     ),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 10,
                                 ),
                               ],

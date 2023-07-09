@@ -69,7 +69,11 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(50),
                             ),
-                            child: const Icon(Icons.favorite_outline, color: Colors.black, size: 20),
+                            child: const Icon(
+                              Icons.favorite_outline,
+                              color: Colors.black,
+                              size: 20,
+                            ),
                           ),
                         ),
                       ],
@@ -140,7 +144,10 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                               width: 102,
                               height: 36,
                               decoration: BoxDecoration(
-                                border: Border.all(color: const Color(0xFFE0E0E0), width: 1),
+                                border: Border.all(
+                                  color: const Color(0xFFE0E0E0),
+                                  width: 1,
+                                ),
                                 borderRadius: BorderRadius.circular(8),
                               ),
                               child: Row(
@@ -302,12 +309,22 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                                         SizedBox(height: 20),
                                         Text(
                                           "Product information",
-                                          style: TextStyle(fontSize: 32, color: Color(0xFF212121), fontFamily: "poppins", fontWeight: FontWeight.bold),
+                                          style: TextStyle(
+                                            fontSize: 32,
+                                            color: Color(0xFF212121),
+                                            fontFamily: "poppins",
+                                            fontWeight: FontWeight.bold,
+                                          ),
                                         ),
                                         SizedBox(height: 30),
                                         Text(
                                           "measurements",
-                                          style: TextStyle(fontSize: 24, color: Color(0xFF212121), fontFamily: "poppins", fontWeight: FontWeight.w600),
+                                          style: TextStyle(
+                                            fontSize: 24,
+                                            color: Color(0xFF212121),
+                                            fontFamily: "poppins",
+                                            fontWeight: FontWeight.w600,
+                                          ),
                                         ),
                                         SizedBox(height: 30),
                                         Row(
