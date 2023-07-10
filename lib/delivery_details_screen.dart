@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ulmo/common_widget/calander_common.dart';
 import 'package:ulmo/common_widget/contect_title_common.dart';
+import 'package:ulmo/common_widget/elevated_common.dart';
 import 'package:ulmo/common_widget/sem_detail_common.dart';
 
 class DeliveryDetailsScreen extends StatefulWidget {
@@ -21,7 +23,7 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
               name: "2 of 3",
               title: "checkout",
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             const Padding(
@@ -38,6 +40,9 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                 ),
               ),
             ),
+            SizedBox(
+              height: 20,
+            ),
             const SemDetailCommon(
               name: "By courier",
               title: "Tomorrow, any time",
@@ -48,6 +53,9 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
               name: "I'll take it myself",
               title: "Any day from tomorrow",
               icon: Icons.shopping_cart_outlined,
+            ),
+            SizedBox(
+              height: 20,
             ),
             const Padding(
               padding: EdgeInsets.all(8.0),
@@ -244,7 +252,10 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                 ],
               ),
             ),
-            Padding(
+            SizedBox(
+              height: 20,
+            ),
+            const Padding(
               padding: EdgeInsets.all(8.0),
               child: Align(
                 alignment: Alignment.topLeft,
@@ -258,6 +269,78 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                 ),
               ),
             ),
+            SizedBox(
+              height: 20,
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 15),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFF5F5F5),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: const Text(
+                        "Tommorrow",
+                        style: TextStyle(color: Color(0xFF212121), fontSize: 15),
+                      ),
+                    ),
+                  ),
+                  const CalanderCommon(
+                    date: " Jun  25 ",
+                  ),
+                  const CalanderCommon(
+                    date: " Jun  26 ",
+                  ),
+                  const CalanderCommon(
+                    date: " Jun  27 ",
+                  ),
+                ],
+              ),
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 15),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFF5F5F5),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: const Text(
+                        " 12:00 pm ",
+                        style: TextStyle(color: Color(0xFF212121), fontSize: 15),
+                      ),
+                    ),
+                  ),
+                  const CalanderCommon(
+                    date: " 2:00 pm ",
+                  ),
+                  const CalanderCommon(
+                    date: " 4:00 pm ",
+                  ),
+                  const CalanderCommon(
+                    date: " 6:00 pm ",
+                  ),
+                ],
+              ),
+            ),
+            Spacer(),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 15),
+              child: ElevatedCommon(
+                width: 343,
+                elevated: "continue",
+                hight: 64,
+              ),
+            )
           ],
         ),
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ulmo/common_widget/elevated_common.dart';
+import 'package:ulmo/common_widget/totle_price_common.dart';
 
 class BagScreen extends StatefulWidget {
   const BagScreen({Key? key}) : super(key: key);
@@ -228,40 +229,11 @@ class _BagScreenState extends State<BagScreen> {
               SizedBox(
                 height: 20,
               ),
-              Row(
-                children: [
-                  Text("total",
-                      style: TextStyle(
-                        color: Color(0xFF212121),
-                        fontSize: 24,
-                        fontWeight: FontWeight.w600,
-                      )),
-                  Spacer(),
-                  Text(
-                    "\$420,50",
-                    style: TextStyle(
-                      color: Color(0xFF212121),
-                      fontSize: 24,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 5,
-              ),
-              Row(
-                children: [
-                  Text(
-                    "Promocode",
-                    style: TextStyle(color: Color(0xFF9E9E9E), fontSize: 16),
-                  ),
-                  Spacer(),
-                  Text(
-                    "−\$25,00",
-                    style: TextStyle(color: Color(0xFF9E9E9E), fontSize: 16),
-                  ),
-                ],
+              TotlePriceScreen(
+                totle: "total",
+                price: "\$420,50",
+                code: "Promocode",
+                codeprice: "−\$25,00",
               ),
               SizedBox(
                 height: 15,

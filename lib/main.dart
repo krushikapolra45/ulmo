@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ulmo/delivery_details_screen.dart';
+import 'package:ulmo/my_orders_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           ),
       // initialRoute: Routename.initialRoute,
       // routes: AppRoute().approutes,
-      home: DeliveryDetailsScreen(),
+      home: MyOrdersScreen(),
     );
   }
 }
