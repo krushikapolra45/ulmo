@@ -21,7 +21,7 @@ class ElevatedCommon extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: ElevatedButton(
         style: ButtonStyle(
-          backgroundColor: MaterialStatePropertyAll(Color(0xFFFee440)),
+          backgroundColor: const MaterialStatePropertyAll(Color(0xFFFee440)),
           shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.circular(radius ?? 8))),
           fixedSize: MaterialStatePropertyAll(
             Size(width!, hight!),

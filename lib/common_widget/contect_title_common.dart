@@ -28,7 +28,7 @@ class ContactTitleCommon extends StatelessWidget {
               Text(
                 name ?? "",
                 style: const TextStyle(
-                  fontSize: 16,
+                  fontSize: 12,
                   color: Color(0xFF9E9E9E),
                 ),
               ),
