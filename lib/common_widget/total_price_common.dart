@@ -1,18 +1,11 @@
 import 'package:flutter/material.dart';
 
 class TotlePriceScreen extends StatelessWidget {
-  final String? totle;
+  final String? total;
   final String? price;
   final String? code;
   final String? codeprice;
-
-  const TotlePriceScreen({
-    Key? key,
-    this.totle,
-    this.price,
-    this.code,
-    this.codeprice,
-  }) : super(key: key);
+  const TotlePriceScreen({Key? key, this.total, this.price, this.code, this.codeprice}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +13,7 @@ class TotlePriceScreen extends StatelessWidget {
       children: [
         Row(
           children: [
-            Text(totle ?? "",
+            Text(total ?? "",
                 style: TextStyle(
                   color: Color(0xFF212121),
                   fontSize: 24,

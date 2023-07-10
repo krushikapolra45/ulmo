@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ulmo/common_widget/elevated_common.dart';
-import 'package:ulmo/common_widget/totle_price_common.dart';
+import 'package:ulmo/common_widget/total_price_common.dart';
 
 class BagScreen extends StatefulWidget {
   const BagScreen({Key? key}) : super(key: key);
@@ -230,7 +230,7 @@ class _BagScreenState extends State<BagScreen> {
                 height: 20,
               ),
               TotlePriceScreen(
-                totle: "total",
+                total: "total",
                 price: "\$420,50",
                 code: "Promocode",
                 codeprice: "−\$25,00",
