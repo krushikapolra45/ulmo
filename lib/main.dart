@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ulmo/contect_info_screen.dart';
 import 'package:ulmo/order_screen.dart';
 
 void main() {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
           ),
       // initialRoute: Routename.initialRoute,
       // routes: AppRoute().approutes,
-      home: OrderScreen(),
+      home: ContactInfoScreen(),
     );
   }
 }
