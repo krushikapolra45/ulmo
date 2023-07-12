@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 class CategoriesCommon extends StatelessWidget {
   final String? images;
   final String? itemname;
-  const CategoriesCommon({Key? key, this.images, this.itemname}) : super(key: key);
+  final double? hight;
+  final double? width;
+  const CategoriesCommon({Key? key, this.images, this.itemname, this.hight, this.width}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +13,11 @@ class CategoriesCommon extends StatelessWidget {
       padding: const EdgeInsets.all(15),
       child: Row(
         children: [
-          Image.asset(images ?? "", width: 36, height: 36),
+          Image.asset(
+            images ?? "",
+            width: width!,
+            height: hight!,
+          ),
           const SizedBox(
             width: 20,
           ),
