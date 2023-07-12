@@ -13,12 +13,12 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(8.0),
                 child: Container(
                   width: double.infinity,
                   height: 64,
@@ -49,10 +49,8 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
                   ),
                 ),
               ),
-              SizedBox(
-                height: 10,
-              ),
-              Padding(
+              const SizedBox(height: 10),
+              const Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -73,9 +71,7 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
                         fontFamily: "Poppins",
                       ),
                     ),
-                    SizedBox(
-                      height: 20,
-                    ),
+                    SizedBox(height: 20),
                     Text(
                       " wood table",
                       style: TextStyle(

@@ -22,9 +22,7 @@ class _FilterScreenState extends State<FilterScreen> {
               name: "Category",
               text: "clear",
             ),
-            const SizedBox(
-              height: 10,
-            ),
+            const SizedBox(height: 10),
             const Padding(
               padding: EdgeInsets.all(8.0),
               child: Row(
@@ -60,10 +58,8 @@ class _FilterScreenState extends State<FilterScreen> {
                 });
               },
             ),
-            const SizedBox(
-              height: 20,
-            ),
-            Padding(
+            const SizedBox(height: 20),
+            const Padding(
               padding: EdgeInsets.all(8.0),
               child: Row(
                 children: [
@@ -88,33 +84,23 @@ class _FilterScreenState extends State<FilterScreen> {
                 ],
               ),
             ),
-            const SizedBox(
-              height: 25,
-            ),
+            const SizedBox(height: 25),
             const FilterCommon(
               name: "Product type",
             ),
-            const SizedBox(
-              height: 25,
-            ),
+            const SizedBox(height: 25),
             const FilterCommon(
               name: "Color",
             ),
-            const SizedBox(
-              height: 25,
-            ),
+            const SizedBox(height: 25),
             const FilterCommon(
               name: "Size",
             ),
-            const SizedBox(
-              height: 25,
-            ),
+            const SizedBox(height: 25),
             const FilterCommon(
               name: "Quality",
             ),
-            SizedBox(
-              height: 90,
-            ),
+            const SizedBox(height: 90),
             const ElevatedCommon(
               elevated: "Show 25 items",
               width: double.infinity,

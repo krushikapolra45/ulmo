@@ -76,9 +76,7 @@ class _StoryScreenState extends State<StoryScreen> {
                             fontFamily: "Poppins",
                           ),
                         ),
-                        SizedBox(
-                          height: 10,
-                        ),
+                        SizedBox(height: 10),
                         Text(
                           "Hermetic storage jar. Made of glass with a\nraised slogan detail and a golden\nscrew-on lid. Available in three sizes.",
                           style: TextStyle(

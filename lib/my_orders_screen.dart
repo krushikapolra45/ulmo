@@ -18,14 +18,14 @@ class _MyOrdersScreenState extends State<MyOrdersScreen> {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              TitleScreen(
+              const TitleScreen(
                 name: "My orders",
               ),
-              TextFieldScreen(
+              const TextFieldScreen(
                 icon: Icons.search_rounded,
                 name: "search",
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -36,10 +36,10 @@ class _MyOrdersScreenState extends State<MyOrdersScreen> {
                       color: const Color(0xFFF5F5F5),
                       borderRadius: BorderRadius.circular(8),
                     ),
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Text(
+                        Text(
                           textAlign: TextAlign.center,
                           "sort",
                           style: TextStyle(
@@ -55,7 +55,7 @@ class _MyOrdersScreenState extends State<MyOrdersScreen> {
                       ],
                     ),
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   Container(
                     width: 175,
                     height: 36,
@@ -81,12 +81,12 @@ class _MyOrdersScreenState extends State<MyOrdersScreen> {
                   ),
                 ],
               ),
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
                   children: [
-                    Row(
+                    const Row(
                       children: [
                         Text(
                           "Yesterday, 10:00 am",
@@ -108,7 +108,7 @@ class _MyOrdersScreenState extends State<MyOrdersScreen> {
                         ),
                       ],
                     ),
-                    Row(
+                    const Row(
                       children: [
                         Text(
                           "Waiting for payment",
@@ -125,7 +125,7 @@ class _MyOrdersScreenState extends State<MyOrdersScreen> {
                         ),
                       ],
                     ),
-                    SizedBox(height: 15),
+                    const SizedBox(height: 15),
                     Row(
                       children: [
                         Image.asset(
@@ -133,9 +133,7 @@ class _MyOrdersScreenState extends State<MyOrdersScreen> {
                           width: 60,
                           height: 73,
                         ),
-                        SizedBox(
-                          width: 10,
-                        ),
+                        const SizedBox(width: 10),
                         Image.asset(
                           "assets/images/squretable.png",
                           width: 60,
@@ -143,8 +141,8 @@ class _MyOrdersScreenState extends State<MyOrdersScreen> {
                         ),
                       ],
                     ),
-                    SizedBox(height: 30),
-                    Row(
+                    const SizedBox(height: 30),
+                    const Row(
                       children: [
                         Text("December 25",
                             style: TextStyle(
@@ -165,7 +163,7 @@ class _MyOrdersScreenState extends State<MyOrdersScreen> {
                         ),
                       ],
                     ),
-                    Row(
+                    const Row(
                       children: [
                         Text(
                           "Delivered",
@@ -186,7 +184,7 @@ class _MyOrdersScreenState extends State<MyOrdersScreen> {
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 15,
                     ),
                     Row(
@@ -196,13 +194,13 @@ class _MyOrdersScreenState extends State<MyOrdersScreen> {
                           width: 60,
                           height: 73,
                         ),
-                        SizedBox(width: 10),
+                        const SizedBox(width: 10),
                         Image.asset(
                           "assets/images/welvetcunjo.png",
                           width: 60,
                           height: 73,
                         ),
-                        SizedBox(width: 10),
+                        const SizedBox(width: 10),
                         Image.asset(
                           "assets/images/blackjug.png",
                           width: 60,

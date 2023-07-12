@@ -14,16 +14,16 @@ class TotlePriceScreen extends StatelessWidget {
         Row(
           children: [
             Text(total ?? "",
-                style: TextStyle(
+                style: const TextStyle(
                   color: Color(0xFF212121),
                   fontSize: 24,
                   fontWeight: FontWeight.w600,
                   fontFamily: "Poppins",
                 )),
-            Spacer(),
+            const Spacer(),
             Text(
               price ?? "",
-              style: TextStyle(
+              style: const TextStyle(
                 color: Color(0xFF212121),
                 fontSize: 24,
                 fontWeight: FontWeight.w600,
@@ -31,17 +31,17 @@ class TotlePriceScreen extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(height: 5),
+        const SizedBox(height: 5),
         Row(
           children: [
             Text(
               code ?? "",
-              style: TextStyle(color: Color(0xFF9E9E9E), fontSize: 16),
+              style: const TextStyle(color: Color(0xFF9E9E9E), fontSize: 16),
             ),
-            Spacer(),
+            const Spacer(),
             Text(
               codeprice ?? "",
-              style: TextStyle(color: Color(0xFF9E9E9E), fontSize: 16),
+              style: const TextStyle(color: Color(0xFF9E9E9E), fontSize: 16),
             ),
           ],
         ),

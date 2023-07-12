@@ -23,9 +23,7 @@ class _NewReviewScreenState extends State<NewReviewScreen> {
                   color: const Color(0xFF212121),
                   onPressed: (() {}),
                 ),
-                const SizedBox(
-                  width: 100,
-                ),
+                const SizedBox(width: 100),
                 const Text(
                   "New review",
                   style: TextStyle(
@@ -36,17 +34,13 @@ class _NewReviewScreenState extends State<NewReviewScreen> {
                 ),
               ],
             ),
-            SizedBox(
-              height: 30,
-            ),
+            const SizedBox(height: 30),
             Image.asset(
               "assets/images/Rating1.png",
               height: 32,
               width: 192,
             ),
-            SizedBox(
-              height: 10,
-            ),
+            const SizedBox(height: 10),
             const Text(
               "Nice",
               style: TextStyle(
@@ -55,9 +49,7 @@ class _NewReviewScreenState extends State<NewReviewScreen> {
                 fontFamily: "Poppins",
               ),
             ),
-            SizedBox(
-              height: 20,
-            ),
+            const SizedBox(height: 20),
             Container(
               width: 343,
               height: 64,
@@ -96,33 +88,25 @@ class _NewReviewScreenState extends State<NewReviewScreen> {
               child: Row(
                 children: [
                   Image.asset("assets/images/Large camera.png", width: 54, height: 54),
-                  const SizedBox(
-                    width: 10,
-                  ),
+                  const SizedBox(width: 10),
                   Image.asset("assets/images/closetbl.png", width: 54, height: 54),
-                  const SizedBox(
-                    width: 10,
-                  ),
+                  const SizedBox(width: 10),
                   Image.asset("assets/images/closelock.png", width: 54, height: 54),
                 ],
               ),
             ),
-            const SizedBox(
-              height: 10,
-            ),
-            GestureDetector(
-              onTap: () {
+            const SizedBox(height: 10),
+            ElevatedCommon(
+              elevated: "Send review",
+              width: double.infinity,
+              hight: 64,
+              onPress: () {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => PopoverScreen(),
+                      builder: (context) => const PopoverScreen(),
                     ));
               },
-              child: const ElevatedCommon(
-                elevated: "Send review",
-                width: double.infinity,
-                hight: 64,
-              ),
             ),
           ],
         ),

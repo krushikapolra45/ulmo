@@ -33,9 +33,7 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
                       fontWeight: FontWeight.w400,
                     ),
                   ),
-                  const SizedBox(
-                    width: 48,
-                  ),
+                  const SizedBox(width: 48),
                   GestureDetector(
                     onTap: () {
                       Navigator.push(

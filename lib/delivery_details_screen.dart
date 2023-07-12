@@ -25,9 +25,7 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
               name: "2 of 3",
               title: "checkout",
             ),
-            const SizedBox(
-              height: 10,
-            ),
+            const SizedBox(height: 10),
             const Padding(
               padding: EdgeInsets.all(8.0),
               child: Align(
@@ -42,9 +40,7 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                 ),
               ),
             ),
-            SizedBox(
-              height: 20,
-            ),
+            const SizedBox(height: 20),
             const SemDetailCommon(
               name: "By courier",
               title: "Tomorrow, any time",
@@ -56,9 +52,7 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
               title: "Any day from tomorrow",
               icon: Icons.shopping_cart_outlined,
             ),
-            SizedBox(
-              height: 20,
-            ),
+            const SizedBox(height: 20),
             const Padding(
               padding: EdgeInsets.all(8.0),
               child: Align(
@@ -263,9 +257,7 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                 ],
               ),
             ),
-            SizedBox(
-              height: 20,
-            ),
+            const SizedBox(height: 20),
             const Padding(
               padding: EdgeInsets.all(8.0),
               child: Align(
@@ -281,9 +273,7 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                 ),
               ),
             ),
-            SizedBox(
-              height: 20,
-            ),
+            const SizedBox(height: 20),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
@@ -344,17 +334,17 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                 ],
               ),
             ),
-            Spacer(),
+            const Spacer(),
             GestureDetector(
               onTap: () {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => PaymentMethodScreen(),
+                      builder: (context) => const PaymentMethodScreen(),
                     ));
               },
-              child: Padding(
-                padding: const EdgeInsets.only(bottom: 15),
+              child: const Padding(
+                padding: EdgeInsets.only(bottom: 15),
                 child: ElevatedCommon(
                   width: 343,
                   elevated: "continue",

@@ -200,9 +200,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
                                     ),
                                   ),
                                 ),
-                                const SizedBox(
-                                  height: 10,
-                                ),
+                                const SizedBox(height: 10),
                               ],
                             );
                           },
@@ -228,9 +226,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
                         ],
                       ),
                     ),
-                    const SizedBox(
-                      width: 15,
-                    ),
+                    const SizedBox(width: 15),
                     ElevatedButton(
                       style: ButtonStyle(
                         backgroundColor: const MaterialStatePropertyAll(Color(0xFFF5F5F5)),
@@ -351,9 +347,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
                                   ),
                                 ],
                               ),
-                              const SizedBox(
-                                width: 80,
-                              ),
+                              const SizedBox(width: 80),
                               Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [

@@ -25,7 +25,7 @@ class _FilterOptionScreenState extends State<FilterOptionScreen> {
   ];
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SafeArea(
         child: Column(
           children: [
@@ -33,16 +33,12 @@ class _FilterOptionScreenState extends State<FilterOptionScreen> {
               name: "Category",
               text: "clear",
             ),
-            SizedBox(
-              height: 10,
-            ),
+            SizedBox(height: 10),
             Column(
               children: [],
             ),
-            const SizedBox(
-              height: 30,
-            ),
-            const ElevatedCommon(
+            SizedBox(height: 30),
+            ElevatedCommon(
               elevated: "Show 25 items",
               width: double.infinity,
               hight: 64,

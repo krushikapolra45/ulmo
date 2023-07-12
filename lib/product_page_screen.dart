@@ -105,9 +105,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                             fontFamily: "Poppins",
                           ),
                         ),
-                        const SizedBox(
-                          height: 20,
-                        ),
+                        const SizedBox(height: 20),
                         Row(
                           children: [
                             Container(
@@ -136,9 +134,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                                 ],
                               ),
                             ),
-                            const SizedBox(
-                              width: 20,
-                            ),
+                            const SizedBox(width: 20),
                             Container(
                               width: 102,
                               height: 36,
@@ -170,9 +166,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                             ),
                           ],
                         ),
-                        const SizedBox(
-                          height: 10,
-                        ),
+                        const SizedBox(height: 10),
                         const ElevatedCommon(
                           elevated: "Add to bag",
                           icon: Icons.shopping_bag_outlined,
@@ -183,9 +177,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                     ),
                   ),
                 ),
-                const SizedBox(
-                  height: 10,
-                ),
+                const SizedBox(height: 10),
                 Padding(
                   padding: const EdgeInsets.all(10),
                   child: Container(
@@ -485,9 +477,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                     ],
                   ),
                 ),
-                const SizedBox(
-                  height: 15,
-                ),
+                const SizedBox(height: 15),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
@@ -525,9 +515,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                     ],
                   ),
                 ),
-                const SizedBox(
-                  height: 15,
-                ),
+                const SizedBox(height: 15),
                 const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Row(
@@ -555,9 +543,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                     ],
                   ),
                 ),
-                const SizedBox(
-                  height: 15,
-                ),
+                const SizedBox(height: 15),
                 const Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Align(
@@ -573,9 +559,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                     ),
                   ),
                 ),
-                const SizedBox(
-                  height: 15,
-                ),
+                const SizedBox(height: 15),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: GridView.builder(

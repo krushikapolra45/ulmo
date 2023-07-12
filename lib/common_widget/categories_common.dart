@@ -8,7 +8,7 @@ class CategoriesCommon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(15),
+      padding: const EdgeInsets.all(15),
       child: Row(
         children: [
           Image.asset(images ?? "", width: 36, height: 36),

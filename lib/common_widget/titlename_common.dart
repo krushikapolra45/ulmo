@@ -21,7 +21,7 @@ class TitleScreen extends StatelessWidget {
             fontWeight: FontWeight.w500,
           ),
         ),
-        // const SizedBox(width: 90),
+        const SizedBox(width: 90),
         Text(
           text ?? "",
           style: const TextStyle(

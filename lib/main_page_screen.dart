@@ -129,39 +129,30 @@ class _MainPageScreenState extends State<MainPageScreen> {
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 3),
+                  padding: EdgeInsets.only(left: 3),
                   child: Row(
                     children: [
                       GestureDetector(
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => const StoryScreen()),
+                            MaterialPageRoute(builder: (context) => StoryScreen()),
                           );
                         },
-                        child: const ItemScreen(
+                        child: ItemCommon(
                           image: "assets/images/tablepic.png",
                           name: "best of\n2020",
                         ),
                       ),
-                      const SizedBox(
-                        width: 5,
-                      ),
-                      const ItemScreen(
+                      ItemCommon(
                         image: "assets/images/golden.png",
                         name: "the golden\nhour",
                       ),
-                      // const SizedBox(
-                      //   width: 5,
-                      // ),
-                      const ItemScreen(
+                      ItemCommon(
                         image: "assets/images/kitchen.png",
-                        name: "lovely \nkitchen",
+                        name: "lovely\nkitchen",
                       ),
-                      const SizedBox(
-                        width: 5,
-                      ),
-                      const ItemScreen(
+                      ItemCommon(
                         image: "assets/images/summer.png",
                         name: "summer\nchoice",
                       ),
@@ -225,9 +216,7 @@ class _MainPageScreenState extends State<MainPageScreen> {
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 10,
-              ),
+              const SizedBox(height: 10),
               const Row(
                 children: [
                   Padding(
@@ -243,9 +232,7 @@ class _MainPageScreenState extends State<MainPageScreen> {
                   )
                 ],
               ),
-              const SizedBox(
-                height: 10,
-              ),
+              const SizedBox(height: 10),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: GridView.builder(

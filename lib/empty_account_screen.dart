@@ -44,33 +44,27 @@ class _EmptyAccountScreenState extends State<EmptyAccountScreen> {
               height: 100,
               width: 98,
             ),
-            const SizedBox(
-              height: 30,
-            ),
-            Text(
+            const SizedBox(height: 30),
+            const Text(
               "come on in",
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 24,
                 color: Color(0xFF212121),
                 fontWeight: FontWeight.bold,
                 fontFamily: "Poppins",
               ),
             ),
-            const SizedBox(
-              height: 30,
-            ),
-            Text(
+            const SizedBox(height: 30),
+            const Text(
               "view orders and update your details",
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 16,
                 color: Color(0xFF9E9E9E),
                 fontWeight: FontWeight.w400,
                 fontFamily: "Poppins",
               ),
             ),
-            const SizedBox(
-              height: 100,
-            ),
+            const SizedBox(height: 100),
             const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

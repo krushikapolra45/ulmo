@@ -18,9 +18,7 @@ class _PopoverScreenState extends State<PopoverScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-              padding: EdgeInsets.only(
-                left: 42,
-              ),
+              padding: const EdgeInsets.only(left: 42),
               child: Container(
                 height: 500,
                 width: 311,
@@ -36,18 +34,14 @@ class _PopoverScreenState extends State<PopoverScreen> {
                       height: 180,
                       width: 279,
                     ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text(
+                    const SizedBox(height: 10),
+                    const Text(
                       textAlign: TextAlign.center,
                       "subscribe to our \n newsletter",
                       style: TextStyle(color: Color(0xFF212121), fontSize: 24, fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text(
+                    const SizedBox(height: 10),
+                    const Text(
                       "Only useful content no ad",
                       style: TextStyle(
                         color: Color(0xFF9E9E9E),
@@ -55,11 +49,9 @@ class _PopoverScreenState extends State<PopoverScreen> {
                         fontFamily: "Poppins",
                       ),
                     ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const SizedBox(height: 10),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: ElevatedCommon(
                         elevated: "Subscribe",
                         width: double.infinity,
@@ -74,15 +66,15 @@ class _PopoverScreenState extends State<PopoverScreen> {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(8),
                           child: ElevatedButton(
-                            style: ButtonStyle(
+                            style: const ButtonStyle(
                               backgroundColor: MaterialStatePropertyAll(
                                 Color(0xFFF5F5F5),
                               ),
                             ),
                             onPressed: () {},
-                            child: Text(
+                            child: const Text(
                               "Maybe later",
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontSize: 16,
                                 color: Colors.black,
                                 fontWeight: FontWeight.w400,

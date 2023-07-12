@@ -42,9 +42,7 @@ class _OrderScreenState extends State<OrderScreen> {
                   fontFamily: "Poppins",
                 ),
               ),
-              const SizedBox(
-                height: 30,
-              ),
+              const SizedBox(height: 30),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -149,7 +147,7 @@ class _OrderScreenState extends State<OrderScreen> {
                   ),
                 ],
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               const Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Align(
@@ -165,7 +163,7 @@ class _OrderScreenState extends State<OrderScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               const Row(
                 children: [
                   Icon(Icons.car_repair),

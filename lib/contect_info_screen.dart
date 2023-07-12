@@ -115,28 +115,37 @@ class _ContactInfoScreenState extends State<ContactInfoScreen> {
                       hintText: "Email",
                       filled: true,
                       fillColor: Color(0xFFF5F5F5),
-                      hintStyle: TextStyle(color: Color(0xFF9E9E9E), fontSize: 16, fontWeight: FontWeight.w400, fontFamily: "sf-pro-display-cufonfonts"),
+                      hintStyle: TextStyle(
+                        color: Color(0xFF9E9E9E),
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                        fontFamily: "Poppins",
+                      ),
                     ),
                     onTap: () {},
                   ),
                 ),
               ),
-              ElevatedCommon(
-                width: 343,
-                hight: 64,
-                elevated: "continue",
-                onPress: () {
-                  if (formKey.currentState!.validate()) {
-                    debugPrint("is valid");
+              const Spacer(),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 30),
+                child: ElevatedCommon(
+                  width: double.infinity,
+                  hight: 64,
+                  elevated: "continue",
+                  onPress: () {
+                    if (formKey.currentState!.validate()) {
+                      debugPrint("is valid");
 
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => DeliveryDetailsScreen()),
-                    );
-                  } else {
-                    debugPrint("is not valid");
-                  }
-                },
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const DeliveryDetailsScreen()),
+                      );
+                    } else {
+                      debugPrint("is not valid");
+                    }
+                  },
+                ),
               ),
             ],
           ),

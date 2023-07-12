@@ -16,14 +16,14 @@ class FilterCommon extends StatelessWidget {
         children: [
           Text(
             name ?? "",
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w500,
               fontFamily: "Poppins",
             ),
           ),
-          Spacer(),
-          Text(
+          const Spacer(),
+          const Text(
             "All",
             style: TextStyle(
               fontSize: 16,

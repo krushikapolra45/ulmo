@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class ItemScreen extends StatelessWidget {
+class ItemCommon extends StatelessWidget {
   final String? image;
   final String? name;
 
-  const ItemScreen({
+  const ItemCommon({
     Key? key,
     this.image,
     this.name,
@@ -16,7 +16,7 @@ class ItemScreen extends StatelessWidget {
       alignment: Alignment.bottomLeft,
       children: [
         Padding(
-          padding: const EdgeInsets.all(8),
+          padding: const EdgeInsets.all(10),
           child: ClipRRect(
             borderRadius: const BorderRadius.all(
               Radius.circular(8),
@@ -25,19 +25,16 @@ class ItemScreen extends StatelessWidget {
               image ?? "",
               height: 88,
               width: 88,
-              // fit: BoxFit.cover,
+              fit: BoxFit.cover,
             ),
           ),
         ),
-        const SizedBox(
-          height: 5,
-        ),
         Padding(
-          padding: const EdgeInsets.all(15),
+          padding: const EdgeInsets.only(bottom: 12, left: 15),
           child: Text(
             name ?? "",
             style: const TextStyle(
-              fontSize: 15,
+              fontSize: 12,
               color: Color(0xFFFFFFFF),
               fontWeight: FontWeight.bold,
               fontFamily: "Poppins",

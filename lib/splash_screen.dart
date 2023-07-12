@@ -12,7 +12,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFFEEB70),
+      backgroundColor: const Color(0xFFFEEB70),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -25,13 +25,13 @@ class _SplashScreenState extends State<SplashScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => MainPageScreen(),
+                        builder: (context) => const MainPageScreen(),
                       ),
                     );
                   },
                 );
               },
-              child: Text(
+              child: const Text(
                 "ulmo",
                 style: TextStyle(
                   color: Color(0xFF212121),

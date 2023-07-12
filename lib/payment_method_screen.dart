@@ -21,7 +21,7 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              ContactTitleCommon(
+              const ContactTitleCommon(
                 name: "2 of 3",
                 title: "checkout",
               ),
@@ -43,31 +43,31 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 15),
-              SemDetailCommon(
+              const SizedBox(height: 15),
+              const SemDetailCommon(
                 name: "Mastercard 9833",
                 title: "734, Exp: 12/29",
                 image: "assets/images_two/shape.png",
               ),
-              SemDetailCommon(
+              const SemDetailCommon(
                 name: "Visa 7233",
                 title: "321, Exp: 11/29",
                 image: "assets/images_two/visa.png",
               ),
-              SemDetailCommon(
+              const SemDetailCommon(
                 name: "Apple pay",
                 image: "assets/images_two/applelogo.png",
               ),
-              Spacer(),
+              const Spacer(),
               GestureDetector(
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => SuccessScreen()),
+                    MaterialPageRoute(builder: (context) => const SuccessScreen()),
                   );
                 },
-                child: Padding(
-                  padding: const EdgeInsets.only(bottom: 20),
+                child: const Padding(
+                  padding: EdgeInsets.only(bottom: 20),
                   child: ElevatedCommon(
                     width: double.infinity,
                     elevated: "Pay \$420,50",

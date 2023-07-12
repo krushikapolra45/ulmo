@@ -19,14 +19,14 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            TitleScreen(
+            const TitleScreen(
               name: "living room",
             ),
-            TextFieldScreen(
+            const TextFieldScreen(
               name: "search",
               icon: Icons.search_rounded,
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.all(10),
               child: Align(
                 alignment: Alignment.topLeft,
@@ -50,48 +50,48 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => CatalogScreen(),
+                            builder: (context) => const CatalogScreen(),
                           ),
                         );
                       },
-                      child: CategoriesCommon(
+                      child: const CategoriesCommon(
                         images: "assets/images_two/furniture.png",
                         itemname: "furniture",
                       ),
                     ),
-                    CategoriesCommon(
+                    const CategoriesCommon(
                       images: "assets/images_two/lighting.png",
                       itemname: "lighting",
                     ),
-                    CategoriesCommon(
+                    const CategoriesCommon(
                       images: "assets/images_two/rugs.png",
                       itemname: "rugs",
                     ),
-                    CategoriesCommon(
+                    const CategoriesCommon(
                       images: "assets/images_two/mirrors.png",
                       itemname: "mirrors",
                     ),
-                    CategoriesCommon(
+                    const CategoriesCommon(
                       images: "assets/images_two/blankets.png",
                       itemname: "blankets",
                     ),
-                    CategoriesCommon(
+                    const CategoriesCommon(
                       images: "assets/images_two/cushions.png",
                       itemname: "cushions",
                     ),
-                    CategoriesCommon(
+                    const CategoriesCommon(
                       images: "assets/images_two/curtains.png",
                       itemname: "curtains",
                     ),
-                    CategoriesCommon(
+                    const CategoriesCommon(
                       images: "assets/images_two/baskets.png",
                       itemname: "baskets",
                     ),
-                    CategoriesCommon(
+                    const CategoriesCommon(
                       images: "assets/images_two/vases.png",
                       itemname: "vases",
                     ),
-                    CategoriesCommon(
+                    const CategoriesCommon(
                       images: "assets/images_two/boxes.png",
                       itemname: "boxes",
                     ),

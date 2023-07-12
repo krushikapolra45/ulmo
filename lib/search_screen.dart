@@ -21,7 +21,7 @@ class _SearchScreenState extends State<SearchScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => SearchResultScreen(),
+                    builder: (context) => const SearchResultScreen(),
                   ),
                 );
               },
@@ -54,10 +54,8 @@ class _SearchScreenState extends State<SearchScreen> {
                 ),
               ),
             ),
-            SizedBox(
-              height: 10,
-            ),
-            Padding(
+            const SizedBox(height: 10),
+            const Padding(
               padding: EdgeInsets.all(8.0),
               child: Row(
                 children: [
@@ -66,9 +64,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     color: Color(0xFF212121),
                     size: 24,
                   ),
-                  SizedBox(
-                    width: 20,
-                  ),
+                  SizedBox(width: 20),
                   Text(
                     " wood chair ",
                     style: TextStyle(
@@ -86,10 +82,8 @@ class _SearchScreenState extends State<SearchScreen> {
                 ],
               ),
             ),
-            SizedBox(
-              height: 15,
-            ),
-            Padding(
+            const SizedBox(height: 15),
+            const Padding(
               padding: EdgeInsets.all(8.0),
               child: Row(
                 children: [
@@ -98,9 +92,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     color: Color(0xFF212121),
                     size: 24,
                   ),
-                  SizedBox(
-                    width: 20,
-                  ),
+                  SizedBox(width: 20),
                   Text(
                     " dark wood ",
                     style: TextStyle(

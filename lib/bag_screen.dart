@@ -240,11 +240,14 @@ class _BagScreenState extends State<BagScreen> {
                 height: 15,
               ),
               ElevatedCommon(
-                width: 343,
+                width: double.infinity,
                 hight: 64,
                 elevated: "checkout",
                 onPress: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => ContactInfoScreen()));
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const ContactInfoScreen()),
+                  );
                 },
               ),
             ],

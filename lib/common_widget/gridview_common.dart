@@ -21,7 +21,6 @@ class GridviewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      // crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Stack(
           children: [
@@ -39,9 +38,7 @@ class GridviewScreen extends StatelessWidget {
               )
           ],
         ),
-        const SizedBox(
-          height: 5,
-        ),
+        const SizedBox(height: 5),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -61,9 +58,7 @@ class GridviewScreen extends StatelessWidget {
             ),
           ],
         ),
-        const SizedBox(
-          height: 5,
-        ),
+        const SizedBox(height: 5),
         Align(
           alignment: Alignment.topLeft,
           child: Text(

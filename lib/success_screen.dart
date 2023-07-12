@@ -15,15 +15,13 @@ class _SuccessScreenState extends State<SuccessScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            SizedBox(height: 200),
+            const SizedBox(height: 200),
             Image.asset(
               "assets/images/friendly.png",
               height: 100,
               width: 98,
             ),
-            const SizedBox(
-              height: 30,
-            ),
+            const SizedBox(height: 30),
             const Text(
               textAlign: TextAlign.center,
               "your order is placed",
@@ -33,12 +31,10 @@ class _SuccessScreenState extends State<SuccessScreen> {
                 fontFamily: "Poppins",
               ),
             ),
-            const SizedBox(
-              height: 30,
-            ),
-            Align(
+            const SizedBox(height: 30),
+            const Align(
               alignment: Alignment.center,
-              child: const Text(
+              child: Text(
                 "thanks for your order, we hope you\n           enjoyed shopping with us",
                 style: TextStyle(
                   fontSize: 16,
@@ -48,16 +44,16 @@ class _SuccessScreenState extends State<SuccessScreen> {
                 ),
               ),
             ),
-            Spacer(),
+            const Spacer(),
             Padding(
-              padding: EdgeInsets.only(bottom: 30),
+              padding: const EdgeInsets.only(bottom: 30),
               child: OutlinedButton(
                 style: ButtonStyle(
                   shape: MaterialStatePropertyAll(
                     RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                   ),
-                  fixedSize: MaterialStatePropertyAll(Size(343, 64)),
-                  side: MaterialStatePropertyAll(BorderSide(width: 2)),
+                  fixedSize: const MaterialStatePropertyAll(Size(343, 64)),
+                  side: const MaterialStatePropertyAll(BorderSide(width: 2)),
                 ),
                 onPressed: () {},
                 child: const Text(
