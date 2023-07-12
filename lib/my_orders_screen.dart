@@ -42,7 +42,11 @@ class _MyOrdersScreenState extends State<MyOrdersScreen> {
                         const Text(
                           textAlign: TextAlign.center,
                           "sort",
-                          style: TextStyle(color: Color(0xFF212121), fontSize: 15),
+                          style: TextStyle(
+                            color: Color(0xFF212121),
+                            fontSize: 15,
+                            fontFamily: "Poppins",
+                          ),
                         ),
                         Icon(
                           Icons.swap_vert,
@@ -90,6 +94,7 @@ class _MyOrdersScreenState extends State<MyOrdersScreen> {
                             color: Color(0xFF212121),
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
+                            fontFamily: "Poppins",
                           ),
                         ),
                         Spacer(),
@@ -107,7 +112,11 @@ class _MyOrdersScreenState extends State<MyOrdersScreen> {
                       children: [
                         Text(
                           "Waiting for payment",
-                          style: TextStyle(color: Color(0xFF9E9E9E), fontSize: 14),
+                          style: TextStyle(
+                            color: Color(0xFF9E9E9E),
+                            fontSize: 14,
+                            fontFamily: "Poppins",
+                          ),
                         ),
                         Spacer(),
                         Text(
@@ -142,6 +151,7 @@ class _MyOrdersScreenState extends State<MyOrdersScreen> {
                               color: Color(0xFF212121),
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
+                              fontFamily: "Poppins",
                             )),
                         Spacer(),
                         Text(
@@ -150,6 +160,7 @@ class _MyOrdersScreenState extends State<MyOrdersScreen> {
                             color: Color(0xFF212121),
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
+                            fontFamily: "Poppins",
                           ),
                         ),
                       ],
@@ -158,12 +169,20 @@ class _MyOrdersScreenState extends State<MyOrdersScreen> {
                       children: [
                         Text(
                           "Delivered",
-                          style: TextStyle(color: Color(0xFF66BB6A), fontSize: 14),
+                          style: TextStyle(
+                            color: Color(0xFF66BB6A),
+                            fontSize: 14,
+                            fontFamily: "Poppins",
+                          ),
                         ),
                         Spacer(),
                         Text(
                           "#14124",
-                          style: TextStyle(color: Color(0xFF9E9E9E), fontSize: 14),
+                          style: TextStyle(
+                            color: Color(0xFF9E9E9E),
+                            fontSize: 14,
+                            fontFamily: "Poppins",
+                          ),
                         ),
                       ],
                     ),

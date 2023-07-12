@@ -19,6 +19,7 @@ class FilterCommon extends StatelessWidget {
             style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w500,
+              fontFamily: "Poppins",
             ),
           ),
           Spacer(),
@@ -28,6 +29,7 @@ class FilterCommon extends StatelessWidget {
               fontSize: 16,
               color: Color(0xFF9E9E9E),
               fontWeight: FontWeight.w500,
+              fontFamily: "Poppins",
             ),
           ),
         ],

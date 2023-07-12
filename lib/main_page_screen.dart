@@ -50,7 +50,7 @@ class _MainPageScreenState extends State<MainPageScreen> {
       "populerImage": "assets/images/woodtblroom.png",
       "price": "\$150.00",
       "icon": Icons.favorite,
-      "history": "Wooden bedside\ntable featuring a raised desi...",
+      "history": "Wooden bedside table\nfeaturing a raised desi...",
       "cardImages": "assets/images/new.png",
     },
     {
@@ -63,7 +63,7 @@ class _MainPageScreenState extends State<MainPageScreen> {
       "populerImage": "assets/images/squretable.png",
       "price": "\$140.25",
       "icon": Icons.favorite_border,
-      "history": "Square bedside table\nwith legs, a rattan shelf and a...",
+      "history": "Square bedside table with\nlegs, a rattan shelf and a...",
     },
     {
       "populerImage": "assets/images/tvtable.png",
@@ -114,7 +114,11 @@ class _MainPageScreenState extends State<MainPageScreen> {
                           SizedBox(width: 10),
                           Text(
                             "search",
-                            style: TextStyle(color: Color(0xFF9E9E9E), fontSize: 16),
+                            style: TextStyle(
+                              color: Color(0xFF9E9E9E),
+                              fontSize: 16,
+                              fontFamily: "Poppins",
+                            ),
                           ),
                         ],
                       ),
@@ -132,9 +136,7 @@ class _MainPageScreenState extends State<MainPageScreen> {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(
-                              builder: (context) => const StoryScreen(),
-                            ),
+                            MaterialPageRoute(builder: (context) => const StoryScreen()),
                           );
                         },
                         child: const ItemScreen(
@@ -149,9 +151,9 @@ class _MainPageScreenState extends State<MainPageScreen> {
                         image: "assets/images/golden.png",
                         name: "the golden\nhour",
                       ),
-                      const SizedBox(
-                        width: 5,
-                      ),
+                      // const SizedBox(
+                      //   width: 5,
+                      // ),
                       const ItemScreen(
                         image: "assets/images/kitchen.png",
                         name: "lovely \nkitchen",
@@ -200,7 +202,7 @@ class _MainPageScreenState extends State<MainPageScreen> {
                                 searchList[index]["serchText"],
                                 style: const TextStyle(
                                   fontSize: 24,
-                                  fontFamily: "poppins",
+                                  fontFamily: "Poppins",
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
@@ -235,6 +237,7 @@ class _MainPageScreenState extends State<MainPageScreen> {
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.w600,
+                        fontFamily: "Poppins",
                       ),
                     ),
                   )
@@ -253,7 +256,7 @@ class _MainPageScreenState extends State<MainPageScreen> {
                       crossAxisCount: 2,
                       mainAxisSpacing: 30,
                       crossAxisSpacing: 20,
-                      mainAxisExtent: 280,
+                      mainAxisExtent: 290,
                     ),
                     itemBuilder: (context, index) {
                       return GridviewScreen(

@@ -17,7 +17,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
       "populerImage": "assets/images/squretable.png",
       "price": "\$140.25",
       "icon": Icons.favorite_border,
-      "history": "Square bedside table\nwith legs, a rattan shelf and a...",
+      "history": "Square bedside table with\nlegs, a rattan shelf and a...",
     },
     {
       "populerImage": "assets/images/tvtable.png",
@@ -96,14 +96,13 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                             fontSize: 24,
                           ),
                         ),
-                        const SizedBox(
-                          height: 10,
-                        ),
+                        const SizedBox(height: 10),
                         const Text(
                           "Wooden bedside table featuring a raised \ndesign on the door",
                           style: TextStyle(
                             fontSize: 16,
                             color: Color(0xFF9E9E9E),
+                            fontFamily: "Poppins",
                           ),
                         ),
                         const SizedBox(
@@ -131,7 +130,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 16,
-                                      fontFamily: "poppins",
+                                      fontFamily: "Poppins",
                                     ),
                                   ),
                                 ],
@@ -163,7 +162,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                                     style: TextStyle(
                                       color: Colors.black,
                                       fontSize: 16,
-                                      fontFamily: "poppins",
+                                      fontFamily: "Poppins",
                                     ),
                                   ),
                                 ],
@@ -196,7 +195,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                       color: const Color(0xFFF5F5F5),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.all(10),
+                      padding: const EdgeInsets.only(left: 10),
                       child: Row(
                         children: [
                           const Text(
@@ -219,7 +218,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                                 style: TextStyle(
                                   color: Color(0xFF212121),
                                   fontWeight: FontWeight.bold,
-                                  fontFamily: "poppins",
+                                  fontFamily: "Poppins",
                                   fontSize: 16,
                                 ),
                               ),
@@ -228,13 +227,13 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                                 style: TextStyle(
                                   color: Color(0xFF9E9E9E),
                                   fontWeight: FontWeight.bold,
-                                  fontFamily: "poppins",
+                                  fontFamily: "Poppins",
                                   fontSize: 14,
                                 ),
                               ),
                             ],
                           ),
-                          const Spacer(),
+                          SizedBox(width: 90),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -250,7 +249,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                                   child: Text(
                                     "copy",
                                     style: TextStyle(
-                                      fontFamily: "poppins",
+                                      fontFamily: "Poppins",
                                       fontWeight: FontWeight.bold,
                                       color: Color(0xFF212121),
                                       fontSize: 14,
@@ -279,7 +278,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                           color: Color(
                             0xFF212121,
                           ),
-                          fontFamily: "poppins",
+                          fontFamily: "Poppins",
                           fontWeight: FontWeight.w400,
                         ),
                       ),
@@ -312,7 +311,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                                           style: TextStyle(
                                             fontSize: 32,
                                             color: Color(0xFF212121),
-                                            fontFamily: "poppins",
+                                            fontFamily: "Poppins",
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
@@ -322,7 +321,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                                           style: TextStyle(
                                             fontSize: 24,
                                             color: Color(0xFF212121),
-                                            fontFamily: "poppins",
+                                            fontFamily: "Poppins",
                                             fontWeight: FontWeight.w600,
                                           ),
                                         ),
@@ -334,7 +333,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                                               style: TextStyle(
                                                 fontSize: 16,
                                                 color: Color(0xFF212121),
-                                                fontFamily: "poppins",
+                                                fontFamily: "Poppins",
                                               ),
                                             ),
                                             Spacer(),
@@ -343,7 +342,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                                               style: TextStyle(
                                                 fontSize: 16,
                                                 color: Color(0xFF9E9E9E),
-                                                fontFamily: "poppins",
+                                                fontFamily: "Poppins",
                                               ),
                                             ),
                                           ],
@@ -356,7 +355,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                                               style: TextStyle(
                                                 fontSize: 16,
                                                 color: Color(0xFF212121),
-                                                fontFamily: "poppins",
+                                                fontFamily: "Poppins",
                                               ),
                                             ),
                                             Spacer(),
@@ -365,7 +364,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                                               style: TextStyle(
                                                 fontSize: 16,
                                                 color: Color(0xFF9E9E9E),
-                                                fontFamily: "poppins",
+                                                fontFamily: "Poppins",
                                               ),
                                             ),
                                           ],
@@ -378,7 +377,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                                               style: TextStyle(
                                                 fontSize: 16,
                                                 color: Color(0xFF212121),
-                                                fontFamily: "poppins",
+                                                fontFamily: "Poppins",
                                               ),
                                             ),
                                             Spacer(),
@@ -387,7 +386,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                                               style: TextStyle(
                                                 fontSize: 16,
                                                 color: Color(0xFF9E9E9E),
-                                                fontFamily: "poppins",
+                                                fontFamily: "Poppins",
                                               ),
                                             ),
                                           ],
@@ -400,7 +399,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                                               style: TextStyle(
                                                 fontSize: 16,
                                                 color: Color(0xFF212121),
-                                                fontFamily: "poppins",
+                                                fontFamily: "Poppins",
                                               ),
                                             ),
                                             Spacer(),
@@ -409,7 +408,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                                               style: TextStyle(
                                                 fontSize: 16,
                                                 color: Color(0xFF9E9E9E),
-                                                fontFamily: "poppins",
+                                                fontFamily: "Poppins",
                                               ),
                                             ),
                                           ],
@@ -421,7 +420,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                                           style: TextStyle(
                                             fontSize: 24,
                                             color: Color(0xFF212121),
-                                            fontFamily: "poppins",
+                                            fontFamily: "Poppins",
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
@@ -433,7 +432,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                                               style: TextStyle(
                                                 fontSize: 16,
                                                 color: Color(0xFF212121),
-                                                fontFamily: "poppins",
+                                                fontFamily: "Poppins",
                                               ),
                                             ),
                                             Spacer(),
@@ -442,7 +441,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                                               style: TextStyle(
                                                 fontSize: 16,
                                                 color: Color(0xFF9E9E9E),
-                                                fontFamily: "poppins",
+                                                fontFamily: "Poppins",
                                               ),
                                             ),
                                           ],
@@ -455,7 +454,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                                               style: TextStyle(
                                                 fontSize: 16,
                                                 color: Color(0xFF212121),
-                                                fontFamily: "poppins",
+                                                fontFamily: "Poppins",
                                               ),
                                             ),
                                             Spacer(),
@@ -464,7 +463,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                                               style: TextStyle(
                                                 fontSize: 16,
                                                 color: Color(0xFF9E9E9E),
-                                                fontFamily: "poppins",
+                                                fontFamily: "Poppins",
                                               ),
                                             ),
                                           ],
@@ -509,7 +508,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                             color: Color(
                               0xFF212121,
                             ),
-                            fontFamily: "poppins",
+                            fontFamily: "Poppins",
                             fontWeight: FontWeight.w400,
                           ),
                         ),
@@ -540,7 +539,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                           color: Color(
                             0xFF212121,
                           ),
-                          fontFamily: "poppins",
+                          fontFamily: "Poppins",
                           fontWeight: FontWeight.w400,
                         ),
                       ),
@@ -568,7 +567,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                       style: TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
-                        fontFamily: "poppins",
+                        fontFamily: "Poppins",
                         color: Color(0xFF212121),
                       ),
                     ),
@@ -587,7 +586,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                         crossAxisCount: 2,
                         mainAxisSpacing: 30,
                         crossAxisSpacing: 20,
-                        mainAxisExtent: 280,
+                        mainAxisExtent: 290,
                       ),
                       itemBuilder: (context, index) {
                         return GridviewScreen(

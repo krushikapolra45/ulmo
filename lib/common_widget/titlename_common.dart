@@ -9,26 +9,24 @@ class TitleScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        BackButton(
+        const BackButton(
           color: Colors.black,
         ),
-        SizedBox(width: 110),
+        const SizedBox(width: 90),
         Text(
           name ?? "",
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 16,
-            fontFamily: "poppins",
+            fontFamily: "Poppins",
             fontWeight: FontWeight.w500,
           ),
         ),
-        SizedBox(
-          width: 100,
-        ),
+        // const SizedBox(width: 90),
         Text(
           text ?? "",
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 16,
-            fontFamily: "poppins",
+            fontFamily: "Poppins",
             fontWeight: FontWeight.w500,
           ),
         ),

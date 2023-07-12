@@ -35,7 +35,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 24,
-                    fontFamily: "poppins",
+                    fontFamily: "Poppins",
                   ),
                 ),
               ),
@@ -54,44 +54,44 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                           ),
                         );
                       },
-                      child: CategoriesCommonScreen(
+                      child: CategoriesCommon(
                         images: "assets/images_two/furniture.png",
                         itemname: "furniture",
                       ),
                     ),
-                    CategoriesCommonScreen(
+                    CategoriesCommon(
                       images: "assets/images_two/lighting.png",
                       itemname: "lighting",
                     ),
-                    CategoriesCommonScreen(
+                    CategoriesCommon(
                       images: "assets/images_two/rugs.png",
                       itemname: "rugs",
                     ),
-                    CategoriesCommonScreen(
+                    CategoriesCommon(
                       images: "assets/images_two/mirrors.png",
                       itemname: "mirrors",
                     ),
-                    CategoriesCommonScreen(
+                    CategoriesCommon(
                       images: "assets/images_two/blankets.png",
                       itemname: "blankets",
                     ),
-                    CategoriesCommonScreen(
+                    CategoriesCommon(
                       images: "assets/images_two/cushions.png",
                       itemname: "cushions",
                     ),
-                    CategoriesCommonScreen(
+                    CategoriesCommon(
                       images: "assets/images_two/curtains.png",
                       itemname: "curtains",
                     ),
-                    CategoriesCommonScreen(
+                    CategoriesCommon(
                       images: "assets/images_two/baskets.png",
                       itemname: "baskets",
                     ),
-                    CategoriesCommonScreen(
+                    CategoriesCommon(
                       images: "assets/images_two/vases.png",
                       itemname: "vases",
                     ),
-                    CategoriesCommonScreen(
+                    CategoriesCommon(
                       images: "assets/images_two/boxes.png",
                       itemname: "boxes",
                     ),

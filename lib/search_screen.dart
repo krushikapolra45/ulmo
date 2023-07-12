@@ -74,6 +74,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     style: TextStyle(
                       color: Color(0xFF212121),
                       fontSize: 16,
+                      fontFamily: "Poppins",
                     ),
                   ),
                   Spacer(),
@@ -105,6 +106,7 @@ class _SearchScreenState extends State<SearchScreen> {
                     style: TextStyle(
                       color: Color(0xFF212121),
                       fontSize: 16,
+                      fontFamily: "Poppins",
                     ),
                   ),
                   Spacer(),

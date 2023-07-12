@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ulmo/common_widget/elevated_common.dart';
 
+import 'popover_screen.dart';
+
 class NewReviewScreen extends StatefulWidget {
   const NewReviewScreen({Key? key}) : super(key: key);
 
@@ -26,7 +28,11 @@ class _NewReviewScreenState extends State<NewReviewScreen> {
                 ),
                 const Text(
                   "New review",
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    fontFamily: "Poppins",
+                  ),
                 ),
               ],
             ),
@@ -46,6 +52,7 @@ class _NewReviewScreenState extends State<NewReviewScreen> {
               style: TextStyle(
                 fontSize: 16,
                 color: Color(0xFF9E9E9E),
+                fontFamily: "Poppins",
               ),
             ),
             SizedBox(
@@ -69,6 +76,7 @@ class _NewReviewScreenState extends State<NewReviewScreen> {
                       style: TextStyle(
                         fontSize: 14,
                         color: Color(0xFF9E9E9E),
+                        fontFamily: "Poppins",
                       ),
                     ),
                     Text(
@@ -76,6 +84,7 @@ class _NewReviewScreenState extends State<NewReviewScreen> {
                       style: TextStyle(
                         fontSize: 16,
                         color: Color(0xFF212121),
+                        fontFamily: "Poppins",
                       ),
                     ),
                   ],
@@ -101,10 +110,19 @@ class _NewReviewScreenState extends State<NewReviewScreen> {
             const SizedBox(
               height: 10,
             ),
-            const ElevatedCommon(
-              elevated: "Send review",
-              width: double.infinity,
-              hight: 64,
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => PopoverScreen(),
+                    ));
+              },
+              child: const ElevatedCommon(
+                elevated: "Send review",
+                width: double.infinity,
+                hight: 64,
+              ),
             ),
           ],
         ),

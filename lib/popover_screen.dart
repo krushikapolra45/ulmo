@@ -52,6 +52,7 @@ class _PopoverScreenState extends State<PopoverScreen> {
                       style: TextStyle(
                         color: Color(0xFF9E9E9E),
                         fontSize: 16,
+                        fontFamily: "Poppins",
                       ),
                     ),
                     SizedBox(
@@ -85,6 +86,7 @@ class _PopoverScreenState extends State<PopoverScreen> {
                                 fontSize: 16,
                                 color: Colors.black,
                                 fontWeight: FontWeight.w400,
+                                fontFamily: "Poppins",
                               ),
                             ),
                           ),

@@ -6,6 +6,7 @@ class ElevatedCommon extends StatelessWidget {
   final double? radius;
   final double? width;
   final double? hight;
+  final void Function()? onPress;
   const ElevatedCommon({
     Key? key,
     this.elevated,
@@ -13,6 +14,7 @@ class ElevatedCommon extends StatelessWidget {
     this.radius,
     this.width,
     this.hight,
+    this.onPress,
   }) : super(key: key);
 
   @override
@@ -27,7 +29,7 @@ class ElevatedCommon extends StatelessWidget {
             Size(width!, hight!),
           ),
         ),
-        onPressed: () {},
+        onPressed: onPress ?? () {},
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -37,6 +39,7 @@ class ElevatedCommon extends StatelessWidget {
                 fontSize: 16,
                 color: Colors.black,
                 fontWeight: FontWeight.w400,
+                fontFamily: "Poppins",
               ),
             ),
             if (icon != null)

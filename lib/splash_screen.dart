@@ -36,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 style: TextStyle(
                   color: Color(0xFF212121),
                   fontSize: 32,
-                  fontFamily: "poppins",
+                  fontFamily: "Poppins",
                 ),
               ),
             ),

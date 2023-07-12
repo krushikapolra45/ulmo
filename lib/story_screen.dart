@@ -73,6 +73,7 @@ class _StoryScreenState extends State<StoryScreen> {
                             color: Color(0xFFFFFFFF),
                             fontWeight: FontWeight.bold,
                             fontSize: 24,
+                            fontFamily: "Poppins",
                           ),
                         ),
                         SizedBox(
@@ -84,6 +85,7 @@ class _StoryScreenState extends State<StoryScreen> {
                             color: Color(0xFFFFFFFF),
                             fontWeight: FontWeight.w500,
                             fontSize: 16,
+                            fontFamily: "Poppins",
                           ),
                         ),
                       ],

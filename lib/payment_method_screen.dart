@@ -3,6 +3,8 @@ import 'package:ulmo/common_widget/contect_title_common.dart';
 import 'package:ulmo/common_widget/elevated_common.dart';
 import 'package:ulmo/common_widget/sem_detail_common.dart';
 
+import 'success_screen.dart';
+
 class PaymentMethodScreen extends StatefulWidget {
   const PaymentMethodScreen({Key? key}) : super(key: key);
 
@@ -36,6 +38,7 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
                       fontSize: 24,
                       color: Color(0xFF212121),
                       fontWeight: FontWeight.w600,
+                      fontFamily: "Poppins",
                     ),
                   ),
                 ),
@@ -56,12 +59,20 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
                 image: "assets/images_two/applelogo.png",
               ),
               Spacer(),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 20),
-                child: ElevatedCommon(
-                  width: double.infinity,
-                  elevated: "Pay \$420,50",
-                  hight: 64,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SuccessScreen()),
+                  );
+                },
+                child: Padding(
+                  padding: const EdgeInsets.only(bottom: 20),
+                  child: ElevatedCommon(
+                    width: double.infinity,
+                    elevated: "Pay \$420,50",
+                    hight: 64,
+                  ),
                 ),
               )
             ],

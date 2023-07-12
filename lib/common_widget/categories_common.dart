@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class CategoriesCommonScreen extends StatelessWidget {
+class CategoriesCommon extends StatelessWidget {
   final String? images;
   final String? itemname;
-  const CategoriesCommonScreen({Key? key, this.images, this.itemname}) : super(key: key);
+  const CategoriesCommon({Key? key, this.images, this.itemname}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class CategoriesCommonScreen extends StatelessWidget {
             style: const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w400,
-              fontFamily: "poppins",
+              fontFamily: "Poppins",
             ),
           ),
         ],

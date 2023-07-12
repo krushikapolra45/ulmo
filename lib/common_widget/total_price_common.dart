@@ -18,6 +18,7 @@ class TotlePriceScreen extends StatelessWidget {
                   color: Color(0xFF212121),
                   fontSize: 24,
                   fontWeight: FontWeight.w600,
+                  fontFamily: "Poppins",
                 )),
             Spacer(),
             Text(
@@ -30,9 +31,7 @@ class TotlePriceScreen extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(
-          height: 5,
-        ),
+        SizedBox(height: 5),
         Row(
           children: [
             Text(

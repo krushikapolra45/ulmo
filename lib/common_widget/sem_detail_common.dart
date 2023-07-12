@@ -36,11 +36,16 @@ class SemDetailCommon extends StatelessWidget {
                     color: Color(0xFF212121),
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
+                    fontFamily: "Poppins",
                   ),
                 ),
                 Text(
                   title ?? "",
-                  style: const TextStyle(color: Color(0xFF9E9E9E), fontSize: 14),
+                  style: const TextStyle(
+                    color: Color(0xFF9E9E9E),
+                    fontSize: 14,
+                    fontFamily: "Poppins",
+                  ),
                 ),
               ],
             ),

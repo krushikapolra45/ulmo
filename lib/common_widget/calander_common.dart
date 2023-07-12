@@ -22,7 +22,11 @@ class CalanderCommon extends StatelessWidget {
         ),
         child: Text(
           date ?? "",
-          style: const TextStyle(color: Color(0xFF212121), fontSize: 15),
+          style: const TextStyle(
+            color: Color(0xFF212121),
+            fontSize: 15,
+            fontFamily: "Poppins",
+          ),
         ),
       ),
     );

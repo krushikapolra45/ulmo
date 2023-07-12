@@ -20,13 +20,11 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
             children: [
               Row(
                 children: [
-                  BackButton(
+                  const BackButton(
                     color: Color(0xFF212121),
                   ),
-                  SizedBox(
-                    width: 120,
-                  ),
-                  Text(
+                  const SizedBox(width: 100),
+                  const Text(
                     "Reviews",
                     style: TextStyle(
                       color: Color(0xFF212121),
@@ -35,7 +33,7 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
                       fontWeight: FontWeight.w400,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 48,
                   ),
                   GestureDetector(
@@ -47,12 +45,12 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
                         ),
                       );
                     },
-                    child: Text(
+                    child: const Text(
                       "new Reviews",
                       style: TextStyle(
                         color: Color(0xFF212121),
                         fontSize: 16,
-                        fontFamily: "poppins",
+                        fontFamily: "Poppins",
                       ),
                     ),
                   ),
@@ -73,6 +71,7 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
                       style: TextStyle(
                         color: Color(0xFF9E9E9E),
                         fontSize: 14,
+                        fontFamily: "Poppins",
                       ),
                     ),
                   ],
@@ -93,6 +92,7 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
                       color: Color(0xFF212121),
                       fontSize: 16,
                       fontWeight: FontWeight.w500,
+                      fontFamily: "Poppins",
                     ),
                   ),
                 ],
@@ -126,7 +126,7 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
                   Image.asset("assets/images/woodtvtbl.png", width: 54, height: 54),
                 ],
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
@@ -138,6 +138,7 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
                       style: TextStyle(
                         color: Color(0xFF9E9E9E),
                         fontSize: 14,
+                        fontFamily: "Poppins",
                       ),
                     ),
                   ],
@@ -157,6 +158,7 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
                     style: TextStyle(
                       color: Color(0xFF212121),
                       fontSize: 16,
+                      fontFamily: "Poppins",
                       fontWeight: FontWeight.w500,
                     ),
                   ),
@@ -172,10 +174,11 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
                   style: TextStyle(
                     color: Color(0xFF9E9E9E),
                     fontSize: 16,
+                    fontFamily: "Poppins",
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
@@ -187,6 +190,7 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
                       style: TextStyle(
                         color: Color(0xFF9E9E9E),
                         fontSize: 14,
+                        fontFamily: "Poppins",
                       ),
                     ),
                   ],
@@ -206,6 +210,7 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
                     style: TextStyle(
                       color: Color(0xFF212121),
                       fontSize: 16,
+                      fontFamily: "Poppins",
                       fontWeight: FontWeight.w500,
                     ),
                   ),
@@ -221,6 +226,7 @@ class _ReviewsScreenState extends State<ReviewsScreen> {
                   style: TextStyle(
                     color: Color(0xFF9E9E9E),
                     fontSize: 16,
+                    fontFamily: "Poppins",
                   ),
                 ),
               ),

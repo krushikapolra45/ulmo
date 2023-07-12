@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ulmo/common_widget/elevated_common.dart';
-import 'package:ulmo/common_widget/no_connection_common.dart';
 
 class EmptyAccountScreen extends StatefulWidget {
   const EmptyAccountScreen({Key? key}) : super(key: key);
@@ -12,11 +11,11 @@ class EmptyAccountScreen extends StatefulWidget {
 class _EmptyAccountScreenState extends State<EmptyAccountScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
         child: Column(
           children: [
-            Padding(
+            const Padding(
               padding: EdgeInsets.all(8.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -25,7 +24,7 @@ class _EmptyAccountScreenState extends State<EmptyAccountScreen> {
                 ],
               ),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.all(8.0),
               child: Align(
                 alignment: Alignment.topLeft,
@@ -34,17 +33,45 @@ class _EmptyAccountScreenState extends State<EmptyAccountScreen> {
                   style: TextStyle(
                     fontSize: 32,
                     fontWeight: FontWeight.bold,
+                    fontFamily: "Poppins",
                     color: Color(0xFF212121),
                   ),
                 ),
               ),
             ),
-            NoConnection(
-              image: "assets/images/smiley.png",
-              heading: "come on in",
-              text: "view orders and update your details",
+            Image.asset(
+              "assets/images/smiley.png",
+              height: 100,
+              width: 98,
             ),
-            Row(
+            const SizedBox(
+              height: 30,
+            ),
+            Text(
+              "come on in",
+              style: const TextStyle(
+                fontSize: 24,
+                color: Color(0xFF212121),
+                fontWeight: FontWeight.bold,
+                fontFamily: "Poppins",
+              ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            Text(
+              "view orders and update your details",
+              style: const TextStyle(
+                fontSize: 16,
+                color: Color(0xFF9E9E9E),
+                fontWeight: FontWeight.w400,
+                fontFamily: "Poppins",
+              ),
+            ),
+            const SizedBox(
+              height: 100,
+            ),
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedCommon(

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ulmo/common_widget/no_connection_common.dart';
 
 class SuccessScreen extends StatefulWidget {
   const SuccessScreen({Key? key}) : super(key: key);
@@ -16,40 +15,61 @@ class _SuccessScreenState extends State<SuccessScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            const NoConnection(
-              image: "assets/images/friendly.png",
-              heading: "your order is placed",
-              colors: Color(0xFF000000),
-              text: "thanks for your order, we hope you \n         senjoyed shopping with us",
+            SizedBox(height: 200),
+            Image.asset(
+              "assets/images/friendly.png",
+              height: 100,
+              width: 98,
             ),
             const SizedBox(
-              height: 120,
+              height: 30,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  height: 64,
-                  width: 343,
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: const Color(0xFF212121),
-                      width: 2,
-                    ),
-                    borderRadius: BorderRadius.circular(8),
+            const Text(
+              textAlign: TextAlign.center,
+              "your order is placed",
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                fontFamily: "Poppins",
+              ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            Align(
+              alignment: Alignment.center,
+              child: const Text(
+                "thanks for your order, we hope you\n           enjoyed shopping with us",
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400,
+                  fontFamily: "Poppins",
+                  color: Color(0xFF212121),
+                ),
+              ),
+            ),
+            Spacer(),
+            Padding(
+              padding: EdgeInsets.only(bottom: 30),
+              child: OutlinedButton(
+                style: ButtonStyle(
+                  shape: MaterialStatePropertyAll(
+                    RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                   ),
-                  child: OutlinedButton(
-                    onPressed: () {},
-                    child: const Text(
-                      "To my orders",
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.black,
-                      ),
-                    ),
+                  fixedSize: MaterialStatePropertyAll(Size(343, 64)),
+                  side: MaterialStatePropertyAll(BorderSide(width: 2)),
+                ),
+                onPressed: () {},
+                child: const Text(
+                  "To my orders",
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w400,
+                    fontFamily: "Poppins",
                   ),
                 ),
-              ],
+              ),
             ),
           ],
         ),

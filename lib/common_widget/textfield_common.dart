@@ -41,7 +41,7 @@ class TextFieldScreen extends StatelessWidget {
                     style: const TextStyle(
                       color: Color(0xFF9E9E9E),
                       fontSize: 16,
-                      fontFamily: "poppins",
+                      fontFamily: "Poppins",
                     ),
                   ),
                   const Spacer(),

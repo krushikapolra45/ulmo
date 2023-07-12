@@ -30,6 +30,7 @@ class ContactTitleCommon extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 12,
                   color: Color(0xFF9E9E9E),
+                  fontFamily: "Poppins",
                 ),
               ),
             ],

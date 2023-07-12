@@ -35,8 +35,12 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
                         ),
                         SizedBox(width: 10),
                         Text(
-                          "|",
-                          style: TextStyle(color: Color(0xFF212121), fontSize: 16),
+                          "wood|",
+                          style: TextStyle(
+                            color: Color(0xFF212121),
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
                         Spacer(),
                         Icon(Icons.keyboard_voice_outlined, color: Color(0xFF212121), size: 20),
@@ -58,11 +62,16 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
                       style: TextStyle(
                         color: Color(0xFF212121),
                         fontSize: 16,
+                        fontFamily: "Poppins",
                       ),
                     ),
                     Text(
                       "living room / furniture",
-                      style: TextStyle(color: Color(0xFF9E9E9E), fontSize: 14),
+                      style: TextStyle(
+                        color: Color(0xFF9E9E9E),
+                        fontSize: 14,
+                        fontFamily: "Poppins",
+                      ),
                     ),
                     SizedBox(
                       height: 20,
@@ -72,11 +81,16 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
                       style: TextStyle(
                         color: Color(0xFF212121),
                         fontSize: 16,
+                        fontFamily: "Poppins",
                       ),
                     ),
                     Text(
                       "living room / furniture",
-                      style: TextStyle(color: Color(0xFF9E9E9E), fontSize: 14),
+                      style: TextStyle(
+                        color: Color(0xFF9E9E9E),
+                        fontSize: 14,
+                        fontFamily: "Poppins",
+                      ),
                     ),
                   ],
                 ),

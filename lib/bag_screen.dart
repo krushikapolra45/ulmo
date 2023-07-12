@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ulmo/common_widget/elevated_common.dart';
 import 'package:ulmo/common_widget/total_price_common.dart';
+import 'package:ulmo/contect_info_screen.dart';
 
 class BagScreen extends StatefulWidget {
   const BagScreen({Key? key}) : super(key: key);
@@ -19,7 +20,7 @@ class _BagScreenState extends State<BagScreen> {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              Align(
+              const Align(
                 alignment: Alignment.topLeft,
                 child: Text(
                   "bag",
@@ -30,7 +31,7 @@ class _BagScreenState extends State<BagScreen> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Row(
@@ -188,10 +189,10 @@ class _BagScreenState extends State<BagScreen> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Align(
+              const Align(
                 alignment: Alignment.topLeft,
                 child: Text(
                   "promocode",
@@ -202,7 +203,7 @@ class _BagScreenState extends State<BagScreen> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
               Container(
@@ -210,10 +211,10 @@ class _BagScreenState extends State<BagScreen> {
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
-                  color: Color(0xFFF5F5F5),
+                  color: const Color(0xFFF5F5F5),
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.all(12),
+                child: const Padding(
+                  padding: EdgeInsets.all(12),
                   child: Row(
                     children: [
                       Text(
@@ -226,22 +227,25 @@ class _BagScreenState extends State<BagScreen> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              TotlePriceScreen(
+              const TotlePriceScreen(
                 total: "total",
                 price: "\$420,50",
                 code: "Promocode",
                 codeprice: "−\$25,00",
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               ElevatedCommon(
                 width: 343,
                 hight: 64,
                 elevated: "checkout",
+                onPress: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => ContactInfoScreen()));
+                },
               ),
             ],
           ),

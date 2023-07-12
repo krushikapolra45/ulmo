@@ -49,7 +49,7 @@ class GridviewScreen extends StatelessWidget {
               price!,
               style: const TextStyle(
                 color: Colors.black,
-                fontFamily: "poppins",
+                fontFamily: "Poppins",
                 fontSize: 17,
                 fontWeight: FontWeight.bold,
               ),
@@ -70,7 +70,7 @@ class GridviewScreen extends StatelessWidget {
             history!,
             style: const TextStyle(
               color: Color(0xFF9E9E9E),
-              fontFamily: "poppins",
+              fontFamily: "Poppins",
               fontSize: 12,
               fontWeight: FontWeight.bold,
             ),

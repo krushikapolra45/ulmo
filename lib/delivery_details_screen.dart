@@ -4,6 +4,8 @@ import 'package:ulmo/common_widget/contect_title_common.dart';
 import 'package:ulmo/common_widget/elevated_common.dart';
 import 'package:ulmo/common_widget/sem_detail_common.dart';
 
+import 'payment_method_screen.dart';
+
 class DeliveryDetailsScreen extends StatefulWidget {
   const DeliveryDetailsScreen({Key? key}) : super(key: key);
 
@@ -67,6 +69,7 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                     fontSize: 24,
                     color: Color(0xFF212121),
                     fontWeight: FontWeight.w600,
+                    fontFamily: "Poppins",
                   ),
                 ),
               ),
@@ -87,6 +90,7 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                             color: Color(0xFF212121),
                             fontSize: 16,
                             fontWeight: FontWeight.w500,
+                            fontFamily: "Poppins",
                           ),
                         ),
                         Text(
@@ -94,6 +98,7 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                           style: TextStyle(
                             color: Color(0xFF9E9E9E),
                             fontSize: 14,
+                            fontFamily: "Poppins",
                           ),
                         ),
                       ],
@@ -129,6 +134,7 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                                             fontSize: 24,
                                             color: Color(0xFF212121),
                                             fontWeight: FontWeight.w600,
+                                            fontFamily: "Poppins",
                                           ),
                                         ),
                                       ),
@@ -146,6 +152,7 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                                                 style: TextStyle(
                                                   color: Color(0xFF212121),
                                                   fontSize: 16,
+                                                  fontFamily: "Poppins",
                                                   fontWeight: FontWeight.w500,
                                                 ),
                                               ),
@@ -153,6 +160,7 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                                                 "Hanna Gouse, +7 932 123-43-23",
                                                 style: TextStyle(
                                                   color: Color(0xFF9E9E9E),
+                                                  fontFamily: "Poppins",
                                                   fontSize: 14,
                                                 ),
                                               ),
@@ -187,6 +195,7 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                                                 style: TextStyle(
                                                   color: Color(0xFF212121),
                                                   fontSize: 16,
+                                                  fontFamily: "Poppins",
                                                   fontWeight: FontWeight.w500,
                                                 ),
                                               ),
@@ -194,6 +203,7 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                                                 "Jane Smith, +7 912 343-12-54",
                                                 style: TextStyle(
                                                   color: Color(0xFF9E9E9E),
+                                                  fontFamily: "Poppins",
                                                   fontSize: 14,
                                                 ),
                                               ),
@@ -230,6 +240,7 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                                           "cancel",
                                           style: TextStyle(
                                             fontSize: 16,
+                                            fontFamily: "Poppins",
                                             color: Color(0xFF212121),
                                           ),
                                         ),
@@ -265,6 +276,7 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                     fontSize: 24,
                     color: Color(0xFF212121),
                     fontWeight: FontWeight.w600,
+                    fontFamily: "Poppins",
                   ),
                 ),
               ),
@@ -333,12 +345,21 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
               ),
             ),
             Spacer(),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 15),
-              child: ElevatedCommon(
-                width: 343,
-                elevated: "continue",
-                hight: 64,
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => PaymentMethodScreen(),
+                    ));
+              },
+              child: Padding(
+                padding: const EdgeInsets.only(bottom: 15),
+                child: ElevatedCommon(
+                  width: 343,
+                  elevated: "continue",
+                  hight: 64,
+                ),
               ),
             )
           ],

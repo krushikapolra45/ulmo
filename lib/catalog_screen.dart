@@ -19,7 +19,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
       "populerImage": "assets/images/woodtblroom.png",
       "price": "\$150.00",
       "icon": Icons.favorite,
-      "history": "Wooden bedside\ntable featuring a raised desi...",
+      "history": "Wooden bedside table\nfeaturing a raised desi...",
       "cardImages": "assets/images/new.png",
     },
     {
@@ -32,7 +32,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
       "populerImage": "assets/images/squretable.png",
       "price": "\$140.25",
       "icon": Icons.favorite_border,
-      "history": "Square bedside table\nwith legs, a rattan shelf and a...",
+      "history": "Square bedside table with\nlegs, a rattan shelf and a...",
     },
     {
       "populerImage": "assets/images/tvtable.png",
@@ -119,6 +119,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
                                           fontSize: 32,
                                           color: Color(0xFF212121),
                                           fontWeight: FontWeight.bold,
+                                          fontFamily: "Poppins",
                                         ),
                                       ),
                                       const SizedBox(height: 20),
@@ -129,6 +130,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
                                             style: TextStyle(
                                               fontSize: 16,
                                               color: Color(0xFF212121),
+                                              fontFamily: "Poppins",
                                             ),
                                           ),
                                           const Spacer(),
@@ -152,6 +154,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
                                         style: TextStyle(
                                           fontSize: 16,
                                           color: Color(0xFF212121),
+                                          fontFamily: "Poppins",
                                         ),
                                       ),
                                       const SizedBox(height: 30),
@@ -160,6 +163,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
                                         style: TextStyle(
                                           fontSize: 16,
                                           color: Color(0xFF212121),
+                                          fontFamily: "Poppins",
                                         ),
                                       ),
                                       const SizedBox(height: 30),
@@ -168,6 +172,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
                                         style: TextStyle(
                                           fontSize: 16,
                                           color: Color(0xFF212121),
+                                          fontFamily: "Poppins",
                                         ),
                                       ),
                                     ],
@@ -190,6 +195,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
                                       style: TextStyle(
                                         fontSize: 16,
                                         color: Color(0xFF212121),
+                                        fontFamily: "Poppins",
                                       ),
                                     ),
                                   ),
@@ -211,6 +217,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
                               fontSize: 16,
                               color: Colors.black,
                               fontWeight: FontWeight.w400,
+                              fontFamily: "Poppins",
                             ),
                           ),
                           Icon(
@@ -255,6 +262,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
                                 fontSize: 16,
                                 color: Colors.black,
                                 fontWeight: FontWeight.w400,
+                                fontFamily: "Poppins",
                               ),
                             ),
                             Image.asset(
@@ -316,7 +324,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
                           color: const Color(0xFFF5F5F5),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.all(10),
+                          padding: const EdgeInsets.only(left: 10),
                           child: Row(
                             children: [
                               const Column(
@@ -328,7 +336,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
                                     style: TextStyle(
                                       color: Color(0xFF212121),
                                       fontWeight: FontWeight.w400,
-                                      fontFamily: "poppins",
+                                      fontFamily: "Poppins",
                                       fontSize: 16,
                                     ),
                                   ),
@@ -337,14 +345,14 @@ class _CatalogScreenState extends State<CatalogScreen> {
                                     style: TextStyle(
                                       color: Color(0xFF9E9E9E),
                                       fontWeight: FontWeight.w400,
-                                      fontFamily: "poppins",
+                                      fontFamily: "Poppins",
                                       fontSize: 14,
                                     ),
                                   ),
                                 ],
                               ),
                               const SizedBox(
-                                width: 100,
+                                width: 80,
                               ),
                               Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -361,7 +369,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
                                       child: Text(
                                         "Need help",
                                         style: TextStyle(
-                                          fontFamily: "poppins",
+                                          fontFamily: "Poppins",
                                           fontWeight: FontWeight.normal,
                                           color: Color(0xFF212121),
                                         ),
