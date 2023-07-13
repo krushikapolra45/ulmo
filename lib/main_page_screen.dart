@@ -246,7 +246,7 @@ class _MainPageScreenState extends State<MainPageScreen> {
                       mainAxisExtent: 290,
                     ),
                     itemBuilder: (context, index) {
-                      return GridviewScreen(
+                      return GridviewCommon(
                         images: populerList[index]["populerImage"],
                         icon: populerList[index]["icon"],
                         price: populerList[index]["price"],

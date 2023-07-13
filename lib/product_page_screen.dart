@@ -573,7 +573,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                         mainAxisExtent: 290,
                       ),
                       itemBuilder: (context, index) {
-                        return GridviewScreen(
+                        return GridviewCommon(
                           images: furnitureList[index]["populerImage"],
                           icon: furnitureList[index]["icon"],
                           price: furnitureList[index]["price"],

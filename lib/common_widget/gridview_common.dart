@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class GridviewScreen extends StatelessWidget {
+class GridviewCommon extends StatelessWidget {
   final String? images;
   final String? price;
   final IconData? icon;
@@ -8,7 +8,7 @@ class GridviewScreen extends StatelessWidget {
   final String? cardImages;
   final bool? isCardImages;
 
-  const GridviewScreen({
+  const GridviewCommon({
     super.key,
     this.images,
     this.price,

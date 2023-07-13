@@ -295,7 +295,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
                         mainAxisExtent: 280,
                       ),
                       itemBuilder: (context, index) {
-                        return GridviewScreen(
+                        return GridviewCommon(
                           images: furnitureList[index]["populerImage"],
                           icon: furnitureList[index]["icon"],
                           price: furnitureList[index]["price"],
@@ -393,7 +393,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
                       mainAxisExtent: 280,
                     ),
                     itemBuilder: (context, index) {
-                      return GridviewScreen(
+                      return GridviewCommon(
                         images: furnitureListTwo[index]["populerImage"],
                         icon: furnitureListTwo[index]["icon"],
                         price: furnitureListTwo[index]["price"],

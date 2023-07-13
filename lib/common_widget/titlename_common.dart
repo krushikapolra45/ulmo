@@ -12,7 +12,7 @@ class TitleScreen extends StatelessWidget {
         const BackButton(
           color: Colors.black,
         ),
-        const SizedBox(width: 90),
+        const SizedBox(width: 100),
         Text(
           name ?? "",
           style: const TextStyle(
