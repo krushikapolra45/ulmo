@@ -48,7 +48,12 @@ class _PhoneLoginState extends State<PhoneLogin> {
                       child: Image.asset("assets/images_three/russia.png", width: 10, height: 10),
                     ),
                     fillColor: const Color(0xFFF5F5F5),
-                    hintStyle: const TextStyle(color: Color(0xFF9E9E9E), fontSize: 16, fontWeight: FontWeight.w400, fontFamily: "sf-pro-display-cufonfonts"),
+                    hintStyle: const TextStyle(
+                      color: Color(0xFF9E9E9E),
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                      fontFamily: "sf-pro-display-cufonfonts",
+                    ),
                   ),
                   onTap: () {},
                 ),

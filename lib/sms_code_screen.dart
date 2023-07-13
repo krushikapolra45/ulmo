@@ -16,11 +16,11 @@ class _SmsCodeScreenState extends State<SmsCodeScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            BigHeddingScreen(
+            const BigHeddingScreen(
               name: "help",
               hedding: "welcome!\nenter code from sms",
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(left: 8.0),
               child: Text(
                 "We sent it to +7 912 323-32-12",
@@ -31,15 +31,6 @@ class _SmsCodeScreenState extends State<SmsCodeScreen> {
                   fontWeight: FontWeight.w400,
                 ),
               ),
-            ),
-            Row(
-              children: [
-                Container(
-                  width: 48,
-                  height: 64,
-                  decoration: BoxDecoration(color: Color(0xFF)),
-                ),
-              ],
             ),
           ],
         ),
