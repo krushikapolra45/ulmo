@@ -10,24 +10,24 @@ class GalleryScreen extends StatefulWidget {
 
 class _GalleryScreenState extends State<GalleryScreen> {
   List<Map<String, dynamic>> imageList = [
-    {"galleryImage": "assets/gallery_image/g1.png"},
-    {"galleryImage": "assets/gallery_image/g2.png"},
-    {"galleryImage": "assets/gallery_image/g3.png"},
-    {"galleryImage": "assets/gallery_image/g4.png"},
-    {"galleryImage": "assets/gallery_image/g5.png"},
-    {"galleryImage": "assets/gallery_image/g6.png"},
-    {"galleryImage": "assets/gallery_image/g7.png"},
-    {"galleryImage": "assets/gallery_image/g8.png"},
-    {"galleryImage": "assets/gallery_image/g9.png"},
-    {"galleryImage": "assets/gallery_image/g10.png"},
-    {"galleryImage": "assets/gallery_image/g11.png"},
-    {"galleryImage": "assets/gallery_image/g12.png"},
-    {"galleryImage": "assets/gallery_image/g13.png"},
-    {"galleryImage": "assets/gallery_image/g14.png"},
-    {"galleryImage": "assets/gallery_image/g15.png"},
-    {"galleryImage": "assets/gallery_image/g16.png"},
-    {"galleryImage": "assets/gallery_image/g17.png"},
-    {"galleryImage": "assets/gallery_image/g18.png"},
+    {"index": "1", "images": "assets/gallery_image/g1.png"},
+    {"index": "2", "images": "assets/gallery_image/g2.png"},
+    {"index": "3", "images": "assets/gallery_image/g3.png"},
+    {"index": "4", "images": "assets/gallery_image/g4.png"},
+    {"index": "5", "images": "assets/gallery_image/g5.png"},
+    {"index": "6", "images": "assets/gallery_image/g6.png"},
+    {"index": "7", "images": "assets/gallery_image/g7.png"},
+    {"index": "8", "images": "assets/gallery_image/g8.png"},
+    {"index": "9", "images": "assets/gallery_image/g9.png"},
+    {"index": "10", "images": "assets/gallery_image/g10.png"},
+    {"index": "11", "images": "assets/gallery_image/g11.png"},
+    {"index": "12", "images": "assets/gallery_image/g12.png"},
+    {"index": "13", "images": "assets/gallery_image/g13.png"},
+    {"index": "14", "images": "assets/gallery_image/g14.png"},
+    {"index": "15", "images": "assets/gallery_image/g15.png"},
+    {"index": "16", "images": "assets/gallery_image/g16.png"},
+    {"index": "17", "images": "assets/gallery_image/g17.png"},
+    {"index": "18", "images": "assets/gallery_image/g18.png"},
   ];
   @override
   Widget build(BuildContext context) {
@@ -39,13 +39,20 @@ class _GalleryScreenState extends State<GalleryScreen> {
               name: "favorites",
               text: "cancel",
             ),
-            GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,
+            Expanded(
+              child: GridView.builder(
+                shrinkWrap: true,
+                physics: AlwaysScrollableScrollPhysics(),
+                itemCount: imageList.length,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 3,
+                  mainAxisSpacing: 5,
+                  crossAxisSpacing: 5,
+                ),
+                itemBuilder: (context, index) {
+                  return imageList[index]["images"];
+                },
               ),
-              itemBuilder: (context, index) {
-                return GalleryScreen();
-              },
             ),
           ],
         ),
