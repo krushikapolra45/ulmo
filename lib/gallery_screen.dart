@@ -35,23 +35,30 @@ class _GalleryScreenState extends State<GalleryScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            TitleScreen(
+            const TitleScreen(
               name: "favorites",
               text: "cancel",
             ),
             Expanded(
-              child: GridView.builder(
-                shrinkWrap: true,
-                physics: AlwaysScrollableScrollPhysics(),
-                itemCount: imageList.length,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
-                  mainAxisSpacing: 5,
-                  crossAxisSpacing: 5,
+              child: Padding(
+                padding: const EdgeInsets.only(right: 5, left: 5),
+                child: GridView.builder(
+                  shrinkWrap: true,
+                  physics: const AlwaysScrollableScrollPhysics(),
+                  itemCount: imageList.length,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                    mainAxisSpacing: 5,
+                    crossAxisSpacing: 5,
+                  ),
+                  itemBuilder: (context, index) => Column(
+                    children: [
+                      Image.asset(
+                        imageList[index]["images"],
+                      ),
+                    ],
+                  ),
                 ),
-                itemBuilder: (context, index) {
-                  return imageList[index]["images"];
-                },
               ),
             ),
           ],
