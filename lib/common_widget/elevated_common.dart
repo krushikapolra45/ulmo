@@ -38,7 +38,7 @@ class ElevatedCommon extends StatelessWidget {
               style: const TextStyle(
                 fontSize: 16,
                 color: Colors.black,
-                fontWeight: FontWeight.w400,
+                fontWeight: FontWeight.w500,
                 fontFamily: "Poppins",
               ),
             ),

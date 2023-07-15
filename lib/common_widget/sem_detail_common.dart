@@ -6,7 +6,9 @@ class SemDetailCommon extends StatelessWidget {
   final double? checkbox;
   final IconData? icon;
   final String? image;
-  const SemDetailCommon({Key? key, this.name, this.title, this.checkbox, this.icon, this.image}) : super(key: key);
+  final double? width;
+  final double? hight;
+  const SemDetailCommon({Key? key, this.name, this.title, this.checkbox, this.icon, this.image, this.width, this.hight}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +18,8 @@ class SemDetailCommon extends StatelessWidget {
         children: [
           Image.asset(
             image ?? "",
-            width: 24,
-            height: 24,
+            width: width!,
+            height: hight!,
           ),
           if (icon != null)
             Icon(
