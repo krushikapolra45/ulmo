@@ -100,7 +100,7 @@ class _AccountScreenState extends State<AccountScreen> {
               child: Row(
                 children: [
                   Icon(
-                    Icons.location_on_outlined,
+                    Icons.pin_drop_outlined,
                     size: 20,
                   ),
                   SizedBox(width: 10),
@@ -144,7 +144,7 @@ class _AccountScreenState extends State<AccountScreen> {
               child: Row(
                 children: [
                   Icon(
-                    Icons.shopping_bag_outlined,
+                    Icons.logout,
                     size: 20,
                   ),
                   SizedBox(width: 10),

@@ -1,8 +1,6 @@
-import 'package:cropperx/cropperx.dart';
 import 'package:flutter/material.dart';
 
 class PhotoCropScreen extends StatefulWidget {
-
   const PhotoCropScreen({Key? key}) : super(key: key);
 
   @override
@@ -50,20 +48,6 @@ class _PhotoCropScreenState extends State<PhotoCropScreen> {
                 ],
               ),
             ),
-
-
-
-    Cropper(
-      cropperKey: _cropperKey,
-      image: Image.network(
-        'https://i.pinimg.com/originals/6b/4d/18/6b4d18c0b756ab20c3591490dfc10090.jpg',
-      ),
-    ),
-
-
-    final imageBytes = await Cropper.crop(
-      cropperKey: _cropperKey,
-    ),
           ],
         ),
       ),

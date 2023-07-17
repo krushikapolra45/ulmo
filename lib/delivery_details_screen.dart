@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:ulmo/common_widget/calander_common.dart';
 import 'package:ulmo/common_widget/contect_title_common.dart';
 import 'package:ulmo/common_widget/elevated_common.dart';
-import 'package:ulmo/common_widget/sem_detail_common.dart';
 
 import 'payment_method_screen.dart';
 
@@ -41,16 +40,68 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
               ),
             ),
             const SizedBox(height: 20),
-            const SemDetailCommon(
-              name: "By courier",
-              title: "Tomorrow, any time",
-              image: "assets/images_two/car.png",
+            Row(
+              children: [
+                Icon(Icons.car_repair_outlined),
+                Padding(
+                  padding: EdgeInsets.all(12),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "By courier",
+                        style: TextStyle(
+                          color: Color(0xFF212121),
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          fontFamily: "Poppins",
+                        ),
+                      ),
+                      Text(
+                        "Tomorrow, any time",
+                        style: TextStyle(
+                          color: Color(0xFF9E9E9E),
+                          fontSize: 14,
+                          fontFamily: "Poppins",
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
-            const SemDetailCommon(
-              image: "",
-              name: "I'll take it myself",
-              title: "Any day from tomorrow",
-              icon: Icons.shopping_cart_outlined,
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Icon(Icons.shopping_cart_outlined),
+                  Padding(
+                    padding: EdgeInsets.all(12),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "I'll take it myself",
+                          style: TextStyle(
+                            color: Color(0xFF212121),
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                            fontFamily: "Poppins",
+                          ),
+                        ),
+                        Text(
+                          "Any day from tomorrow",
+                          style: TextStyle(
+                            color: Color(0xFF9E9E9E),
+                            fontSize: 14,
+                            fontFamily: "Poppins",
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
             const SizedBox(height: 20),
             const Padding(
@@ -257,7 +308,6 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                 ],
               ),
             ),
-            const SizedBox(height: 20),
             const Padding(
               padding: EdgeInsets.all(8.0),
               child: Align(
