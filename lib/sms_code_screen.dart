@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ulmo/common_widget/big_hedding_common.dart';
+import 'package:ulmo/common_widget/elevated_common.dart';
+
+import 'profile_setup_screen.dart';
 
 class SmsCodeScreen extends StatefulWidget {
   const SmsCodeScreen({Key? key}) : super(key: key);
@@ -31,6 +34,19 @@ class _SmsCodeScreenState extends State<SmsCodeScreen> {
                   fontWeight: FontWeight.w400,
                 ),
               ),
+            ),
+            ElevatedCommon(
+              elevated: "new code 0:20",
+              hight: 64,
+              width: double.infinity,
+              onPress: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ProfileSetupScreen(),
+                  ),
+                );
+              },
             ),
           ],
         ),

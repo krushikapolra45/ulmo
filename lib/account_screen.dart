@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ulmo/common_widget/sem_detail_common.dart';
 
 class AccountScreen extends StatefulWidget {
   const AccountScreen({Key? key}) : super(key: key);
@@ -11,7 +10,7 @@ class AccountScreen extends StatefulWidget {
 class _AccountScreenState extends State<AccountScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
         child: Column(
           children: [
@@ -20,7 +19,11 @@ class _AccountScreenState extends State<AccountScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Icon(Icons.settings_outlined, color: Color(0xFF212121), size: 25),
+                  Icon(
+                    Icons.settings_outlined,
+                    color: Color(0xFF212121),
+                    size: 25,
+                  ),
                 ],
               ),
             ),
@@ -39,12 +42,40 @@ class _AccountScreenState extends State<AccountScreen> {
                 ),
               ),
             ),
-            SemDetailCommon(
-              image: "assets/images/avatargirl.png",
-              width: 36,
-              hight: 36,
-              name: "Tanya Morenko",
-              title: "+7 912 323-32-12",
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Image.asset(
+                    "assets/images/avatargirl.png",
+                    width: 36,
+                    height: 36,
+                  ),
+                  SizedBox(width: 10),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Tanya Morenko",
+                        style: TextStyle(
+                          color: Color(0xFF212121),
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          fontFamily: "Poppins",
+                        ),
+                      ),
+                      Text(
+                        "+7 912 323-32-12",
+                        style: TextStyle(
+                          color: Color(0xFF9E9E9E),
+                          fontSize: 14,
+                          fontFamily: "Poppins",
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
             Padding(
               padding: EdgeInsets.all(8.0),

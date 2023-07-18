@@ -18,16 +18,16 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            const ContactTitleCommon(
-              name: "2 of 3",
-              title: "checkout",
-            ),
-            const SizedBox(height: 10),
-            const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Align(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              const ContactTitleCommon(
+                name: "2 of 3",
+                title: "checkout",
+              ),
+              const SizedBox(height: 20),
+              Align(
                 alignment: Alignment.topLeft,
                 child: Text(
                   "delivery method",
@@ -38,41 +38,38 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                   ),
                 ),
               ),
-            ),
-            const SizedBox(height: 20),
-            Row(
-              children: [
-                Icon(Icons.car_repair_outlined),
-                Padding(
-                  padding: EdgeInsets.all(12),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "By courier",
-                        style: TextStyle(
-                          color: Color(0xFF212121),
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                          fontFamily: "Poppins",
+              const SizedBox(height: 20),
+              const Row(
+                children: [
+                  Icon(Icons.car_repair_outlined),
+                  Padding(
+                    padding: EdgeInsets.all(12),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "By courier",
+                          style: TextStyle(
+                            color: Color(0xFF212121),
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                            fontFamily: "Poppins",
+                          ),
                         ),
-                      ),
-                      Text(
-                        "Tomorrow, any time",
-                        style: TextStyle(
-                          color: Color(0xFF9E9E9E),
-                          fontSize: 14,
-                          fontFamily: "Poppins",
+                        Text(
+                          "Tomorrow, any time",
+                          style: TextStyle(
+                            color: Color(0xFF9E9E9E),
+                            fontSize: 14,
+                            fontFamily: "Poppins",
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-              ],
-            ),
-            const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Row(
+                ],
+              ),
+              const Row(
                 children: [
                   Icon(Icons.shopping_cart_outlined),
                   Padding(
@@ -102,26 +99,20 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                   ),
                 ],
               ),
-            ),
-            const SizedBox(height: 20),
-            const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Align(
+              const SizedBox(height: 20),
+              Align(
                 alignment: Alignment.topLeft,
                 child: Text(
-                  "delivery address",
+                  "delivery Address",
                   style: TextStyle(
                     fontSize: 24,
                     color: Color(0xFF212121),
                     fontWeight: FontWeight.w600,
-                    fontFamily: "Poppins",
                   ),
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
+              SizedBox(height: 20),
+              Row(
                 children: [
                   const Icon(Icons.location_on_outlined),
                   const Padding(
@@ -307,10 +298,8 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                   ),
                 ],
               ),
-            ),
-            const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Align(
+              SizedBox(height: 20),
+              Align(
                 alignment: Alignment.topLeft,
                 child: Text(
                   "delivery time",
@@ -318,19 +307,15 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                     fontSize: 24,
                     color: Color(0xFF212121),
                     fontWeight: FontWeight.w600,
-                    fontFamily: "Poppins",
                   ),
                 ),
               ),
-            ),
-            const SizedBox(height: 20),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
+              const SizedBox(height: 20),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Container(
                       padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 15),
                       decoration: BoxDecoration(
                         color: const Color(0xFFF5F5F5),
@@ -341,26 +326,23 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                         style: TextStyle(color: Color(0xFF212121), fontSize: 15),
                       ),
                     ),
-                  ),
-                  const CalanderCommon(
-                    date: " Jun  25 ",
-                  ),
-                  const CalanderCommon(
-                    date: " Jun  26 ",
-                  ),
-                  const CalanderCommon(
-                    date: " Jun  27 ",
-                  ),
-                ],
+                    const CalanderCommon(
+                      date: " Jun  25 ",
+                    ),
+                    const CalanderCommon(
+                      date: " Jun  26 ",
+                    ),
+                    const CalanderCommon(
+                      date: " Jun  27 ",
+                    ),
+                  ],
+                ),
               ),
-            ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Container(
                       padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 15),
                       decoration: BoxDecoration(
                         color: const Color(0xFFF5F5F5),
@@ -371,38 +353,38 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                         style: TextStyle(color: Color(0xFF212121), fontSize: 15),
                       ),
                     ),
-                  ),
-                  const CalanderCommon(
-                    date: " 2:00 pm ",
-                  ),
-                  const CalanderCommon(
-                    date: " 4:00 pm ",
-                  ),
-                  const CalanderCommon(
-                    date: " 6:00 pm ",
-                  ),
-                ],
-              ),
-            ),
-            const Spacer(),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const PaymentMethodScreen(),
-                    ));
-              },
-              child: const Padding(
-                padding: EdgeInsets.only(bottom: 15),
-                child: ElevatedCommon(
-                  width: 343,
-                  elevated: "continue",
-                  hight: 64,
+                    const CalanderCommon(
+                      date: " 2:00 pm ",
+                    ),
+                    const CalanderCommon(
+                      date: " 4:00 pm ",
+                    ),
+                    const CalanderCommon(
+                      date: " 6:00 pm ",
+                    ),
+                  ],
                 ),
               ),
-            )
-          ],
+              const Spacer(),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const PaymentMethodScreen(),
+                      ));
+                },
+                child: const Padding(
+                  padding: EdgeInsets.only(bottom: 30),
+                  child: ElevatedCommon(
+                    width: 343,
+                    elevated: "continue",
+                    hight: 64,
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ulmo/common_widget/elevated_common.dart';
 import 'package:ulmo/common_widget/titlename_common.dart';
 
 class AddressScreen extends StatefulWidget {
@@ -15,11 +16,11 @@ class _AddressScreenState extends State<AddressScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            TitleScreen(
+            const TitleScreen(
               name: "Address",
             ),
-            Padding(
-              padding: const EdgeInsets.all(12),
+            const Padding(
+              padding: EdgeInsets.all(12),
               child: Align(
                 alignment: Alignment.topLeft,
                 child: Text(
@@ -115,8 +116,8 @@ class _AddressScreenState extends State<AddressScreen> {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(12),
+            const Padding(
+              padding: EdgeInsets.all(12),
               child: Align(
                 alignment: Alignment.topLeft,
                 child: Text(
@@ -129,9 +130,81 @@ class _AddressScreenState extends State<AddressScreen> {
                 ),
               ),
             ),
-            Row(
-              children: [Column()],
-            )
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Great Britain",
+                        style: TextStyle(
+                          color: Color(0xFF212121),
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          fontFamily: "Poppins",
+                        ),
+                      ),
+                      Text(
+                        "Delivery country",
+                        style: TextStyle(
+                          color: Color(0xFF9E9E9E),
+                          fontSize: 14,
+                          fontFamily: "Poppins",
+                        ),
+                      ),
+                    ],
+                  ),
+                  Spacer(),
+                  Icon(Icons.arrow_forward_ios_outlined),
+                ],
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "London",
+                        style: TextStyle(
+                          color: Color(0xFF212121),
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          fontFamily: "Poppins",
+                        ),
+                      ),
+                      Text(
+                        "Delivery city",
+                        style: TextStyle(
+                          color: Color(0xFF9E9E9E),
+                          fontSize: 14,
+                          fontFamily: "Poppins",
+                        ),
+                      ),
+                    ],
+                  ),
+                  Spacer(),
+                  Icon(Icons.arrow_forward_ios_outlined),
+                ],
+              ),
+            ),
+            ElevatedCommon(
+              width: double.infinity,
+              hight: 64,
+              elevated: "save adderss",
+            ),
+            Text(
+              "delete address",
+              style: TextStyle(
+                color: Color(0xFF212121),
+                fontSize: 16,
+                fontWeight: FontWeight.w400,
+              ),
+            ),
           ],
         ),
       ),

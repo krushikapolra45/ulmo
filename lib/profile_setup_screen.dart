@@ -84,6 +84,7 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen> {
                   ),
                 ),
               ),
+              SizedBox(height: 10),
               Padding(
                 padding: const EdgeInsets.all(10),
                 child: ClipRRect(
@@ -167,25 +168,22 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen> {
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 30),
-                child: ElevatedCommon(
-                  width: double.infinity,
-                  hight: 64,
-                  elevated: "continue",
-                  onPress: () {
-                    if (formKey.currentState!.validate()) {
-                      debugPrint("is valid");
+              ElevatedCommon(
+                width: double.infinity,
+                hight: 64,
+                elevated: "continue",
+                onPress: () {
+                  if (formKey.currentState!.validate()) {
+                    debugPrint("is valid");
 
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const AccountScreen()),
-                      );
-                    } else {
-                      debugPrint("is not valid");
-                    }
-                  },
-                ),
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const AccountScreen()),
+                    );
+                  } else {
+                    debugPrint("is not valid");
+                  }
+                },
               ),
             ],
           ),
