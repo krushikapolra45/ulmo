@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ulmo/setting_screen.dart';
 
+import 'saved_item_screen.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
           ),
       // initialRoute: Routename.initialRoute,
       // routes: AppRoute().approutes,
-      home: const SettingScreen(),
+      home: const SavedItemScreen(),
     );
   }
 }
