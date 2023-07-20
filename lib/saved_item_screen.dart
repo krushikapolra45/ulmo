@@ -15,7 +15,7 @@ class _SavedItemScreenState extends State<SavedItemScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            Align(
+            const Align(
               alignment: Alignment.center,
               child: Text(
                 "saved items",
@@ -27,10 +27,15 @@ class _SavedItemScreenState extends State<SavedItemScreen> {
                 ),
               ),
             ),
-            TextFieldScreen(
-              name: "search",
-              icon: Icons.search_rounded,
+            SizedBox(height: 10),
+            Padding(
+              padding: const EdgeInsets.all(4),
+              child: const TextFieldScreen(
+                name: "search",
+                icon: Icons.search_rounded,
+              ),
             ),
+            SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -86,7 +91,7 @@ class _SavedItemScreenState extends State<SavedItemScreen> {
                 ),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -189,8 +194,8 @@ class _SavedItemScreenState extends State<SavedItemScreen> {
                     ],
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(10),
+                const Padding(
+                  padding: EdgeInsets.all(10),
                   child: Column(
                     children: [
                       Icon(
