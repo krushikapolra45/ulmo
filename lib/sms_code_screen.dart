@@ -51,10 +51,6 @@ class _SmsCodeScreenState extends State<SmsCodeScreen> {
             Expanded(
               child: ListView(
                 children: <Widget>[
-                  // ClipRRect(
-                  //   borderRadius: BorderRadius.circular(30),
-                  //   // child: Image.asset(Constants.otpGifImage),
-                  // ),
                   const SizedBox(height: 8),
                   const Padding(
                     padding: EdgeInsets.only(left: 10),
@@ -63,7 +59,6 @@ class _SmsCodeScreenState extends State<SmsCodeScreen> {
                       style: TextStyle(color: Color(0xFF9E9E9E), fontSize: 16, fontFamily: "Poppins,"),
                     ),
                   ),
-
                   const SizedBox(
                     height: 20,
                   ),
@@ -76,16 +71,13 @@ class _SmsCodeScreenState extends State<SmsCodeScreen> {
                       ),
                       child: PinCodeTextField(
                         appContext: context,
-                        pastedTextStyle: TextStyle(
+                        pastedTextStyle: const TextStyle(
                           color: Color(0xFFE0E0E0),
                           fontWeight: FontWeight.bold,
                         ),
                         length: 5,
                         obscureText: true,
                         obscuringCharacter: '*',
-                        // obscuringWidget: const FlutterLogo(
-                        //   size: 24,
-                        // ),
                         blinkWhenObscuring: true,
                         animationType: AnimationType.fade,
                         validator: (v) {
@@ -100,12 +92,12 @@ class _SmsCodeScreenState extends State<SmsCodeScreen> {
                           borderRadius: BorderRadius.circular(8),
                           fieldHeight: 50,
                           fieldWidth: 40,
-                          activeFillColor: Color(0xFFF5F5F5),
-                          inactiveFillColor: Color(0xFFF5F5F5),
-                          inactiveColor: Color(0xFFF5F5F5),
-                          activeColor: Color(0xFFF5F5F5),
-                          selectedColor: Color(0xFFE0E0E0),
-                          selectedFillColor: Color(0xFFF5F5F5),
+                          activeFillColor: const Color(0xFFF5F5F5),
+                          inactiveFillColor: const Color(0xFFF5F5F5),
+                          inactiveColor: const Color(0xFFF5F5F5),
+                          activeColor: const Color(0xFFF5F5F5),
+                          selectedColor: const Color(0xFFE0E0E0),
+                          selectedFillColor: const Color(0xFFF5F5F5),
                         ),
                         cursorColor: Colors.black,
                         animationDuration: const Duration(milliseconds: 300),
@@ -113,13 +105,6 @@ class _SmsCodeScreenState extends State<SmsCodeScreen> {
                         errorAnimationController: errorController,
                         controller: textEditingController,
                         keyboardType: TextInputType.number,
-                        // boxShadows: const [
-                        //   BoxShadow(
-                        //     offset: Offset(0, 1),
-                        //     color: Colors.black12,
-                        //     blurRadius: 10,
-                        //   )
-                        // ],
                         onCompleted: (v) {
                           debugPrint("Completed");
                         },
