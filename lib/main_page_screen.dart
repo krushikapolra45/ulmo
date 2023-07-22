@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:ulmo/account_screen.dart';
 import 'package:ulmo/bag_screen.dart';
 import 'package:ulmo/categories_screen.dart';
 import 'package:ulmo/common_widget/gridview_common.dart';
 import 'package:ulmo/common_widget/item_common.dart';
 
+import 'saved_item_screen.dart';
 import 'search_screen.dart';
 import 'story_screen.dart';
 
@@ -18,8 +20,8 @@ class _MainPageScreenState extends State<MainPageScreen> {
   List<Widget> ScreenList = [
     const MainPageScreen(),
     const BagScreen(),
-    // Login_Success(),
-    // LoginScreen(),
+    const SavedItemScreen(),
+    const AccountScreen(),
   ];
 
   List<Map<String, dynamic>> searchList = [
@@ -129,30 +131,30 @@ class _MainPageScreenState extends State<MainPageScreen> {
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Padding(
-                  padding: EdgeInsets.only(left: 3),
+                  padding: const EdgeInsets.only(left: 1),
                   child: Row(
                     children: [
                       GestureDetector(
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => StoryScreen()),
+                            MaterialPageRoute(builder: (context) => const StoryScreen()),
                           );
                         },
-                        child: ItemCommon(
+                        child: const ItemCommon(
                           image: "assets/images/tablepic.png",
                           name: "best of\n2020",
                         ),
                       ),
-                      ItemCommon(
+                      const ItemCommon(
                         image: "assets/images/golden.png",
                         name: "the golden\nhour",
                       ),
-                      ItemCommon(
+                      const ItemCommon(
                         image: "assets/images/kitchen.png",
                         name: "lovely\nkitchen",
                       ),
-                      ItemCommon(
+                      const ItemCommon(
                         image: "assets/images/summer.png",
                         name: "summer\nchoice",
                       ),

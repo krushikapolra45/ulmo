@@ -1,6 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:ulmo/account_screen.dart';
-import 'package:ulmo/gallery_screen.dart';
 
 import 'common_widget/elevated_common.dart';
 
@@ -12,6 +13,8 @@ class ProfileSetupScreen extends StatefulWidget {
 }
 
 class _ProfileSetupScreenState extends State<ProfileSetupScreen> {
+  final ImagePicker picker = ImagePicker();
+  XFile? image;
   TextEditingController nameController = TextEditingController();
   TextEditingController numberController = TextEditingController();
   TextEditingController emailController = TextEditingController();
@@ -52,37 +55,28 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen> {
                 ],
               ),
               const SizedBox(height: 30),
-              Container(
-                width: 56,
-                height: 56,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    width: 1,
-                    color: const Color(0xFFEEEEEE),
+              ListView(
+                padding: const EdgeInsets.all(15),
+                children: [
+                  GestureDetector(
+                    onTap: () => pickProfileImage(),
+                    child: Container(
+                      height: 56,
+                      width: 56,
+                      clipBehavior: Clip.antiAlias,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        border: Border.all(color: Color(0xFFEEEEEE)),
+                      ),
+                      child: image != null
+                          ? Image.file(
+                              File(image!.path),
+                              fit: BoxFit.cover,
+                            )
+                          : const Icon(Icons.camera_alt_sharp, size: 24),
+                    ),
                   ),
-                  borderRadius: BorderRadius.circular(100),
-                  color: const Color(0xFFF5F5F5),
-                ),
-                child: const Icon(Icons.camera_alt_outlined, size: 18),
-              ),
-              SizedBox(height: 20),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const GalleryScreen(),
-                      ));
-                },
-                child: const Text(
-                  "Upload photo",
-                  style: TextStyle(
-                    color: Color(0xFF212121),
-                    fontSize: 14,
-                    fontFamily: "Poppins",
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
+                ],
               ),
               SizedBox(height: 10),
               Padding(
@@ -190,5 +184,16 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen> {
         ),
       ),
     );
+  }
+
+  pickProfileImage() async {
+    image = await picker.pickImage(source: ImageSource.gallery);
+    debugPrint(image!.path);
+    debugPrint(image!.name);
+
+    var data = await image!.readAsBytes();
+    debugPrint(data.toString());
+
+    setState(() {});
   }
 }

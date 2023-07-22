@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:ulmo/account_screen.dart';
 import 'package:ulmo/bag_screen.dart';
-import 'package:ulmo/catalog_screen.dart';
-import 'package:ulmo/categories_screen.dart';
 import 'package:ulmo/main_page_screen.dart';
+
+import 'saved_item_screen.dart';
 
 class BottomNavigationBarScreen extends StatefulWidget {
   const BottomNavigationBarScreen({Key? key}) : super(key: key);
@@ -14,10 +15,10 @@ class BottomNavigationBarScreen extends StatefulWidget {
 class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
   int currentIndex = 0;
   List<Widget> ScreenList = [
-    MainPageScreen(),
-    BagScreen(),
-    CatalogScreen(),
-    CategoriesScreen(),
+    const MainPageScreen(),
+    const BagScreen(),
+    const SavedItemScreen(),
+    const AccountScreen(),
   ];
 
   @override
@@ -27,7 +28,7 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
         selectedItemColor: Colors.black,
-        unselectedItemColor: Color(0xFFBDBDBD),
+        unselectedItemColor: const Color(0xFFBDBDBD),
         onTap: (value) {
           debugPrint("value: ->$value");
           currentIndex = value;
@@ -42,7 +43,7 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
               height: 32,
             ),
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             label: "",
             icon: Icon(
               Icons.shopping_bag_outlined,
@@ -50,7 +51,7 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
               size: 32,
             ),
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             label: "",
             icon: Icon(
               Icons.favorite_border,
@@ -58,7 +59,7 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
               size: 32,
             ),
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             label: "",
             activeIcon: Icon(Icons.person),
             icon: Icon(
