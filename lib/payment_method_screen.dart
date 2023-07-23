@@ -59,22 +59,20 @@ class _PaymentMethodScreenState extends State<PaymentMethodScreen> {
                 name: "Apple pay",
               ),
               const Spacer(),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const SuccessScreen()),
-                  );
-                },
-                child: const Padding(
-                  padding: EdgeInsets.only(bottom: 20),
-                  child: ElevatedCommon(
-                    width: double.infinity,
-                    elevated: "Pay \$420,50",
-                    hight: 64,
-                  ),
+              Padding(
+                padding: EdgeInsets.only(bottom: 20),
+                child: ElevatedCommon(
+                  width: double.infinity,
+                  elevated: "Pay \$420,50",
+                  hight: 64,
+                  onPress: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const SuccessScreen()),
+                    );
+                  },
                 ),
-              )
+              ),
             ],
           ),
         ),

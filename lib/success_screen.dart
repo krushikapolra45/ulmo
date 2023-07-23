@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ulmo/my_orders_screen.dart';
 
 class SuccessScreen extends StatefulWidget {
   const SuccessScreen({Key? key}) : super(key: key);
@@ -55,7 +56,12 @@ class _SuccessScreenState extends State<SuccessScreen> {
                   fixedSize: const MaterialStatePropertyAll(Size(343, 64)),
                   side: const MaterialStatePropertyAll(BorderSide(width: 2)),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const MyOrdersScreen()),
+                  );
+                },
                 child: const Text(
                   "To my orders",
                   style: TextStyle(

@@ -1,4 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:ulmo/address_book_screen.dart';
+import 'package:ulmo/bag_screen.dart';
+import 'package:ulmo/main_page_screen.dart';
+import 'package:ulmo/my_details_screen.dart';
+import 'package:ulmo/my_orders_screen.dart';
+import 'package:ulmo/new_payment_method_screen.dart';
+
+import 'saved_item_screen.dart';
+import 'setting_screen.dart';
 
 class AccountScreen extends StatefulWidget {
   const AccountScreen({Key? key}) : super(key: key);
@@ -8,6 +17,12 @@ class AccountScreen extends StatefulWidget {
 }
 
 class _AccountScreenState extends State<AccountScreen> {
+  List<Widget> ScreenList = [
+    const MainPageScreen(),
+    const BagScreen(),
+    const SavedItemScreen(),
+    const AccountScreen(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,15 +31,24 @@ class _AccountScreenState extends State<AccountScreen> {
           children: [
             Padding(
               padding: EdgeInsets.all(8.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Icon(
-                    Icons.settings_outlined,
-                    color: Color(0xFF212121),
-                    size: 25,
-                  ),
-                ],
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SettingScreen(),
+                      ));
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Icon(
+                      Icons.settings_outlined,
+                      color: Color(0xFF212121),
+                      size: 25,
+                    ),
+                  ],
+                ),
               ),
             ),
             Padding(
@@ -86,13 +110,22 @@ class _AccountScreenState extends State<AccountScreen> {
                     size: 20,
                   ),
                   SizedBox(width: 10),
-                  Text(
-                    "my order",
-                    style: TextStyle(
-                      color: Color(0xFF212121),
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      fontFamily: "Poppins",
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => MyOrdersScreen(),
+                          ));
+                    },
+                    child: Text(
+                      "my order",
+                      style: TextStyle(
+                        color: Color(0xFF212121),
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        fontFamily: "Poppins",
+                      ),
                     ),
                   ),
                   Spacer(),
@@ -113,13 +146,22 @@ class _AccountScreenState extends State<AccountScreen> {
                     size: 20,
                   ),
                   SizedBox(width: 10),
-                  Text(
-                    "my details",
-                    style: TextStyle(
-                      color: Color(0xFF212121),
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      fontFamily: "Poppins",
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => MyDetailsScreen(),
+                          ));
+                    },
+                    child: Text(
+                      "my details",
+                      style: TextStyle(
+                        color: Color(0xFF212121),
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        fontFamily: "Poppins",
+                      ),
                     ),
                   ),
                 ],
@@ -135,13 +177,22 @@ class _AccountScreenState extends State<AccountScreen> {
                     size: 20,
                   ),
                   SizedBox(width: 10),
-                  Text(
-                    "address book",
-                    style: TextStyle(
-                      color: Color(0xFF212121),
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      fontFamily: "Poppins",
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => AddressBookScreen(),
+                          ));
+                    },
+                    child: Text(
+                      "address book",
+                      style: TextStyle(
+                        color: Color(0xFF212121),
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        fontFamily: "Poppins",
+                      ),
                     ),
                   ),
                 ],
@@ -150,23 +201,32 @@ class _AccountScreenState extends State<AccountScreen> {
             SizedBox(height: 20),
             Padding(
               padding: EdgeInsets.all(8.0),
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.payment_rounded,
-                    size: 20,
-                  ),
-                  SizedBox(width: 10),
-                  Text(
-                    "payment methods",
-                    style: TextStyle(
-                      color: Color(0xFF212121),
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      fontFamily: "Poppins",
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => NewPaymentMethodScreen(),
+                      ));
+                },
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.payment_rounded,
+                      size: 20,
                     ),
-                  ),
-                ],
+                    SizedBox(width: 10),
+                    Text(
+                      "payment methods",
+                      style: TextStyle(
+                        color: Color(0xFF212121),
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        fontFamily: "Poppins",
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
             SizedBox(height: 20),

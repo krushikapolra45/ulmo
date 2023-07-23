@@ -65,10 +65,11 @@ class _PhoneLoginState extends State<PhoneLogin> {
               elevated: "continue",
               onPress: () {
                 Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const SmsCodeScreen(),
-                    ));
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const SmsCodeScreen(),
+                  ),
+                );
               },
             ),
           ],

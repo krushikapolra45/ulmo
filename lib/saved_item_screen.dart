@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:ulmo/account_screen.dart';
+import 'package:ulmo/bag_screen.dart';
 import 'package:ulmo/common_widget/textfield_common.dart';
+import 'package:ulmo/main_page_screen.dart';
 
 class SavedItemScreen extends StatefulWidget {
   const SavedItemScreen({Key? key}) : super(key: key);
@@ -9,6 +12,12 @@ class SavedItemScreen extends StatefulWidget {
 }
 
 class _SavedItemScreenState extends State<SavedItemScreen> {
+  List<Widget> ScreenList = [
+    const MainPageScreen(),
+    const BagScreen(),
+    const SavedItemScreen(),
+    const AccountScreen(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(

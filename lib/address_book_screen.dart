@@ -15,10 +15,10 @@ class _AddressBookScreenState extends State<AddressBookScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            const TitleScreen(
+            TitleScreen(
               name: " address book",
             ),
-            const Row(
+            Row(
               children: [
                 Icon(Icons.location_on_outlined),
                 Padding(
@@ -48,7 +48,7 @@ class _AddressBookScreenState extends State<AddressBookScreen> {
                 ),
               ],
             ),
-            const Row(
+            Row(
               children: [
                 Icon(Icons.location_on_outlined),
                 Padding(
@@ -78,29 +78,28 @@ class _AddressBookScreenState extends State<AddressBookScreen> {
                 ),
               ],
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                height: 64,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: const Color(0xFFF5F5F5),
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: Align(
-                  alignment: Alignment.center,
-                  child: const Text(
-                    "add new address",
-                    style: TextStyle(
-                      color: Color(0xFF212121),
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      fontFamily: "Poppins",
-                    ),
+            ElevatedButton(
+              style: ButtonStyle(
+                  backgroundColor: MaterialStatePropertyAll(
+                    Color(0xFFF5F5F5),
                   ),
+                  fixedSize: MaterialStatePropertyAll(
+                    Size(343, 64),
+                  ),
+                  shape: MaterialStatePropertyAll(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                  )),
+              onPressed: () {},
+              child: Text(
+                "Add new address",
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Color(0xFF212121),
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

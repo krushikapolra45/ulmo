@@ -27,7 +27,7 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                 title: "checkout",
               ),
               const SizedBox(height: 20),
-              Align(
+              const Align(
                 alignment: Alignment.topLeft,
                 child: Text(
                   "delivery method",
@@ -100,7 +100,7 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                 ],
               ),
               const SizedBox(height: 20),
-              Align(
+              const Align(
                 alignment: Alignment.topLeft,
                 child: Text(
                   "delivery Address",
@@ -111,7 +111,7 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Row(
                 children: [
                   const Icon(Icons.location_on_outlined),
@@ -298,8 +298,8 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                   ),
                 ],
               ),
-              SizedBox(height: 20),
-              Align(
+              const SizedBox(height: 20),
+              const Align(
                 alignment: Alignment.topLeft,
                 child: Text(
                   "delivery time",
@@ -366,23 +366,21 @@ class _DeliveryDetailsScreenState extends State<DeliveryDetailsScreen> {
                 ),
               ),
               const Spacer(),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const PaymentMethodScreen(),
-                      ));
-                },
-                child: const Padding(
-                  padding: EdgeInsets.only(bottom: 30),
-                  child: ElevatedCommon(
-                    width: 343,
-                    elevated: "continue",
-                    hight: 64,
-                  ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 30),
+                child: ElevatedCommon(
+                  width: 343,
+                  elevated: "continue",
+                  hight: 64,
+                  onPress: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const PaymentMethodScreen(),
+                        ));
+                  },
                 ),
-              )
+              ),
             ],
           ),
         ),

@@ -42,7 +42,7 @@ class _OrderScreenState extends State<OrderScreen> {
                   fontFamily: "Poppins",
                 ),
               ),
-              const SizedBox(height: 30),
+              const SizedBox(height: 20),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -79,7 +79,7 @@ class _OrderScreenState extends State<OrderScreen> {
                             fontFamily: "Poppins",
                           ),
                         ),
-                        const SizedBox(height: 10),
+                        const SizedBox(height: 5),
                         const Text(
                           "Wooden bedside table featuring a \nraised design",
                           style: TextStyle(
@@ -89,7 +89,7 @@ class _OrderScreenState extends State<OrderScreen> {
                             fontFamily: "Poppins",
                           ),
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: 13),
                         Container(
                           height: 36,
                           width: 96,
@@ -105,7 +105,7 @@ class _OrderScreenState extends State<OrderScreen> {
                             ),
                           ),
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: 18),
                         const Text(
                           textAlign: TextAlign.start,
                           "\$280.50",
@@ -116,7 +116,7 @@ class _OrderScreenState extends State<OrderScreen> {
                             fontFamily: "Poppins",
                           ),
                         ),
-                        const SizedBox(height: 10),
+                        const SizedBox(height: 5),
                         const Text(
                           "Square bedside table with legs, a\nrattan shelf and a...",
                           style: TextStyle(
@@ -126,7 +126,7 @@ class _OrderScreenState extends State<OrderScreen> {
                             fontFamily: "Poppins",
                           ),
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: 13),
                         Container(
                           height: 36,
                           width: 96,

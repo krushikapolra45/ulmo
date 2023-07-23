@@ -5,8 +5,6 @@ import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:ulmo/common_widget/big_hedding_common.dart';
 import 'package:ulmo/common_widget/elevated_common.dart';
 
-import 'profile_setup_screen.dart';
-
 class SmsCodeScreen extends StatefulWidget {
   final String? phoneNumber;
 
@@ -147,10 +145,10 @@ class _SmsCodeScreenState extends State<SmsCodeScreen> {
                         errorController!.add(ErrorAnimationType.shake); // Triggering error shake animation
                         setState(() => hasError = true);
 
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => const ProfileSetupScreen()),
-                        );
+                        // Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(builder: (context) => const ProfileSetupScreen()),
+                        // );
                       } else {
                         setState(
                           () {
