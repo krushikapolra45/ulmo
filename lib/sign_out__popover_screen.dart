@@ -44,8 +44,8 @@ class _SignOutPopoverScreenState extends State<SignOutPopoverScreen> {
                         fontFamily: "Poppins",
                       ),
                     ),
-                    SizedBox(height: 10),
-                    Padding(
+                    const SizedBox(height: 10),
+                    const Padding(
                       padding: EdgeInsets.all(8.0),
                       child: ElevatedCommon(
                         elevated: "No, I want to stay",
@@ -72,7 +72,7 @@ class _SignOutPopoverScreenState extends State<SignOutPopoverScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => AccountScreen(),
+                                builder: (context) => const AccountScreen(),
                               ));
                         },
                         child: const Text(
