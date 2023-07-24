@@ -35,28 +35,51 @@ class _FilterOptionScreenState extends State<FilterOptionScreen> {
             ),
             Expanded(
               child: GridView.builder(
-                // shrinkWrap: true,
-                // scrollDirection: Axis.vertical,
-                // physics: const AlwaysScrollableScrollPhysics(),
+                shrinkWrap: true,
                 itemCount: listButton.length,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 1,
-                  crossAxisSpacing: 2,
                   mainAxisSpacing: 2,
+                  mainAxisExtent: 60,
                 ),
-                itemBuilder: (context, index) => Row(
-                  children: [
-                    Text(
-                      listButton[index]["text"],
-                    ),
-                  ],
+                itemBuilder: (context, index) => Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      Text(
+                        listButton[index]["text"],
+                      ),
+                      const Spacer(),
+                      Checkbox(
+                        value: checkvalue,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50),
+                        ),
+                        fillColor: const MaterialStatePropertyAll(
+                          Color(0xFFFEE440),
+                        ),
+                        checkColor: const Color(0xFF212121),
+                        // focusColor:
+                        hoverColor: const Color(0xFFF5F5F5),
+                        onChanged: (value) {
+                          debugPrint("value---> $value");
+                          setState(() {
+                            checkvalue = value!;
+                          });
+                        },
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
-            const ElevatedCommon(
-              elevated: "Show 25 items",
-              width: double.infinity,
-              hight: 64,
+            const Padding(
+              padding: EdgeInsets.only(bottom: 30),
+              child: ElevatedCommon(
+                elevated: "Show 25 items",
+                width: double.infinity,
+                hight: 64,
+              ),
             ),
           ],
         ),

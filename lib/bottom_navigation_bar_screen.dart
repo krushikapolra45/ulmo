@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ulmo/account_screen.dart';
 import 'package:ulmo/bag_screen.dart';
+import 'package:ulmo/empty_account_screen.dart';
 import 'package:ulmo/main_page_screen.dart';
 
 import 'saved_item_screen.dart';
@@ -18,7 +18,7 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
     const MainPageScreen(),
     const BagScreen(),
     const SavedItemScreen(),
-    const AccountScreen(),
+    const EmptyAccountScreen(),
   ];
 
   @override

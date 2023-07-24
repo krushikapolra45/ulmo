@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ulmo/common_widget/elevated_common.dart';
 import 'package:ulmo/common_widget/filter_common.dart';
 import 'package:ulmo/common_widget/titlename_common.dart';
+import 'package:ulmo/filter_option_screen.dart';
 
 class FilterScreen extends StatefulWidget {
   const FilterScreen({Key? key}) : super(key: key);
@@ -58,30 +59,39 @@ class _FilterScreenState extends State<FilterScreen> {
                 });
               },
             ),
-            const SizedBox(height: 20),
-            const Padding(
+            SizedBox(height: 20),
+            Padding(
               padding: EdgeInsets.all(8.0),
-              child: Row(
-                children: [
-                  Text(
-                    "Category",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      fontFamily: "Poppins",
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => FilterOptionScreen(),
+                      ));
+                },
+                child: Row(
+                  children: [
+                    Text(
+                      "Category",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        fontFamily: "Poppins",
+                      ),
                     ),
-                  ),
-                  Spacer(),
-                  Text(
-                    "furniture",
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Color(0xFF9E9E9E),
-                      fontWeight: FontWeight.w500,
-                      fontFamily: "Poppins",
+                    Spacer(),
+                    Text(
+                      "furniture",
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Color(0xFF9E9E9E),
+                        fontWeight: FontWeight.w500,
+                        fontFamily: "Poppins",
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
             const SizedBox(height: 25),

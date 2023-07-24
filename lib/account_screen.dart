@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:ulmo/address_book_screen.dart';
-import 'package:ulmo/bag_screen.dart';
-import 'package:ulmo/main_page_screen.dart';
 import 'package:ulmo/my_details_screen.dart';
 import 'package:ulmo/my_orders_screen.dart';
 import 'package:ulmo/new_payment_method_screen.dart';
 
-import 'saved_item_screen.dart';
 import 'setting_screen.dart';
 
 class AccountScreen extends StatefulWidget {
@@ -17,12 +14,6 @@ class AccountScreen extends StatefulWidget {
 }
 
 class _AccountScreenState extends State<AccountScreen> {
-  List<Widget> ScreenList = [
-    const MainPageScreen(),
-    const BagScreen(),
-    const SavedItemScreen(),
-    const AccountScreen(),
-  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
