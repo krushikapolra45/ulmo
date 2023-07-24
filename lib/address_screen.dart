@@ -210,7 +210,7 @@ class _AddressScreenState extends State<AddressScreen> {
                                   builder: (context) => const DeliveryCountryScreen(),
                                 ));
                           },
-                          child: const Icon(Icons.arrow_forward_ios_outlined)),
+                          child: const Icon(Icons.arrow_forward_ios_outlined),),
                     ],
                   ),
                 ),

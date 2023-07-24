@@ -25,20 +25,35 @@ class _FilterOptionScreenState extends State<FilterOptionScreen> {
   ];
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
         child: Column(
           children: [
-            TitleScreen(
+            const TitleScreen(
               name: "Category",
               text: "clear",
             ),
-            SizedBox(height: 10),
-            Column(
-              children: [],
+            Expanded(
+              child: GridView.builder(
+                // shrinkWrap: true,
+                // scrollDirection: Axis.vertical,
+                // physics: const AlwaysScrollableScrollPhysics(),
+                itemCount: listButton.length,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 1,
+                  crossAxisSpacing: 2,
+                  mainAxisSpacing: 2,
+                ),
+                itemBuilder: (context, index) => Row(
+                  children: [
+                    Text(
+                      listButton[index]["text"],
+                    ),
+                  ],
+                ),
+              ),
             ),
-            SizedBox(height: 30),
-            ElevatedCommon(
+            const ElevatedCommon(
               elevated: "Show 25 items",
               width: double.infinity,
               hight: 64,

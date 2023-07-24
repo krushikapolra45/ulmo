@@ -73,7 +73,7 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen> {
                             clipBehavior: Clip.antiAlias,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              border: Border.all(color: Color(0xFFEEEEEE)),
+                              border: Border.all(color: const Color(0xFFEEEEEE)),
                             ),
                             child: image != null
                                 ? Image.file(
@@ -88,7 +88,7 @@ class _ProfileSetupScreenState extends State<ProfileSetupScreen> {
                       ],
                     ),
                   ),
-                  Text(
+                  const Text(
                     "Upload photo",
                     style: TextStyle(
                       color: Color(0xFF212121),

@@ -119,6 +119,37 @@ class _MyDetailsScreenState extends State<MyDetailsScreen> {
                 ),
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: ClipRRect(
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(8),
+                ),
+                child: TextFormField(
+                  validator: (value) {
+                    if (!RegExp(r"(?:19|20)\d\d").hasMatch(value!)) {
+                      return "Please enter valid birthdate";
+                    }
+                    return null;
+                  },
+                  decoration: const InputDecoration(
+                    contentPadding: EdgeInsets.all(20),
+                    isDense: true,
+                    border: InputBorder.none,
+                    hintText: "date of birth",
+                    filled: true,
+                    fillColor: Color(0xFFF5F5F5),
+                    hintStyle: TextStyle(
+                      color: Color(0xFF9E9E9E),
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                      fontFamily: "Poppins",
+                    ),
+                  ),
+                  onTap: () {},
+                ),
+              ),
+            ),
           ],
         ),
       ),

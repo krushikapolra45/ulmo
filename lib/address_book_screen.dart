@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ulmo/address_screen.dart';
 import 'package:ulmo/common_widget/titlename_common.dart';
 
 class AddressBookScreen extends StatefulWidget {
@@ -15,10 +16,10 @@ class _AddressBookScreenState extends State<AddressBookScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            TitleScreen(
+            const TitleScreen(
               name: " address book",
             ),
-            Row(
+            const Row(
               children: [
                 Icon(Icons.location_on_outlined),
                 Padding(
@@ -48,7 +49,7 @@ class _AddressBookScreenState extends State<AddressBookScreen> {
                 ),
               ],
             ),
-            Row(
+            const Row(
               children: [
                 Icon(Icons.location_on_outlined),
                 Padding(
@@ -80,10 +81,10 @@ class _AddressBookScreenState extends State<AddressBookScreen> {
             ),
             ElevatedButton(
               style: ButtonStyle(
-                  backgroundColor: MaterialStatePropertyAll(
+                  backgroundColor: const MaterialStatePropertyAll(
                     Color(0xFFF5F5F5),
                   ),
-                  fixedSize: MaterialStatePropertyAll(
+                  fixedSize: const MaterialStatePropertyAll(
                     Size(343, 64),
                   ),
                   shape: MaterialStatePropertyAll(
@@ -91,8 +92,14 @@ class _AddressBookScreenState extends State<AddressBookScreen> {
                       borderRadius: BorderRadius.circular(8),
                     ),
                   )),
-              onPressed: () {},
-              child: Text(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => AddressScreen(),
+                    ));
+              },
+              child: const Text(
                 "Add new address",
                 style: TextStyle(
                   fontSize: 16,

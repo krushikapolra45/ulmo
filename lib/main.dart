@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ulmo/new_payment_method_screen.dart';
+
+import 'sign_out__popover_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
           ),
       // initialRoute: Routename.initialRoute,
       // routes: AppRoute().approutes,
-      home: const NewPaymentMethodScreen(),
+      home: const SignOutPopoverScreen(),
     );
   }
 }

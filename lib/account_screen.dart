@@ -30,16 +30,16 @@ class _AccountScreenState extends State<AccountScreen> {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(8.0),
               child: GestureDetector(
                 onTap: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => SettingScreen(),
+                        builder: (context) => const SettingScreen(),
                       ));
                 },
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Icon(
@@ -51,7 +51,7 @@ class _AccountScreenState extends State<AccountScreen> {
                 ),
               ),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.all(8.0),
               child: Align(
                 alignment: Alignment.topLeft,
@@ -75,8 +75,8 @@ class _AccountScreenState extends State<AccountScreen> {
                     width: 36,
                     height: 36,
                   ),
-                  SizedBox(width: 10),
-                  Column(
+                  const SizedBox(width: 10),
+                  const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
@@ -102,23 +102,23 @@ class _AccountScreenState extends State<AccountScreen> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(8.0),
               child: Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.shopping_bag_outlined,
                     size: 20,
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => MyOrdersScreen(),
+                            builder: (context) => const MyOrdersScreen(),
                           ));
                     },
-                    child: Text(
+                    child: const Text(
                       "my order",
                       style: TextStyle(
                         color: Color(0xFF212121),
@@ -128,33 +128,33 @@ class _AccountScreenState extends State<AccountScreen> {
                       ),
                     ),
                   ),
-                  Spacer(),
-                  Text(
+                  const Spacer(),
+                  const Text(
                     "14",
                     style: TextStyle(color: Color(0xFF9E9E9E), fontSize: 16),
                   ),
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Padding(
-              padding: EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(8.0),
               child: Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.person_outline,
                     size: 20,
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => MyDetailsScreen(),
+                            builder: (context) => const MyDetailsScreen(),
                           ));
                     },
-                    child: Text(
+                    child: const Text(
                       "my details",
                       style: TextStyle(
                         color: Color(0xFF212121),
@@ -167,25 +167,25 @@ class _AccountScreenState extends State<AccountScreen> {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Padding(
-              padding: EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(8.0),
               child: Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.pin_drop_outlined,
                     size: 20,
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => AddressBookScreen(),
+                            builder: (context) => const AddressBookScreen(),
                           ));
                     },
-                    child: Text(
+                    child: const Text(
                       "address book",
                       style: TextStyle(
                         color: Color(0xFF212121),
@@ -198,25 +198,25 @@ class _AccountScreenState extends State<AccountScreen> {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Padding(
-              padding: EdgeInsets.all(8.0),
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => NewPaymentMethodScreen(),
-                      ));
-                },
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.payment_rounded,
-                      size: 20,
-                    ),
-                    SizedBox(width: 10),
-                    Text(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.payment_rounded,
+                    size: 20,
+                  ),
+                  SizedBox(width: 10),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => NewPaymentMethodScreen(),
+                          ));
+                    },
+                    child: Text(
                       "payment methods",
                       style: TextStyle(
                         color: Color(0xFF212121),
@@ -225,12 +225,12 @@ class _AccountScreenState extends State<AccountScreen> {
                         fontFamily: "Poppins",
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
-            SizedBox(height: 20),
-            Padding(
+            const SizedBox(height: 20),
+            const Padding(
               padding: EdgeInsets.all(8.0),
               child: Row(
                 children: [
