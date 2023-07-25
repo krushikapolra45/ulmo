@@ -84,25 +84,6 @@ class _NewPaymentMethodScreenState extends State<NewPaymentMethodScreen> {
                                   ),
                                 ),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(8),
-                                  child: const TextField(
-                                    decoration: InputDecoration(
-                                      contentPadding: EdgeInsets.all(20),
-                                      isDense: true,
-                                      border: InputBorder.none,
-                                      filled: true,
-                                      hintText: "House number",
-                                      fillColor: Color(0xFFF5F5F5),
-                                      suffixIcon: Padding(
-                                        padding: EdgeInsets.all(8.0),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
                             ],
                           ),
                         ),
