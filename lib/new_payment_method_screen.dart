@@ -60,19 +60,19 @@ class _NewPaymentMethodScreenState extends State<NewPaymentMethodScreen> {
                   ),
                   context: context,
                   builder: (context) {
-                    return Wrap(
+                    return const Wrap(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.all(12),
+                          padding: EdgeInsets.all(12),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              const Icon(
+                              Icon(
                                 Icons.close,
                                 color: Color(0xFF212121),
                                 size: 24,
                               ),
-                              const Align(
+                              Align(
                                 alignment: Alignment.topLeft,
                                 child: Text(
                                   "new card",
@@ -81,6 +81,123 @@ class _NewPaymentMethodScreenState extends State<NewPaymentMethodScreen> {
                                     color: Color(0xFF212121),
                                     fontWeight: FontWeight.w600,
                                     fontFamily: "Poppins",
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 15, right: 15, top: 20),
+                          child: TextField(
+                            decoration: InputDecoration(
+                              contentPadding: EdgeInsets.all(20),
+                              isDense: true,
+                              border: InputBorder.none,
+                              filled: true,
+                              fillColor: Color(0xFFF5F5F5),
+                              suffixIcon: Padding(
+                                padding: EdgeInsets.all(14),
+                                child: Row(
+                                  children: [
+                                    Icon(
+                                      Icons.payment_rounded,
+                                      size: 20,
+                                    ),
+                                    SizedBox(width: 20),
+                                    Text(
+                                      "Card number",
+                                      style: TextStyle(
+                                        color: Color(0xFF9E9E9E),
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 15,
+                                        fontFamily: "Poppins",
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 15),
+                        Padding(
+                          padding: EdgeInsets.only(left: 15, right: 15),
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                    contentPadding: EdgeInsets.all(20),
+                                    isDense: true,
+                                    border: InputBorder.none,
+                                    filled: true,
+                                    fillColor: Color(0xFFF5F5F5),
+                                    suffixIcon: Padding(
+                                      padding: EdgeInsets.all(14),
+                                      child: Text(
+                                        "Expiry date",
+                                        style: TextStyle(
+                                          color: Color(0xFF9E9E9E),
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 15,
+                                          fontFamily: "Poppins",
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(width: 10),
+                              Expanded(
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                    contentPadding: EdgeInsets.all(20),
+                                    isDense: true,
+                                    border: InputBorder.none,
+                                    filled: true,
+                                    fillColor: Color(0xFFF5F5F5),
+                                    suffixIcon: Padding(
+                                      padding: EdgeInsets.all(14),
+                                      child: Text(
+                                        "CVC/CVV",
+                                        style: TextStyle(
+                                          color: Color(0xFF9E9E9E),
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 15,
+                                          fontFamily: "Poppins",
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(left: 15, right: 15, top: 20),
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                    contentPadding: EdgeInsets.all(20),
+                                    isDense: true,
+                                    border: InputBorder.none,
+                                    filled: true,
+                                    fillColor: Color(0xFFF5F5F5),
+                                    suffixIcon: Padding(
+                                      padding: EdgeInsets.all(14),
+                                      child: Row(
+                                        children: [
+                                          SizedBox(width: 20),
+                                          Text(
+                                            "Name on the card",
+                                            style: TextStyle(
+                                              color: Color(0xFF9E9E9E),
+                                              fontWeight: FontWeight.w500,
+                                              fontSize: 15,
+                                              fontFamily: "Poppins",
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ),
