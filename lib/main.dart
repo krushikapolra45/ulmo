@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ulmo/filter_option_screen.dart';
 import 'package:ulmo/new_payment_method_screen.dart';
 
 void main() {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
           ),
       // initialRoute: Routename.initialRoute,
       // routes: AppRoute().approutes,
-      home: const NewPaymentMethodScreen(),
+      home: const FilterOptionScreen(),
     );
   }
 }
