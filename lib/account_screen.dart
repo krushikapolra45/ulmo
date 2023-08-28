@@ -194,20 +194,20 @@ class _AccountScreenState extends State<AccountScreen> {
               padding: const EdgeInsets.all(8.0),
               child: Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.payment_rounded,
                     size: 20,
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   GestureDetector(
                     onTap: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => NewPaymentMethodScreen(),
+                            builder: (context) => const NewPaymentMethodScreen(),
                           ));
                     },
-                    child: Text(
+                    child: const Text(
                       "payment methods",
                       style: TextStyle(
                         color: Color(0xFF212121),

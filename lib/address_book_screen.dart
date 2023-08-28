@@ -96,7 +96,7 @@ class _AddressBookScreenState extends State<AddressBookScreen> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => AddressScreen(),
+                      builder: (context) => const AddressScreen(),
                     ));
               },
               child: const Text(

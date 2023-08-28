@@ -12,7 +12,7 @@ class _PhotoCropScreenState extends State<PhotoCropScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF212121),
+      backgroundColor: const Color(0xFF212121),
       body: SafeArea(
         child: Column(
           children: [
@@ -25,22 +25,22 @@ class _PhotoCropScreenState extends State<PhotoCropScreen> {
                     width: 36,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50),
-                      color: Color(0xB3FFFFFF),
+                      color: const Color(0xB3FFFFFF),
                     ),
                     child: BackButton(
-                      color: Color(0xFF212121),
+                      color: const Color(0xFF212121),
                       onPressed: () {},
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Container(
                     height: 36,
                     width: 36,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50),
-                      color: Color(0xB3FFFFFF),
+                      color: const Color(0xB3FFFFFF),
                     ),
-                    child: Icon(
+                    child: const Icon(
                       Icons.done,
                       color: Color(0xFF212121),
                     ),

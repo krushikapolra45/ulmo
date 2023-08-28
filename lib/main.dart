@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ulmo/filter_option_screen.dart';
-import 'package:ulmo/new_payment_method_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,12 +14,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
+
+      theme: ThemeData(fontFamily: "Poppins"
           // colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
           // useMaterial3: false,
           ),
       // initialRoute: Routename.initialRoute,
       // routes: AppRoute().approutes,
+
       home: const FilterOptionScreen(),
     );
   }

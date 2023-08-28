@@ -27,15 +27,15 @@ class _SavedItemScreenState extends State<SavedItemScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 10),
-            Padding(
-              padding: const EdgeInsets.all(4),
-              child: const TextFieldScreen(
+            const SizedBox(height: 10),
+            const Padding(
+              padding: EdgeInsets.all(4),
+              child: TextFieldScreen(
                 name: "search",
                 icon: Icons.search_rounded,
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [

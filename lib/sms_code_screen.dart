@@ -56,7 +56,11 @@ class _SmsCodeScreenState extends State<SmsCodeScreen> {
                     padding: EdgeInsets.only(left: 10),
                     child: Text(
                       "We sent it to +7 912 323-32-12",
-                      style: TextStyle(color: Color(0xFF9E9E9E), fontSize: 16, fontFamily: "Poppins,"),
+                      style: TextStyle(
+                        color: Color(0xFF9E9E9E),
+                        fontSize: 16,
+
+                      ),
                     ),
                   ),
                   const SizedBox(
@@ -142,9 +146,9 @@ class _SmsCodeScreenState extends State<SmsCodeScreen> {
                     width: double.infinity,
                     onPress: () {
                       formKey.currentState!.validate();
-                      // conditions for validating
+
                       if (currentText.length != 3 || currentText != "123") {
-                        errorController!.add(ErrorAnimationType.shake); // Triggering error shake animation
+                        errorController!.add(ErrorAnimationType.shake);
                         setState(() => hasError = true);
 
                         Navigator.push(

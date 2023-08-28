@@ -17,12 +17,10 @@ class _SettingScreenState extends State<SettingScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            TitleScreen(
-              name: "settings",
-            ),
-            SizedBox(height: 20),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
+            const TitleScreen(name: "settings"),
+            const SizedBox(height: 20),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
               child: Row(
                 children: [
                   Text(
@@ -45,9 +43,9 @@ class _SettingScreenState extends State<SettingScreen> {
                 ],
               ),
             ),
-            SizedBox(height: 20),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
+            const SizedBox(height: 20),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
               child: Row(
                 children: [
                   Text(
@@ -70,12 +68,12 @@ class _SettingScreenState extends State<SettingScreen> {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
                 children: [
-                  Text(
+                  const Text(
                     "Notifications",
                     style: TextStyle(
                       fontWeight: FontWeight.w400,
@@ -83,7 +81,7 @@ class _SettingScreenState extends State<SettingScreen> {
                       color: Color(0xFF212121),
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   CupertinoSwitch(
                     value: swichvalue,
                     onChanged: (value) {
@@ -96,9 +94,9 @@ class _SettingScreenState extends State<SettingScreen> {
                 ],
               ),
             ),
-            SizedBox(height: 20),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
+            const SizedBox(height: 20),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
               child: Row(
                 children: [
                   Text(

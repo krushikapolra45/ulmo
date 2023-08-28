@@ -59,18 +59,18 @@ class _FilterScreenState extends State<FilterScreen> {
                 });
               },
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Padding(
-              padding: EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(8.0),
               child: GestureDetector(
                 onTap: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => FilterOptionScreen(),
+                        builder: (context) => const FilterOptionScreen(),
                       ));
                 },
-                child: Row(
+                child: const Row(
                   children: [
                     Text(
                       "Category",
