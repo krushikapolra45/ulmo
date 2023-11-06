@@ -183,7 +183,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
                                   padding: const EdgeInsets.all(10),
                                   child: Container(
                                     alignment: Alignment.center,
-                                    width: 343,
+                                    width: double.infinity,
                                     height: 64,
                                     decoration: BoxDecoration(
                                       color: const Color(0xFFF5F5F5),

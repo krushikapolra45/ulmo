@@ -46,7 +46,7 @@ class _BagScreenState extends State<BagScreen> {
                           height: 115,
                           width: 94,
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: 25),
                         Image.asset(
                           "assets/images/squretable.png",
                           height: 115,
@@ -78,7 +78,7 @@ class _BagScreenState extends State<BagScreen> {
                             fontWeight: FontWeight.w400,
                           ),
                         ),
-                        const SizedBox(height: 22),
+                        const SizedBox(height: 10),
                         Container(
                           height: 36,
                           width: 96,
@@ -131,7 +131,7 @@ class _BagScreenState extends State<BagScreen> {
                             fontWeight: FontWeight.w400,
                           ),
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: 10),
                         Container(
                           height: 36,
                           width: 96,
@@ -168,7 +168,7 @@ class _BagScreenState extends State<BagScreen> {
                   ),
                   const Spacer(),
                   const Padding(
-                    padding: EdgeInsets.all(11),
+                    padding: EdgeInsets.all(8),
                     child: Column(
                       children: [
                         Icon(

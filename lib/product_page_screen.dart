@@ -81,7 +81,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                   ],
                 ),
                 Container(
-                  height: 250,
+                  height: 260,
                   width: double.infinity,
                   color: const Color(0xFFF5F5F5),
                   child: Padding(
@@ -170,7 +170,7 @@ class _ProductPageScreenState extends State<ProductPageScreen> {
                         const ElevatedCommon(
                           elevated: "Add to bag",
                           icon: Icons.shopping_bag_outlined,
-                          hight: 64,
+                          hight: 60,
                           width: 343,
                         ),
                       ],

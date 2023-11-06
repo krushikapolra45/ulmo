@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ulmo/main_page_screen.dart';
+import 'package:ulmo/bottom_navigation_bar_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       // initialRoute: Routename.initialRoute,
       // routes: AppRoute().approutes,
 
-      home: const MainPageScreen(),
+      home: const BottomNavigationBarScreen(),
     );
   }
 }
